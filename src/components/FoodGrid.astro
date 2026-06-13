@@ -31,7 +31,7 @@ filtered.sort((a, b) => {
       isAscending = true;
       break;
     case "protein-per-price": {
-      const getVal = (f) => {
+      const getVal = (f: { protein: number; price: number; priceUnit: string }) => {
         const priceValue =
           f.priceUnit === "lb" ? (f.price / 453.6) * 100 : f.price;
         return f.protein / (priceValue || 1);
@@ -194,9 +194,10 @@ filtered.sort((a, b) => {
     ) as HTMLElement[];
     if (cards.length === 0) return;
 
-    let visibleIndex = 0;
-    const hasCategory = categoryId && categoryId !== "foods" && categoryId !== "all";
+    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
+    const hasCategory = categoryId && validCategories.includes(categoryId);
 
+    let visibleIndex = 0;
     cards.forEach((card) => {
       const cardCategory = card.getAttribute("data-category");
       if (!hasCategory || cardCategory === categoryId) {
@@ -222,14 +223,16 @@ filtered.sort((a, b) => {
 
   function updateHeaderActiveState(hash: string) {
     const cleanHash = hash.replace("#", "");
+    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
+    const hasValidCategory = validCategories.includes(cleanHash);
     
     // Desktop links
     const desktopLinks = document.querySelectorAll(".nav-desktop .nav-link");
     desktopLinks.forEach(link => {
       const href = link.getAttribute("href");
-      if (href === "/" && !cleanHash) {
+      if (href === "/" && (!cleanHash || cleanHash === "features")) {
         link.classList.add("active");
-      } else if (href === `#${cleanHash}`) {
+      } else if (hasValidCategory && href === `#${cleanHash}`) {
         link.classList.add("active");
       } else if (cleanHash === "foods" && href === "#foods") {
         link.classList.add("active");
@@ -242,9 +245,9 @@ filtered.sort((a, b) => {
     const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-link");
     mobileLinks.forEach(link => {
       const href = link.getAttribute("href");
-      if (href === "/" && !cleanHash) {
+      if (href === "/" && (!cleanHash || cleanHash === "features")) {
         link.classList.add("active");
-      } else if (href === `#${cleanHash}`) {
+      } else if (hasValidCategory && href === `#${cleanHash}`) {
         link.classList.add("active");
       } else if (cleanHash === "foods" && href === "#foods") {
         link.classList.add("active");
@@ -283,21 +286,14 @@ filtered.sort((a, b) => {
     );
   });
 
-  // Bind click events on header and mobile navigation category links
+  // Bind click events on header and mobile navigation category links starting with #
   document.querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link").forEach((link) => {
     link.addEventListener("click", function (this: HTMLAnchorElement, e: Event) {
       const href = this.getAttribute("href");
-      if (href) {
-        if (href === "/") {
-          if (window.location.pathname === "/") {
-            e.preventDefault();
-            window.location.hash = "";
-          }
-        } else if (href.startsWith("#")) {
-          e.preventDefault();
-          const hashPart = href.slice(1);
-          window.location.hash = hashPart;
-        }
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const hashPart = href.slice(1);
+        window.location.hash = hashPart;
       }
     });
   });
@@ -342,9 +338,12 @@ filtered.sort((a, b) => {
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
     
-    // Smooth scroll to the foods section
-    const gridSection = document.getElementById("foods");
-    gridSection?.scrollIntoView({ behavior: "smooth" });
+    // Smooth scroll to the foods section only if the hash is a category or All Foods
+    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
+    if (validCategories.includes(hash) || hash === "foods") {
+      const gridSection = document.getElementById("foods");
+      gridSection?.scrollIntoView({ behavior: "smooth" });
+    }
   });
 
   // Handle initial load sort if URL has a search param
@@ -369,10 +368,10 @@ filtered.sort((a, b) => {
     }
 
     const hash = window.location.hash.slice(1);
+    applyClientFilter(hash);
+    updateHeaderActiveState(hash);
+
     if (hash) {
-      applyClientFilter(hash);
-      updateHeaderActiveState(hash);
-      
       // Delay slightly for render completion
       setTimeout(() => {
         const gridSection = document.getElementById("foods");

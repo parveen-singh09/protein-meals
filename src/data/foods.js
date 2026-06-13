@@ -27,6 +27,7 @@ export const foods = [
     description: 'Lean, versatile protein source. Skinless breast is lowest in fat.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'budget-friendly', 'muscle-building'],
   },
   {
@@ -48,6 +49,7 @@ export const foods = [
     description: 'Extra lean poultry with one of the highest protein-to-fat ratios.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'low-fat'],
   },
   {
@@ -69,6 +71,7 @@ export const foods = [
     description: 'High-quality complete protein rich in iron and B12.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['iron-rich', 'budget-friendly'],
   },
   {
@@ -90,6 +93,7 @@ export const foods = [
     description: 'Premium cut steak with excellent protein and mineral content.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['premium', 'iron-rich'],
   },
   {
@@ -111,6 +115,7 @@ export const foods = [
     description: 'Lean cut of pork with protein comparable to chicken breast.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'budget-friendly'],
   },
   {
@@ -132,6 +137,7 @@ export const foods = [
     description: 'Flavorful meat rich in iron and B vitamins.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['premium', 'iron-rich'],
   },
   {
@@ -148,11 +154,12 @@ export const foods = [
     serving: '100g',
     ageGroups: ['adult', 'teen'],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/9173043/pexels-photo-9173043.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/33157191/pexels-photo-33157191.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
     micros: { iron: 3.4, zinc: 5.0, vitaminB12: 2.3, selenium: 23.0 },
     description: 'Lean game meat, lower in fat than beef with rich mineral profile.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'iron-rich', 'grass-fed'],
   },
   {
@@ -174,6 +181,7 @@ export const foods = [
     description: 'Juicier than breast with more flavor, still high in protein.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['budget-friendly', 'flavorful'],
   },
   {
@@ -190,11 +198,12 @@ export const foods = [
     serving: '100g',
     ageGroups: ['adult'],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/19405544/pexels-photo-19405544.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15508161/pexels-photo-15508161.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
     micros: { iron: 4.5, zinc: 5.2, vitaminB12: 2.5, riboflavin: 0.5 },
     description: 'Ultra-lean wild game with exceptional protein density.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'iron-rich', 'wild'],
   },
   {
@@ -216,6 +225,7 @@ export const foods = [
     description: 'Fatty fish rich in omega-3s, vitamin D, and high-quality protein.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['omega-3', 'vitamin-d', 'heart-healthy'],
   },
   {
@@ -237,6 +247,7 @@ export const foods = [
     description: 'Convenient, affordable protein source with long shelf life.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['budget-friendly', 'convenient', 'pantry-staple'],
   },
   {
@@ -258,6 +269,7 @@ export const foods = [
     description: 'Nearly pure protein with minimal fat and calories.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['lean', 'low-calorie', 'iodine-rich'],
   },
   {
@@ -279,6 +291,7 @@ export const foods = [
     description: 'White fish with mild flavor, very lean and protein-dense.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['lean', 'low-fat', 'mild'],
   },
   {
@@ -300,6 +313,7 @@ export const foods = [
     description: 'Affordable white fish with high protein and mild taste.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['budget-friendly', 'mild', 'lean'],
   },
   {
@@ -321,6 +335,7 @@ export const foods = [
     description: 'Nutrient-dense small fish, eat bones-in for calcium boost.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['calcium-rich', 'omega-3', 'budget-friendly', 'sustainable'],
   },
   {
@@ -342,6 +357,7 @@ export const foods = [
     description: 'Firm white fish with dense protein and rich mineral content.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['lean', 'selenium-rich'],
   },
   {
@@ -363,6 +379,7 @@ export const foods = [
     description: 'Delicate seafood with excellent protein and B12 content.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['premium', 'low-fat'],
   },
   {
@@ -384,6 +401,7 @@ export const foods = [
     description: 'Nature\'s multivitamin. Complete protein with yolks intact.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['budget-friendly', 'versatile', 'nutrient-dense'],
   },
   {
@@ -405,6 +423,7 @@ export const foods = [
     description: 'Nearly pure protein, virtually fat-free. Highest protein efficiency.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['lean', 'low-calorie', 'low-fat'],
   },
   {
@@ -426,6 +445,7 @@ export const foods = [
     description: 'Thick, creamy yogurt with probiotics and twice the protein of regular yogurt.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['probiotic', 'calcium-rich', 'versatile'],
   },
   {
@@ -447,6 +467,7 @@ export const foods = [
     description: 'Casein-rich dairy that digests slowly, ideal before bed.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['slow-digesting', 'calcium-rich', 'budget-friendly'],
   },
   {
@@ -468,6 +489,7 @@ export const foods = [
     description: 'Lower-moisture cheese with concentrated protein and calcium.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'versatile'],
   },
   {
@@ -489,6 +511,7 @@ export const foods = [
     description: 'Aged hard cheese with extremely high protein density per gram.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'umami', 'aged'],
   },
   {
@@ -510,6 +533,7 @@ export const foods = [
     description: 'Popular hard cheese with excellent protein and calcium profile.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'versatile', 'flavorful'],
   },
   {
@@ -531,6 +555,7 @@ export const foods = [
     description: 'Affordable complete protein with calcium and vitamin D fortification.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['budget-friendly', 'calcium-rich', 'kid-friendly'],
   },
   {
@@ -552,6 +577,7 @@ export const foods = [
     description: 'Fast-digesting protein powder, ideal post-workout for muscle recovery.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['fast-digesting', 'post-workout', 'convenient'],
   },
   {
@@ -573,6 +599,7 @@ export const foods = [
     description: 'Plant-based complete protein powder, vegan-friendly alternative.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 98,
     tags: ['vegan', 'plant-based', 'complete-protein'],
   },
 
@@ -595,6 +622,7 @@ export const foods = [
     description: 'Slow-digesting milk protein, ideal before sleep for sustained amino release.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 100,
     tags: ['slow-digesting', 'night-time', 'sustained-release'],
   },
   {
@@ -616,6 +644,7 @@ export const foods = [
     description: 'Versatile soy-based protein that absorbs flavors well.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 85,
     tags: ['vegan', 'calcium-rich', 'versatile', 'budget-friendly'],
   },
   {
@@ -637,6 +666,7 @@ export const foods = [
     description: 'Fermented soybean cake with nutty flavor, more protein than tofu.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 85,
     tags: ['vegan', 'fermented', 'high-fiber'],
   },
   {
@@ -658,6 +688,7 @@ export const foods = [
     description: 'Young soybeans in pods, fun to eat and packed with protein and fiber.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 85,
     tags: ['vegan', 'high-fiber', 'snack', 'folate-rich'],
   },
   {
@@ -679,6 +710,7 @@ export const foods = [
     description: 'Quick-cooking legume, excellent plant protein with high fiber content.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 72,
     tags: ['vegan', 'high-fiber', 'budget-friendly', 'iron-rich'],
   },
   {
@@ -700,6 +732,7 @@ export const foods = [
     description: 'Versatile legume, base for hummus and curries with good protein.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 78,
     tags: ['vegan', 'high-fiber', 'budget-friendly', 'versatile'],
   },
   {
@@ -721,6 +754,7 @@ export const foods = [
     description: 'Fiber-rich legume popular in Latin cuisine with solid protein content.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 75,
     tags: ['vegan', 'high-fiber', 'budget-friendly', 'iron-rich'],
   },
   {
@@ -742,6 +776,7 @@ export const foods = [
     description: 'Pseudograin with all nine essential amino acids. Gluten-free.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 83,
     tags: ['gluten-free', 'complete-protein', 'vegan', 'versatile'],
   },
   {
@@ -763,6 +798,7 @@ export const foods = [
     description: 'Vitamin E-rich nut with protein, healthy fats, and fiber.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 55,
     tags: ['vitamin-e', 'healthy-fats', 'snack', 'calcium-rich'],
   },
   {
@@ -784,6 +820,7 @@ export const foods = [
     description: 'Budget-friendly legume (not a true nut) with protein and healthy fats.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 52,
     tags: ['budget-friendly', 'healthy-fats', 'snack', 'niacin-rich'],
   },
   {
@@ -805,6 +842,7 @@ export const foods = [
     description: 'Classic spread with protein, healthy monounsaturated fats, and great taste.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 52,
     tags: ['budget-friendly', 'kid-friendly', 'versatile', 'healthy-fats'],
   },
   {
@@ -826,6 +864,7 @@ export const foods = [
     description: 'Tiny seeds with complete protein, omega-3s, and rich mineral profile.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 82,
     tags: ['vegan', 'complete-protein', 'omega-3', 'magnesium-rich'],
   },
   {
@@ -847,6 +886,7 @@ export const foods = [
     description: 'Fiber-dense seed that forms gel, rich in omega-3s and calcium.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 75,
     tags: ['vegan', 'high-fiber', 'omega-3', 'calcium-rich'],
   },
   {
@@ -868,6 +908,7 @@ export const foods = [
     description: 'Wheat gluten "meat" with the highest plant-based protein density.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 80,
     tags: ['vegan', 'meat-alternative', 'high-protein', 'low-fat'],
   },
   {
@@ -889,6 +930,7 @@ export const foods = [
     description: 'Mineral powerhouse, especially zinc and magnesium for immune health.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 75,
     tags: ['zinc-rich', 'magnesium-rich', 'snack', 'iron-rich'],
   },
   {
@@ -910,6 +952,7 @@ export const foods = [
     description: 'Whole grain with decent protein and beta-glucan fiber for heart health.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'high-fiber', 'budget-friendly', 'heart-healthy'],
   },
   {
@@ -931,6 +974,7 @@ export const foods = [
     description: 'Nutrient-dense leafy green with surprising protein for a vegetable.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'low-calorie', 'iron-rich', 'vitamin-k'],
   },
   {
@@ -952,6 +996,7 @@ export const foods = [
     description: 'Cruciferous vegetable with fiber, vitamin C, and sulforaphane.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'low-calorie', 'vitamin-c', 'fiber-rich'],
   },
   {
@@ -973,6 +1018,7 @@ export const foods = [
     description: 'Starchy vegetable with more protein than most veggies, kid-friendly.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 65,
     tags: ['vegan', 'high-fiber', 'kid-friendly', 'budget-friendly'],
   },
   {
@@ -994,6 +1040,7 @@ export const foods = [
     description: 'Classic cut with good protein, B vitamins, and selenium.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['budget-friendly', 'versatile'],
   },
   {
@@ -1015,6 +1062,7 @@ export const foods = [
     description: 'Concentrated dried meat snack, high protein per gram due to water removal.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['convenient', 'snack', 'shelf-stable', 'portable'],
   },
   {
@@ -1036,6 +1084,7 @@ export const foods = [
     description: 'Lean ground poultry, healthier alternative to ground beef.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'budget-friendly', 'versatile'],
   },
   {
@@ -1057,6 +1106,7 @@ export const foods = [
     description: 'Sweet shellfish with exceptional B12 and selenium content.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['premium', 'b12-rich', 'low-calorie'],
   },
   {
@@ -1078,6 +1128,7 @@ export const foods = [
     description: 'Premium shellfish, lean protein with selenium and B12.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['premium', 'low-calorie', 'selenium-rich'],
   },
   {
@@ -1099,6 +1150,7 @@ export const foods = [
     description: 'Oily fish with the highest omega-3 content, incredibly nutrient-dense.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['omega-3', 'vitamin-d', 'nutrient-dense', 'sustainable'],
   },
   {
@@ -1120,6 +1172,7 @@ export const foods = [
     description: 'Highest omega-3 nut, supports brain health with antioxidant polyphenols.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 55,
     tags: ['omega-3', 'brain-health', 'antioxidant', 'snack'],
   },
   {
@@ -1141,6 +1194,7 @@ export const foods = [
     description: 'Creamy nut rich in copper, magnesium, and heart-healthy fats.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 55,
     tags: ['healthy-fats', 'copper-rich', 'snack', 'versatile'],
   },
   {
@@ -1162,6 +1216,7 @@ export const foods = [
     description: 'Creamy Italian cheese, versatile for both sweet and savory dishes.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'versatile', 'mild'],
   },
   {
@@ -1183,6 +1238,7 @@ export const foods = [
     description: 'Tangy brined cheese, lower fat than many cheeses with good protein.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'flavorful', 'salad-topping'],
   },
   {
@@ -1204,6 +1260,7 @@ export const foods = [
     description: 'Nutty-flavored cheese with holes, exceptional calcium and protein.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['calcium-rich', 'nutty', 'low-lactose'],
   },
   {
@@ -1225,6 +1282,7 @@ export const foods = [
     description: 'Lean cut of beef with exceptional protein density and rich flavor.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['lean', 'iron-rich', 'premium'],
   },
   {
@@ -1246,6 +1304,7 @@ export const foods = [
     description: 'Lean, meaty fish steak with exceptional protein and selenium content.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 94,
     tags: ['lean', 'selenium-rich', 'low-fat'],
   },
   {
@@ -1267,6 +1326,7 @@ export const foods = [
     description: 'Exceptionally high B12 and iron content, tiny nutritional powerhouse.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 90,
     tags: ['b12-rich', 'iron-rich', 'low-calorie', 'sustainable'],
   },
   {
@@ -1288,6 +1348,7 @@ export const foods = [
     description: 'Fun-to-eat nut with complete protein profile and vibrant antioxidants.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 55,
     tags: ['complete-protein', 'antioxidant', 'snack', 'vitamin-b6'],
   },
   {
@@ -1309,6 +1370,7 @@ export const foods = [
     description: 'Vitamin E powerhouse seed, great for salads and snacking.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 72,
     tags: ['vitamin-e', 'snack', 'budget-friendly', 'selenium-rich'],
   },
   {
@@ -1330,6 +1392,7 @@ export const foods = [
     description: 'Chickpea-tahini spread with protein, fiber, and healthy fats.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 78,
     tags: ['vegan', 'versatile', 'dip', 'high-fiber'],
   },
   {
@@ -1351,6 +1414,7 @@ export const foods = [
     description: 'Best plant milk for protein, often fortified with calcium and vitamins.',
     type: 'veg',
     completeProtein: true,
+        bioavailability: 95,
     tags: ['vegan', 'calcium-rich', 'dairy-alternative', 'complete-protein'],
   },
 {
@@ -1372,6 +1436,7 @@ export const foods = [
     description: 'Most nutrient-dense food on earth. Exceptionally high B12, iron, vitamin A.',
     type: 'non-veg',
     completeProtein: true,
+        bioavailability: 92,
     tags: ['nutrient-dense', 'iron-rich', 'budget-friendly', 'b12-rich'],
   },
   {
@@ -1393,6 +1458,7 @@ export const foods = [
     description: 'Sweet summer staple with modest protein but great taste and fiber.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'kid-friendly', 'seasonal', 'budget-friendly'],
   },
   {
@@ -1414,6 +1480,7 @@ export const foods = [
     description: 'Mini cabbage high in vitamin K, C, and cancer-fighting compounds.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'low-calorie', 'vitamin-k', 'fiber-rich'],
   },
   {
@@ -1435,6 +1502,7 @@ export const foods = [
     description: 'Elegant spring vegetable with folate and prebiotic fiber.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 60,
     tags: ['vegan', 'low-calorie', 'folate-rich', 'seasonal'],
   },
   {
@@ -1456,6 +1524,7 @@ export const foods = [
     description: 'Umami-rich fungus with vitamin D when exposed to UV light.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 55,
     tags: ['vegan', 'low-calorie', 'vitamin-d', 'umami'],
   },
   {
@@ -1477,6 +1546,7 @@ export const foods = [
     description: 'Deactivated yeast with cheesy flavor, fortified with B vitamins.',
     type: 'veg',
     completeProtein: false,
+        bioavailability: 90,
     tags: ['vegan', 'b12-rich', 'cheese-alternative', 'high-fiber'],
   },
 ];

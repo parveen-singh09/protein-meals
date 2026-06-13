@@ -19,6 +19,7 @@ export interface Props {
     description: string;
     type: string;
     completeProtein: boolean;
+    bioavailability: number;
     tags: string[];
   };
   index: number;
@@ -27,7 +28,7 @@ export interface Props {
 const { food, index } = Astro.props;
 
 const proteinBarPercent = Math.min((food.protein / 100) * 100, 100);
-const proteinPerCalorie = ((food.protein / food.calories) * 100).toFixed(1);
+
 
 const priceValue =
   food.priceUnit === "lb" ? (food.price / 453.6) * 100 : food.price;
@@ -148,8 +149,8 @@ function microValue(v: number): string {
         <span class="stat-label">{priceLabel}</span>
       </div>
       <div class="stat">
-        <span class="stat-value">{proteinPerCalorie}</span>
-        <span class="stat-label">Protein % in total Cal</span>
+        <span class="stat-value">{food.bioavailability}%</span>
+        <span class="stat-label">Bioavailability</span>
       </div>
       <div class="stat">
         <span class="stat-value"
