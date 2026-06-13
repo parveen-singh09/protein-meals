@@ -15,7 +15,7 @@ export interface Props {
     ageGroups: string[];
     availability: string;
     image: string;
-    micros: Record<string, number>;
+    micros: Record<string, number | undefined>;
     description: string;
     type: string;
     completeProtein: boolean;
@@ -31,13 +31,11 @@ const proteinPerCalorie = (food.protein / food.calories * 100).toFixed(1);
 
 const weightUnits = ['lb', 'pound', 'ounce', 'oz'];
 const isWeightUnit = weightUnits.some(u => food.priceUnit.includes(u));
-const quantityUnits = new Set(['can', 'dozen', 'bag', 'block', 'bunch', 'ear', 'carton', 'gallon', 'pack']);
-const isQuantityUnit = quantityUnits.has(food.priceUnit) || /^\d/.test(food.priceUnit);
 
-const priceLabel = isWeightUnit ? 'avg / 100g' : `avg / ${food.priceUnit}`;
+const priceLabel = isWeightUnit ? 'avg price / 100g' : `avg price / ${food.priceUnit}`;
 const displayPrice = isWeightUnit ? (food.price / 453.6 * 100).toFixed(0) : food.price.toFixed(0);
 
-const categoryLabels = {
+const categoryLabels: Record<string, string> = {
   meat: 'Meat & Poultry',
   seafood: 'Fish & Seafood',
   dairy: 'Dairy & Eggs',
@@ -110,10 +108,10 @@ function microValue(v: number): string {
       </div>
       <div class="stat">
         <span class="stat-value">{proteinPerCalorie}</span>
-        <span class="stat-label">Protein/Cal</span>
+        <span class="stat-label">Protein % in total Cal</span>
       </div>
       <div class="stat">
-        <span class="stat-value">{food.serving}</span>
+        <span class="stat-value">{food.serving.replace(/\(.*\)/, '').trim()}</span>
         <span class="stat-label">Serving</span>
       </div>
     </div>
@@ -123,7 +121,7 @@ function microValue(v: number): string {
         {Object.entries(food.micros).map(([key, val]) => (
           <div class="micro-item">
             <span class="micro-label">{microLabels[key] || key}</span>
-            <span class="micro-value">{microValue(val)}</span>
+            <span class="micro-value">{microValue(val ?? 0)}</span>
           </div>
         ))}
       </div>
@@ -140,11 +138,28 @@ function microValue(v: number): string {
     overflow: hidden;
     transition: all 0.3s ease;
     animation: fadeIn 0.42s ease-out both;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  :root.dark .food-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
   .food-card:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 40px rgba(34, 197, 94, 0.15);
+  }
+
+  :root.dark .food-card:hover {
+    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.08);
   }
 
   .card-image {
@@ -247,7 +262,7 @@ function microValue(v: number): string {
     gap: 0.125rem;
     padding: 0.5rem;
     border-radius: 0.375rem;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(255, 255, 255, 0.08);
     font-size: 0.8125rem;
     font-weight: 600;
     font-family: var(--font-mono);
@@ -278,13 +293,13 @@ function microValue(v: number): string {
     gap: 0.5rem;
     padding: 0.75rem;
     border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   :root.dark .card-stats {
     background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.06);
   }
 
   .stat {
@@ -312,7 +327,7 @@ function microValue(v: number): string {
     gap: 0.375rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   :root.dark .micro-content {

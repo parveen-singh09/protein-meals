@@ -1,7 +1,5 @@
 ---
 import { foods } from '../data/foods';
-
-const topProtein = [...foods].sort((a, b) => b.protein - a.protein).slice(0, 5);
 const categories = [
   { id: 'meat', label: 'Meat & Poultry', icon: '🥩', count: foods.filter(f => f.category === 'meat').length },
   { id: 'seafood', label: 'Fish & Seafood', icon: '🐟', count: foods.filter(f => f.category === 'seafood').length },
@@ -141,25 +139,6 @@ const categories = [
   </div>
 </section>
 
-<section class="top-picks" id="top-picks">
-  <div class="container">
-    <div class="section-label">Top Picks</div>
-    <h2 class="features-title">Highest Protein Foods</h2>
-    <div class="top-list glass">
-      {topProtein.map((food, i) => (
-        <div class="top-item fade-in" style={`animation-delay: ${i * 60}ms`}>
-          <span class="top-rank">#{i + 1}</span>
-          <div class="top-info">
-            <span class="top-name">{food.name}</span>
-            <span class="top-category">{food.category}</span>
-          </div>
-          <div class="top-value">{food.protein}g <small>/ 100g</small></div>
-          <div class="top-meta">{food.calories} cal</div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
 <style>
   .hero {

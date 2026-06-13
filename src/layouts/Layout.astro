@@ -50,16 +50,16 @@ const { title = 'High Protein Valley - Discover Protein-Rich Foods', description
     --accent-teal: #20B2AA;
     --accent-green: #22c55e;
     --accent-lime: #84cc16;
-    --bg-gradient-1: #d4edda;
-    --bg-gradient-2: #e2efd9;
-    --bg-gradient-3: #c8e6e3;
-    --surface: rgba(180, 220, 180, 0.25);
-    --surface-hover: rgba(180, 220, 180, 0.35);
+    --bg-gradient-1: #f5f0eb;
+    --bg-gradient-2: #faf5f0;
+    --bg-gradient-3: #efe8e0;
+    --surface: rgba(255, 255, 255, 0.35);
+    --surface-hover: rgba(255, 255, 255, 0.5);
     --text-primary: #1a2332;
     --text-secondary: #475569;
     --text-muted: #64748b;
-    --card-bg: rgba(180, 220, 180, 0.2);
-    --card-border: rgba(180, 220, 180, 0.3);
+    --card-bg: rgba(255, 255, 255, 0.25);
+    --card-border: rgba(255, 255, 255, 0.35);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     --radius: 0.75rem;
     --max-width: 1280px;
@@ -82,6 +82,10 @@ const { title = 'High Protein Valley - Discover Protein-Rich Foods', description
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
+  :root.dark body {
+    background: linear-gradient(135deg, rgba(10,22,40,0.9), rgba(13,33,55,0.9), rgba(10,26,40,0.9)), url('/background.jpg') center/cover fixed;
+  }
+
   *,
   *::before,
   *::after {
@@ -92,8 +96,7 @@ const { title = 'High Protein Valley - Discover Protein-Rich Foods', description
     scroll-behavior: smooth;
   }
 
-  html.theme-ready,
-  html.theme-ready body {
+  html.theme-ready {
     transition: background 0.35s ease, color 0.35s ease;
   }
 
@@ -103,8 +106,7 @@ const { title = 'High Protein Valley - Discover Protein-Rich Foods', description
     width: 100%;
     min-height: 100dvh;
     font-family: var(--font-sans);
-    background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3));
-    background-attachment: fixed;
+    background: linear-gradient(135deg, rgba(245,240,235,0.85), rgba(250,245,240,0.85), rgba(239,232,224,0.85)), url('/background.jpg') center/cover fixed;
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;

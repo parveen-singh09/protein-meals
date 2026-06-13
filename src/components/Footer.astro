@@ -45,10 +45,12 @@
 </footer>
 
 <script>
-  document.querySelectorAll('[data-sort]').forEach(link => {
+  document.querySelectorAll('[data-sort]').forEach(el => {
+    const link = el as HTMLElement;
     link.addEventListener('click', e => {
       e.preventDefault();
       const sortId = link.dataset.sort;
+      if (!sortId) return;
       const url = new URL(window.location.href);
       url.searchParams.set('sort', sortId);
       window.location.href = url.toString();

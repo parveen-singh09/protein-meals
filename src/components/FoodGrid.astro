@@ -113,9 +113,9 @@ filtered.sort((a, b) => {
 </section>
 
 <script>
-  let searchTimeout;
+  let searchTimeout: ReturnType<typeof setTimeout>;
 
-  window.handleSearch = function(value) {
+  (window as any).handleSearch = function(value: string) {
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(() => {
       const url = new URL(window.location.href);
@@ -126,8 +126,8 @@ filtered.sort((a, b) => {
   };
 
   document.querySelectorAll('.chip').forEach(chip => {
-    chip.addEventListener('click', function(e) {
-      const parent = this.closest('.filter-chips');
+    chip.addEventListener('click', function(this: HTMLElement, _e: Event) {
+      const parent = this.closest('.filter-chips')!;
       parent.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
       this.classList.add('active');
     });
@@ -272,7 +272,7 @@ filtered.sort((a, b) => {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .empty-state {
