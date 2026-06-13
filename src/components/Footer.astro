@@ -1,0 +1,167 @@
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+          <line x1="6" y1="17" x2="18" y2="17"/>
+        </svg>
+        <span>HighProtein Valley</span>
+      </div>
+      <p class="footer-desc">
+        Your free resource for discovering protein-rich foods. Data sourced from USDA FoodData Central (fdc.nal.usda.gov).
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#meat">Meat & Poultry</a>
+        <a href="#seafood">Fish & Seafood</a>
+        <a href="#dairy">Dairy & Eggs</a>
+        <a href="#plant">Plant-Based</a>
+        <a href="#supplements">Supplements</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sort By</h4>
+        <a href="#foods" data-sort="protein-desc">Highest Protein</a>
+        <a href="#foods" data-sort="calories-desc">Highest Calories</a>
+        <a href="#foods" data-sort="protein-per-price">Protein per $</a>
+        <a href="#foods" data-sort="protein-per-calorie">Protein per Calorie</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <span class="footer-domain">highproteinvalley.com</span>
+        <span class="footer-note">Completely free resource</span>
+        <span class="footer-note">60+ foods and growing</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} HighProtein Valley. All rights reserved.</p>
+      <p class="footer-source">Nutrition data from <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener noreferrer">USDA FoodData Central</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-sort]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const sortId = link.dataset.sort;
+      const url = new URL(window.location.href);
+      url.searchParams.set('sort', sortId);
+      window.location.href = url.toString();
+    });
+  });
+</script>
+
+<style>
+  .footer {
+    margin-top: 6rem;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  html.theme-ready .footer {
+    transition: background 0.35s ease, border-color 0.35s ease;
+  }
+
+  :root.dark .footer {
+    background: rgba(255, 255, 255, 0.03);
+    border-top-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-brand {
+    max-width: 320px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+
+  .footer-col a,
+  .footer-col span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: var(--accent-green);
+  }
+
+  .footer-domain {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-teal);
+  }
+
+  .footer-note {
+    color: var(--text-muted) !important;
+    font-size: 0.8rem !important;
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .footer-source a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>

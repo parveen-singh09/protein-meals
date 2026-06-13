@@ -1,0 +1,339 @@
+---
+export interface Props {
+  food: {
+    id: string;
+    name: string;
+    category: string;
+    protein: number;
+    calories: number;
+    carbs: number;
+    fat: number;
+    fiber: number;
+    price: number;
+    priceUnit: string;
+    serving: string;
+    ageGroups: string[];
+    availability: string;
+    image: string;
+    micros: Record<string, number>;
+    description: string;
+    type: string;
+    completeProtein: boolean;
+    tags: string[];
+  };
+  index: number;
+}
+
+  const { food, index } = Astro.props;
+
+const proteinBarPercent = Math.min((food.protein / 100) * 100, 100);
+const proteinPerCalorie = (food.protein / food.calories * 100).toFixed(1);
+
+const weightUnits = ['lb', 'pound', 'ounce', 'oz'];
+const isWeightUnit = weightUnits.some(u => food.priceUnit.includes(u));
+const quantityUnits = new Set(['can', 'dozen', 'bag', 'block', 'bunch', 'ear', 'carton', 'gallon', 'pack']);
+const isQuantityUnit = quantityUnits.has(food.priceUnit) || /^\d/.test(food.priceUnit);
+
+const priceLabel = isWeightUnit ? 'avg / 100g' : `avg / ${food.priceUnit}`;
+const displayPrice = isWeightUnit ? (food.price / 453.6 * 100).toFixed(0) : food.price.toFixed(0);
+
+const categoryLabels = {
+  meat: 'Meat & Poultry',
+  seafood: 'Fish & Seafood',
+  dairy: 'Dairy & Eggs',
+  plant: 'Plant-Based',
+  supplements: 'Supplements',
+};
+
+const microLabels: Record<string, string> = {
+  vitaminA: 'Vitamin A', vitaminB6: 'Vitamin B6', vitaminB12: 'Vitamin B12',
+  vitaminC: 'Vitamin C', vitaminD: 'Vitamin D', vitaminE: 'Vitamin E', vitaminK: 'Vitamin K',
+  calcium: 'Calcium', iron: 'Iron', magnesium: 'Magnesium', zinc: 'Zinc',
+  selenium: 'Selenium', potassium: 'Potassium', phosphorus: 'Phosphorus',
+  omega3: 'Omega-3', choline: 'Choline', folate: 'Folate', niacin: 'Niacin',
+  riboflavin: 'Riboflavin', thiamin: 'Thiamin', copper: 'Copper', manganese: 'Manganese',
+  glycine: 'Glycine', proline: 'Proline', hydroxyproline: 'Hydroxyproline',
+};
+
+function microValue(v: number): string {
+  if (v >= 1000) return (v / 1000).toFixed(1) + 'g';
+  if (v >= 1) return v.toFixed(1) + 'mg';
+  if (v >= 0.001) return (v * 1000).toFixed(0) + 'µg';
+  return v + 'mg';
+}
+---
+
+<article class="food-card glass" style={`animation-delay: ${index * 80}ms`}>
+  <div class="card-image">
+    <img src={food.image} alt={food.name} loading={index < 12 ? 'eager' : 'lazy'} />
+
+    <div class="card-category">{categoryLabels[food.category] || food.category}</div>
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">{food.name}</h3>
+    <p class="card-desc">{food.description}</p>
+
+    <div class="macro-bar">
+      <div class="macro-bar-label">
+        <span>Protein</span>
+        <span class="macro-value highlight">{food.protein}g / 100g</span>
+      </div>
+      <div class="macro-bar-track">
+        <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}></div>
+      </div>
+    </div>
+
+    <div class="macro-grid">
+      <div class="macro-item">
+        <span>{food.calories}</span>
+        <small>Calories</small>
+      </div>
+      <div class="macro-item">
+        <span>{food.carbs}g</span>
+        <small>Carbs</small>
+      </div>
+      <div class="macro-item">
+        <span>{food.fat}g</span>
+        <small>Fat</small>
+      </div>
+      <div class="macro-item">
+        <span>{food.fiber}g</span>
+        <small>Fiber</small>
+      </div>
+    </div>
+
+    <div class="card-stats">
+      <div class="stat">
+        <span class="stat-value">₹{displayPrice}</span>
+        <span class="stat-label">{priceLabel}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{proteinPerCalorie}</span>
+        <span class="stat-label">Protein/Cal</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">{food.serving}</span>
+        <span class="stat-label">Serving</span>
+      </div>
+    </div>
+
+    <div class="micro-section">
+      <div class="micro-content">
+        {Object.entries(food.micros).map(([key, val]) => (
+          <div class="micro-item">
+            <span class="micro-label">{microLabels[key] || key}</span>
+            <span class="micro-value">{microValue(val)}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+  </div>
+</article>
+
+
+
+<style>
+  .food-card {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.42s ease-out both;
+  }
+
+  .food-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.15);
+  }
+
+  .card-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+
+
+  .card-category {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .macro-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .macro-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .macro-value.highlight {
+    color: var(--accent-teal);
+    font-weight: 600;
+    font-family: var(--font-mono);
+  }
+
+  .macro-bar-track {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  :root.dark .macro-bar-track {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .macro-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-teal), var(--accent-blue));
+    border-radius: 3px;
+    transition: width 0.6s ease;
+  }
+
+  .macro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .macro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background: rgba(0, 0, 0, 0.03);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+  }
+
+  :root.dark .macro-item {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .macro-item svg {
+    color: var(--text-muted);
+    width: 14px;
+    height: 14px;
+  }
+
+  .macro-item small {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .card-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  :root.dark .card-stats {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .micro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  :root.dark .micro-content {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .micro-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+  }
+
+  .micro-label {
+    color: var(--text-secondary);
+  }
+
+  .micro-value {
+    font-family: var(--font-mono);
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+
+</style>
