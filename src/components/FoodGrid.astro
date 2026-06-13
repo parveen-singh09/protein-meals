@@ -1,36 +1,63 @@
 ---
-import { foods, categories, sortOptions, getSortValue, availabilityOptions } from '../data/foods';
-import FoodCard from './FoodCard.astro';
+import { foods, sortOptions } from "../data/foods";
+import FoodCard from "./FoodCard.astro";
 
-const currentSort = Astro.url.searchParams.get('sort') || 'protein-desc';
-const currentCategory = Astro.url.searchParams.get('category') || 'all';
-const currentAvailability = Astro.url.searchParams.get('availability') || 'all';
-const currentSearch = Astro.url.searchParams.get('search') || '';
-
+const currentSort = Astro.url.searchParams.get("sort") || "protein-desc";
 let filtered = [...foods];
 
-if (currentCategory !== 'all') {
-  filtered = filtered.filter(f => f.category === currentCategory);
-}
-
-if (currentAvailability !== 'all') {
-  filtered = filtered.filter(f => f.availability === currentAvailability);
-}
-
-if (currentSearch) {
-  const q = currentSearch.toLowerCase();
-  filtered = filtered.filter(f =>
-    f.name.toLowerCase().includes(q) ||
-    f.description.toLowerCase().includes(q) ||
-    f.tags.some(t => t.toLowerCase().includes(q))
-  );
-}
-
 filtered.sort((a, b) => {
-  const va = getSortValue(a, currentSort);
-  const vb = getSortValue(b, currentSort);
-  if (typeof va === 'number' && typeof vb === 'number') return vb - va;
-  return String(va).localeCompare(String(vb));
+  let valA, valB;
+  let isAscending = false;
+
+  switch (currentSort) {
+    case "protein-desc":
+      valA = a.protein;
+      valB = b.protein;
+      isAscending = false;
+      break;
+    case "protein-asc":
+      valA = a.protein;
+      valB = b.protein;
+      isAscending = true;
+      break;
+    case "calories-desc":
+      valA = a.calories;
+      valB = b.calories;
+      isAscending = false;
+      break;
+    case "calories-asc":
+      valA = a.calories;
+      valB = b.calories;
+      isAscending = true;
+      break;
+    case "protein-per-price": {
+      const getVal = (f) => {
+        const priceValue =
+          f.priceUnit === "lb" ? (f.price / 453.6) * 100 : f.price;
+        return f.protein / (priceValue || 1);
+      };
+      valA = getVal(a);
+      valB = getVal(b);
+      isAscending = false;
+      break;
+    }
+    default:
+      valA = a.protein;
+      valB = b.protein;
+      isAscending = false;
+  }
+
+  if (valA !== valB) {
+    if (typeof valA === "number" && typeof valB === "number") {
+      return isAscending ? valA - valB : valB - valA;
+    }
+    return isAscending
+      ? String(valA).localeCompare(String(valB))
+      : String(valB).localeCompare(String(valA));
+  }
+
+  // Fallback to name ascending (A-Z) on tie
+  return a.name.localeCompare(b.name);
 });
 ---
 
@@ -38,100 +65,327 @@ filtered.sort((a, b) => {
   <div class="container">
     <div class="section-header fade-in">
       <h2>Browse All Foods</h2>
-      <p class="section-subtitle">{filtered.length} of {foods.length} protein-rich foods found</p>
     </div>
 
     <div class="filters glass fade-in">
-      <div class="search-wrapper">
-        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input
-          type="search"
-          class="search-input"
-          placeholder="Search foods..."
-          value={currentSearch}
-          oninput="handleSearch(this.value)"
-        />
-      </div>
-
-      <div class="filter-group">
-        <label class="filter-label">Category</label>
-        <div class="filter-chips">
-          {categories.map(cat => (
-            <a
-              href={`?category=${cat.id}&sort=${currentSort}&availability=${currentAvailability}&search=${currentSearch}`}
-              class={`chip ${currentCategory === cat.id ? 'active' : ''}`}
-            >{cat.label}</a>
-          ))}
-        </div>
-      </div>
-
       <div class="filter-row">
         <div class="filter-group">
           <label class="filter-label">Sort By</label>
           <div class="filter-chips">
-            {sortOptions.map(opt => (
-              <a
-                href={`?sort=${opt.id}&category=${currentCategory}&availability=${currentAvailability}&search=${currentSearch}`}
-                class={`chip ${currentSort === opt.id ? 'active' : ''}`}
-              >{opt.label}</a>
-            ))}
-          </div>
-        </div>
-
-        <div class="filter-group">
-          <label class="filter-label">Availability</label>
-          <div class="filter-chips">
-            {availabilityOptions.map(av => (
-              <a
-                href={`?availability=${av.id}&sort=${currentSort}&category=${currentCategory}&search=${currentSearch}`}
-                class={`chip ${currentAvailability === av.id ? 'active' : ''}`}
-              >{av.label}</a>
-            ))}
+            {
+              sortOptions.map((opt) => (
+                <a
+                  href={`?sort=${opt.id}`}
+                  class={`chip ${currentSort === opt.id ? "active" : ""}`}
+                >
+                  {opt.label}
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
     </div>
 
-    {filtered.length > 0 ? (
-      <div class="grid">
-        {filtered.map((food, i) => <FoodCard food={food} index={i} />)}
-      </div>
-    ) : (
-      <div class="empty-state glass fade-in">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          <line x1="8" y1="11" x2="14" y2="11"/>
-        </svg>
-        <h3>No foods found</h3>
-        <p>Try adjusting your search or filters</p>
-        <a href="/" class="btn">Clear all filters</a>
-      </div>
-    )}
+    <div class="grid">
+      {filtered.map((food, i) => (
+        <FoodCard food={food} index={i} />
+      ))}
+    </div>
+    <div class="empty-state glass fade-in" style="display: none;">
+      <svg
+        width="48"
+        height="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        <line x1="8" y1="11" x2="14" y2="11" />
+      </svg>
+      <h3>No foods found</h3>
+      <p>Try adjusting your search or filters</p>
+      <a href="/" class="btn">
+        Clear all filters
+      </a>
+    </div>
   </div>
 </section>
 
 <script>
-  let searchTimeout: ReturnType<typeof setTimeout>;
+  function getQueryParam(name: string) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  }
 
-  (window as any).handleSearch = function(value: string) {
-    clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(() => {
-      const url = new URL(window.location.href);
-      url.searchParams.set('search', value);
-      if (!value) url.searchParams.delete('search');
-      window.location.href = url.toString();
-    }, 400);
-  };
+  function applyClientSort(sortId: string) {
+    const grid = document.querySelector(".grid");
+    if (!grid) return;
 
-  document.querySelectorAll('.chip').forEach(chip => {
-    chip.addEventListener('click', function(this: HTMLElement, _e: Event) {
-      const parent = this.closest('.filter-chips')!;
-      parent.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-      this.classList.add('active');
+    const cards = Array.from(
+      grid.querySelectorAll(".food-card"),
+    ) as HTMLElement[];
+    if (cards.length === 0) return;
+
+    let isAscending = false;
+    let dataAttr = "protein";
+
+    switch (sortId) {
+      case "protein-desc":
+        dataAttr = "protein";
+        isAscending = false;
+        break;
+      case "protein-asc":
+        dataAttr = "protein";
+        isAscending = true;
+        break;
+      case "calories-desc":
+        dataAttr = "calories";
+        isAscending = false;
+        break;
+      case "calories-asc":
+        dataAttr = "calories";
+        isAscending = true;
+        break;
+      case "protein-per-price":
+        dataAttr = "protein-per-price";
+        isAscending = false;
+        break;
+      default:
+        dataAttr = "protein";
+        isAscending = false;
+    }
+
+    cards.sort((a, b) => {
+      const valA = parseFloat(a.getAttribute(`data-${dataAttr}`) || "0");
+      const valB = parseFloat(b.getAttribute(`data-${dataAttr}`) || "0");
+
+      if (valA !== valB) {
+        return isAscending ? valA - valB : valB - valA;
+      }
+
+      // Tie breaker: Name A-Z
+      const nameA = a.getAttribute("data-name") || "";
+      const nameB = b.getAttribute("data-name") || "";
+      return nameA.localeCompare(nameB);
+    });
+
+    // Re-append cards in the sorted order and update animation delays for visible ones
+    let visibleIndex = 0;
+    cards.forEach((card) => {
+      if (!card.classList.contains("filtered-out")) {
+        card.style.animationDelay = `${visibleIndex * 50}ms`;
+        visibleIndex++;
+      }
+      grid.appendChild(card);
+    });
+  }
+
+  function applyClientFilter(categoryId: string | null) {
+    const grid = document.querySelector(".grid");
+    if (!grid) return;
+
+    const cards = Array.from(
+      grid.querySelectorAll(".food-card"),
+    ) as HTMLElement[];
+    if (cards.length === 0) return;
+
+    let visibleIndex = 0;
+    const hasCategory = categoryId && categoryId !== "foods" && categoryId !== "all";
+
+    cards.forEach((card) => {
+      const cardCategory = card.getAttribute("data-category");
+      if (!hasCategory || cardCategory === categoryId) {
+        card.classList.remove("filtered-out");
+        card.style.animationDelay = `${visibleIndex * 50}ms`;
+        
+        // Reset and retrigger animation for smooth entry
+        card.style.animation = "none";
+        card.offsetHeight; // trigger reflow
+        card.style.animation = "";
+        
+        visibleIndex++;
+      } else {
+        card.classList.add("filtered-out");
+      }
+    });
+
+    const emptyState = document.querySelector(".empty-state") as HTMLElement;
+    if (emptyState) {
+      emptyState.style.display = visibleIndex === 0 ? "flex" : "none";
+    }
+  }
+
+  function updateHeaderActiveState(hash: string) {
+    const cleanHash = hash.replace("#", "");
+    
+    // Desktop links
+    const desktopLinks = document.querySelectorAll(".nav-desktop .nav-link");
+    desktopLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === "/" && !cleanHash) {
+        link.classList.add("active");
+      } else if (href === `#${cleanHash}`) {
+        link.classList.add("active");
+      } else if (cleanHash === "foods" && href === "#foods") {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    // Mobile links
+    const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-link");
+    mobileLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === "/" && !cleanHash) {
+        link.classList.add("active");
+      } else if (href === `#${cleanHash}`) {
+        link.classList.add("active");
+      } else if (cleanHash === "foods" && href === "#foods") {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  // Bind click events on chips
+  document.querySelectorAll(".chip").forEach((chip) => {
+    chip.addEventListener(
+      "click",
+      function (this: HTMLAnchorElement, e: Event) {
+        e.preventDefault();
+
+        const href = this.getAttribute("href") || "";
+        const params = new URLSearchParams(href.split("?")[1] || "");
+        const sortId = params.get("sort") || "protein-desc";
+
+        // Update active chip styling
+        const parent = this.closest(".filter-chips")!;
+        parent
+          .querySelectorAll(".chip")
+          .forEach((c) => c.classList.remove("active"));
+        this.classList.add("active");
+
+        // Apply sort
+        applyClientSort(sortId);
+
+        // Update URL query parameters without reloading
+        const url = new URL(window.location.href);
+        url.searchParams.set("sort", sortId);
+        window.history.pushState({}, "", url.toString());
+      },
+    );
+  });
+
+  // Bind click events on header and mobile navigation category links
+  document.querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link").forEach((link) => {
+    link.addEventListener("click", function (this: HTMLAnchorElement, e: Event) {
+      const href = this.getAttribute("href");
+      if (href) {
+        if (href === "/") {
+          if (window.location.pathname === "/") {
+            e.preventDefault();
+            window.location.hash = "";
+          }
+        } else if (href.startsWith("#")) {
+          e.preventDefault();
+          const hashPart = href.slice(1);
+          window.location.hash = hashPart;
+        }
+      }
     });
   });
+
+  // Bind click events on footer sort links
+  document.querySelectorAll("[data-sort]").forEach(link => {
+    link.addEventListener("click", function(this: HTMLAnchorElement, e: Event) {
+      e.preventDefault();
+      const sortId = this.getAttribute("data-sort");
+      if (!sortId) return;
+
+      // Update URL query parameter without reloading
+      const url = new URL(window.location.href);
+      url.searchParams.set("sort", sortId);
+      window.history.pushState({}, "", url.toString());
+
+      // Update active chip styling in the grid filters
+      const chips = document.querySelectorAll(".chip");
+      chips.forEach(chip => {
+        const href = chip.getAttribute("href") || "";
+        const params = new URLSearchParams(href.split("?")[1] || "");
+        const chipSortId = params.get("sort");
+        if (chipSortId === sortId) {
+          const parent = chip.closest(".filter-chips")!;
+          parent.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+        }
+      });
+
+      // Apply sorting
+      applyClientSort(sortId);
+
+      // Smooth scroll to grid section
+      const gridSection = document.getElementById("foods");
+      gridSection?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Handle hash changes (category filters)
+  window.addEventListener("hashchange", () => {
+    const hash = window.location.hash.slice(1);
+    applyClientFilter(hash);
+    updateHeaderActiveState(hash);
+    
+    // Smooth scroll to the foods section
+    const gridSection = document.getElementById("foods");
+    gridSection?.scrollIntoView({ behavior: "smooth" });
+  });
+
+  // Handle initial load sort if URL has a search param
+  const runInit = () => {
+    const initialSort = getQueryParam("sort");
+    if (initialSort) {
+      applyClientSort(initialSort);
+
+      const chips = document.querySelectorAll(".chip");
+      chips.forEach((chip) => {
+        const href = chip.getAttribute("href") || "";
+        const params = new URLSearchParams(href.split("?")[1] || "");
+        const sortId = params.get("sort");
+        if (sortId === initialSort) {
+          const parent = chip.closest(".filter-chips")!;
+          parent
+            .querySelectorAll(".chip")
+            .forEach((c) => c.classList.remove("active"));
+          chip.classList.add("active");
+        }
+      });
+    }
+
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      applyClientFilter(hash);
+      updateHeaderActiveState(hash);
+      
+      // Delay slightly for render completion
+      setTimeout(() => {
+        const gridSection = document.getElementById("foods");
+        gridSection?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", runInit);
+  } else {
+    runInit();
+  }
 </script>
 
 <style>
@@ -149,16 +403,15 @@ filtered.sort((a, b) => {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800;
     margin: 0 0 0.5rem;
-    background: linear-gradient(135deg, var(--accent-green), var(--accent-teal), var(--accent-lime));
+    background: linear-gradient(
+      135deg,
+      var(--accent-green),
+      var(--accent-teal),
+      var(--accent-lime)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  .section-subtitle {
-    color: var(--text-muted);
-    font-size: 0.9375rem;
-    margin: 0;
   }
 
   .filters {
@@ -169,50 +422,11 @@ filtered.sort((a, b) => {
     gap: 1rem;
   }
 
-  .search-wrapper {
-    position: relative;
-  }
-
-  .search-icon {
-    position: absolute;
-    left: 0.875rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    pointer-events: none;
-  }
-
-  .search-input {
-    width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    background: rgba(0, 0, 0, 0.02);
-    color: var(--text-primary);
-    font-size: 0.875rem;
-    font-family: var(--font-sans);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  .search-input::placeholder {
-    color: var(--text-muted);
-  }
-
-  .search-input:focus {
-    border-color: var(--accent-green);
-    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
-  }
-
-  :root.dark .search-input {
-    border-color: rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.04);
-  }
-
   .filter-group {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .filter-label {
@@ -221,6 +435,7 @@ filtered.sort((a, b) => {
     letter-spacing: 0.06em;
     color: var(--text-muted);
     font-weight: 600;
+    flex-shrink: 0;
   }
 
   .filter-chips {
@@ -330,5 +545,9 @@ filtered.sort((a, b) => {
     .grid {
       grid-template-columns: repeat(4, 1fr);
     }
+  }
+
+  :global(.food-card.filtered-out) {
+    display: none !important;
   }
 </style>

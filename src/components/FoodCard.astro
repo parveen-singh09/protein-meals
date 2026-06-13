@@ -24,48 +24,88 @@ export interface Props {
   index: number;
 }
 
-  const { food, index } = Astro.props;
+const { food, index } = Astro.props;
 
 const proteinBarPercent = Math.min((food.protein / 100) * 100, 100);
-const proteinPerCalorie = (food.protein / food.calories * 100).toFixed(1);
+const proteinPerCalorie = ((food.protein / food.calories) * 100).toFixed(1);
 
-const weightUnits = ['lb', 'pound', 'ounce', 'oz'];
-const isWeightUnit = weightUnits.some(u => food.priceUnit.includes(u));
+const priceValue =
+  food.priceUnit === "lb" ? (food.price / 453.6) * 100 : food.price;
+const proteinPerPrice = food.protein / (priceValue || 1);
 
-const priceLabel = isWeightUnit ? 'avg price / 100g' : `avg price / ${food.priceUnit}`;
-const displayPrice = isWeightUnit ? (food.price / 453.6 * 100).toFixed(0) : food.price.toFixed(0);
+const weightUnits = ["lb", "pound", "ounce", "oz"];
+const isWeightUnit = weightUnits.some((u) => food.priceUnit.includes(u));
+
+const priceLabel = isWeightUnit
+  ? "avg price / 100g"
+  : `avg price / ${food.priceUnit}`;
+const displayPrice = isWeightUnit
+  ? ((food.price / 453.6) * 100).toFixed(0)
+  : food.price.toFixed(0);
 
 const categoryLabels: Record<string, string> = {
-  meat: 'Meat & Poultry',
-  seafood: 'Fish & Seafood',
-  dairy: 'Dairy & Eggs',
-  plant: 'Plant-Based',
-  supplements: 'Supplements',
+  meat: "Meat & Poultry",
+  seafood: "Fish & Seafood",
+  dairy: "Dairy & Eggs",
+  plant: "Plant-Based",
+  supplements: "Supplements",
 };
 
 const microLabels: Record<string, string> = {
-  vitaminA: 'Vitamin A', vitaminB6: 'Vitamin B6', vitaminB12: 'Vitamin B12',
-  vitaminC: 'Vitamin C', vitaminD: 'Vitamin D', vitaminE: 'Vitamin E', vitaminK: 'Vitamin K',
-  calcium: 'Calcium', iron: 'Iron', magnesium: 'Magnesium', zinc: 'Zinc',
-  selenium: 'Selenium', potassium: 'Potassium', phosphorus: 'Phosphorus',
-  omega3: 'Omega-3', choline: 'Choline', folate: 'Folate', niacin: 'Niacin',
-  riboflavin: 'Riboflavin', thiamin: 'Thiamin', copper: 'Copper', manganese: 'Manganese',
-  glycine: 'Glycine', proline: 'Proline', hydroxyproline: 'Hydroxyproline',
+  vitaminA: "Vitamin A",
+  vitaminB6: "Vitamin B6",
+  vitaminB12: "Vitamin B12",
+  vitaminC: "Vitamin C",
+  vitaminD: "Vitamin D",
+  vitaminE: "Vitamin E",
+  vitaminK: "Vitamin K",
+  calcium: "Calcium",
+  iron: "Iron",
+  magnesium: "Magnesium",
+  zinc: "Zinc",
+  selenium: "Selenium",
+  potassium: "Potassium",
+  phosphorus: "Phosphorus",
+  omega3: "Omega-3",
+  choline: "Choline",
+  folate: "Folate",
+  niacin: "Niacin",
+  riboflavin: "Riboflavin",
+  thiamin: "Thiamin",
+  copper: "Copper",
+  manganese: "Manganese",
+  glycine: "Glycine",
+  proline: "Proline",
+  hydroxyproline: "Hydroxyproline",
 };
 
 function microValue(v: number): string {
-  if (v >= 1000) return (v / 1000).toFixed(1) + 'g';
-  if (v >= 1) return v.toFixed(1) + 'mg';
-  if (v >= 0.001) return (v * 1000).toFixed(0) + 'µg';
-  return v + 'mg';
+  if (v >= 1000) return (v / 1000).toFixed(1) + "g";
+  if (v >= 1) return v.toFixed(1) + "mg";
+  if (v >= 0.001) return (v * 1000).toFixed(0) + "µg";
+  return v + "mg";
 }
 ---
 
-<article class="food-card glass" style={`animation-delay: ${index * 80}ms`}>
+<article
+  class="food-card glass"
+  style={`animation-delay: ${index * 80}ms`}
+  data-protein={food.protein}
+  data-calories={food.calories}
+  data-protein-per-price={proteinPerPrice}
+  data-name={food.name.toLowerCase()}
+  data-category={food.category}
+>
   <div class="card-image">
-    <img src={food.image} alt={food.name} loading={index < 12 ? 'eager' : 'lazy'} />
+    <img
+      src={food.image}
+      alt={food.name}
+      loading={index < 12 ? "eager" : "lazy"}
+    />
 
-    <div class="card-category">{categoryLabels[food.category] || food.category}</div>
+    <div class="card-category">
+      {categoryLabels[food.category] || food.category}
+    </div>
   </div>
 
   <div class="card-body">
@@ -78,7 +118,8 @@ function microValue(v: number): string {
         <span class="macro-value highlight">{food.protein}g / 100g</span>
       </div>
       <div class="macro-bar-track">
-        <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}></div>
+        <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}>
+        </div>
       </div>
     </div>
 
@@ -111,27 +152,27 @@ function microValue(v: number): string {
         <span class="stat-label">Protein % in total Cal</span>
       </div>
       <div class="stat">
-        <span class="stat-value">{food.serving.replace(/\(.*\)/, '').trim()}</span>
+        <span class="stat-value"
+          >{food.serving.replace(/\(.*\)/, "").trim()}</span
+        >
         <span class="stat-label">Serving</span>
       </div>
     </div>
 
     <div class="micro-section">
       <div class="micro-content">
-        {Object.entries(food.micros).map(([key, val]) => (
-          <div class="micro-item">
-            <span class="micro-label">{microLabels[key] || key}</span>
-            <span class="micro-value">{microValue(val ?? 0)}</span>
-          </div>
-        ))}
+        {
+          Object.entries(food.micros).map(([key, val]) => (
+            <div class="micro-item">
+              <span class="micro-label">{microLabels[key] || key}</span>
+              <span class="micro-value">{microValue(val ?? 0)}</span>
+            </div>
+          ))
+        }
       </div>
     </div>
-
-
   </div>
 </article>
-
-
 
 <style>
   .food-card {
@@ -174,8 +215,6 @@ function microValue(v: number): string {
     object-fit: cover;
     transition: transform 0.4s ease;
   }
-
-
 
   .card-category {
     position: absolute;
@@ -349,6 +388,4 @@ function microValue(v: number): string {
     color: var(--accent-teal);
     font-weight: 500;
   }
-
-
 </style>

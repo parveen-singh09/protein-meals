@@ -2,14 +2,26 @@
   <div class="container footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
-          <line x1="6" y1="17" x2="18" y2="17"/>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"
+          ></path>
+          <line x1="6" y1="17" x2="18" y2="17"></line>
         </svg>
         <span>HighProtein Valley</span>
       </div>
       <p class="footer-desc">
-        Your free resource for discovering protein-rich foods. Data sourced from USDA FoodData Central (fdc.nal.usda.gov).
+        Your free resource for discovering protein-rich foods. Data sourced from
+        USDA FoodData Central (fdc.nal.usda.gov).
       </p>
     </div>
 
@@ -38,25 +50,21 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {new Date().getFullYear()} HighProtein Valley. All rights reserved.</p>
-      <p class="footer-source">Nutrition data from <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener noreferrer">USDA FoodData Central</a></p>
+      <p>
+        &copy; {new Date().getFullYear()} HighProtein Valley. All rights reserved.
+      </p>
+      <p class="footer-source">
+        Nutrition data from <a
+          href="https://fdc.nal.usda.gov/"
+          target="_blank"
+          rel="noopener noreferrer">USDA FoodData Central</a
+        >
+      </p>
     </div>
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('[data-sort]').forEach(el => {
-    const link = el as HTMLElement;
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const sortId = link.dataset.sort;
-      if (!sortId) return;
-      const url = new URL(window.location.href);
-      url.searchParams.set('sort', sortId);
-      window.location.href = url.toString();
-    });
-  });
-</script>
+
 
 <style>
   .footer {
@@ -67,7 +75,9 @@
   }
 
   html.theme-ready .footer {
-    transition: background 0.35s ease, border-color 0.35s ease;
+    transition:
+      background 0.35s ease,
+      border-color 0.35s ease;
   }
 
   :root.dark .footer {
@@ -91,7 +101,11 @@
     gap: 0.5rem;
     font-size: 1.125rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-green), var(--accent-teal));
+    background: linear-gradient(
+      135deg,
+      var(--accent-green),
+      var(--accent-teal)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -1,20 +1,8 @@
 ---
 import { foods } from '../data/foods';
-const categories = [
-  { id: 'meat', label: 'Meat & Poultry', icon: '🥩', count: foods.filter(f => f.category === 'meat').length },
-  { id: 'seafood', label: 'Fish & Seafood', icon: '🐟', count: foods.filter(f => f.category === 'seafood').length },
-  { id: 'dairy', label: 'Dairy & Eggs', icon: '🥛', count: foods.filter(f => f.category === 'dairy').length },
-  { id: 'plant', label: 'Plant-Based', icon: '🌱', count: foods.filter(f => f.category === 'plant').length },
-  { id: 'supplements', label: 'Supplements', icon: '💪', count: foods.filter(f => f.category === 'supplements').length },
-];
 ---
 
 <section class="hero">
-  <div class="hero-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
   <div class="container hero-content">
     <div class="hero-text fade-in">
       <div class="hero-badge glass">
@@ -37,20 +25,6 @@ const categories = [
       </div>
     </div>
 
-    <div class="hero-stats fade-in">
-      <div class="hero-stat glass">
-        <span class="hero-stat-value">{foods.length}+</span>
-        <span class="hero-stat-label">Food Items</span>
-      </div>
-      <div class="hero-stat glass">
-        <span class="hero-stat-value">{foods.reduce((s, f) => Math.max(s, f.protein), 0)}g</span>
-        <span class="hero-stat-label">Max Protein/100g</span>
-      </div>
-      <div class="hero-stat glass">
-        <span class="hero-stat-value">{new Set(foods.map(f => f.category)).size}</span>
-        <span class="hero-stat-label">Categories</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -123,21 +97,7 @@ const categories = [
   </div>
 </section>
 
-<section class="categories-section" id="categories">
-  <div class="container">
-    <div class="section-label">Categories</div>
-    <h2 class="features-title">Browse by Food Category</h2>
-    <div class="categories-grid">
-      {categories.map((cat, i) => (
-        <a href={`?category=${cat.id}`} class="category-card glass fade-in" style={`animation-delay: ${i * 80}ms`}>
-          <span class="category-emoji">{cat.icon}</span>
-          <span class="category-name">{cat.label}</span>
-          <span class="category-count">{cat.count} foods</span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+
 
 
 <style>
@@ -150,68 +110,7 @@ const categories = [
     padding-top: 64px;
   }
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
 
-  .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
-  }
-
-  .orb-1 {
-    width: 500px;
-    height: 500px;
-    background: var(--accent-green);
-    top: -10%;
-    right: -5%;
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .orb-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-teal);
-    bottom: -10%;
-    left: -5%;
-    animation: float 10s ease-in-out infinite reverse;
-  }
-
-  .orb-3 {
-    width: 300px;
-    height: 300px;
-    background: var(--accent-lime);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: float 12s ease-in-out infinite;
-  }
-
-  :root.dark .orb-1 {
-    background: #22c55e;
-    opacity: 0.15;
-  }
-
-  :root.dark .orb-2 {
-    background: #14b8a6;
-    opacity: 0.15;
-  }
-
-  :root.dark .orb-3 {
-    background: #65a30d;
-    opacity: 0.15;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -30px) scale(1.05); }
-    66% { transform: translate(-20px, 20px) scale(0.95); }
-  }
 
   .hero-content {
     position: relative;
@@ -276,38 +175,7 @@ const categories = [
     font-size: 1rem;
   }
 
-  .hero-stats {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 
-  .hero-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.25rem 1.75rem;
-    min-width: 140px;
-  }
-
-  .hero-stat-value {
-    font-size: 1.75rem;
-    font-weight: 800;
-    font-family: var(--font-mono);
-    background: linear-gradient(135deg, var(--accent-green), var(--accent-teal));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-stat-label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
 
   .features {
     padding: 6rem 0;
@@ -508,23 +376,6 @@ const categories = [
   @media (min-width: 1024px) {
     .features-grid {
       grid-template-columns: repeat(3, 1fr);
-    }
-    .hero-content {
-      flex-direction: row;
-      text-align: left;
-      justify-content: space-between;
-    }
-    .hero-text {
-      text-align: left;
-    }
-    .hero-subtitle {
-      margin-left: 0;
-    }
-    .hero-actions {
-      justify-content: flex-start;
-    }
-    .hero-stats {
-      flex-direction: column;
     }
   }
 </style>

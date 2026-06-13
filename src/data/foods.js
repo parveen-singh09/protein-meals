@@ -1461,7 +1461,7 @@ export const foods = [
   {
     id: 'nutritional-yeast',
     name: 'Nutritional Yeast',
-    category: 'supplements',
+    category: 'plant',
     protein: 50,
     calories: 320,
     carbs: 35,
@@ -1487,25 +1487,9 @@ export const sortOptions = [
   { id: 'calories-desc', label: 'Highest Calories' },
   { id: 'calories-asc', label: 'Lowest Calories' },
   { id: 'protein-per-price', label: 'Best Protein per $' },
-  { id: 'protein-per-calorie', label: 'Best Protein per Calorie' },
-  { id: 'name-asc', label: 'Name (A-Z)' },
 ];
 
-export function getSortValue(food, sortId) {
-  switch (sortId) {
-    case 'protein-desc': return food.protein;
-    case 'protein-asc': return -food.protein;
-    case 'calories-desc': return food.calories;
-    case 'calories-asc': return -food.calories;
-    case 'protein-per-price': {
-      const priceValue = food.priceUnit === 'lb' ? food.price / 453.6 * 100 : food.price;
-      return food.protein / (priceValue || 1);
-    }
-    case 'protein-per-calorie': return food.protein / (food.calories || 1);
-    case 'name-asc': return food.name;
-    default: return food.protein;
-  }
-}
+
 
 export const ageGroupOptions = [
   { id: 'all-ages', label: 'All Ages' },
