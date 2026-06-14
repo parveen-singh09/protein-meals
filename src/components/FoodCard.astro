@@ -41,8 +41,8 @@ const priceLabel = isWeightUnit
   ? "avg price / 100g"
   : `avg price / ${food.priceUnit}`;
 const displayPrice = isWeightUnit
-  ? ((food.price / 453.6) * 100).toFixed(0)
-  : food.price.toFixed(0);
+  ? (food.price / 453.6).toFixed(2)
+  : (food.price / 100).toFixed(2);
 
 const categoryLabels: Record<string, string> = {
   meat: "Meat & Poultry",
@@ -151,7 +151,7 @@ function microValue(v: number): string {
 
     <div class="card-stats">
       <div class="stat">
-        <span class="stat-value">₹{displayPrice}</span>
+        <span class="stat-value">${displayPrice}</span>
         <span class="stat-label">{priceLabel}</span>
       </div>
       <div class="stat">
@@ -159,7 +159,7 @@ function microValue(v: number): string {
         <span class="stat-label">Bioavailability</span>
       </div>
       <div class="stat">
-        <span class="stat-value">{food.aminoAcids}</span>
+        <span class="stat-value">{food.aminoAcids}%</span>
         <span class="stat-label">Amino Acids</span>
       </div>
     </div>
