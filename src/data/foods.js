@@ -5805,7 +5805,7 @@ export const sortOptions = [
   },
   {
     id: 'protein-per-price',
-    label: 'Best Protein per $',
+    label: 'Best Protein per Price',
   }
 ];
 

@@ -70,13 +70,15 @@ filtered.sort((a, b) => {
     <div class="filters glass fade-in">
       <div class="filter-row">
         <div class="filter-group">
-          <label class="filter-label" for="search-input">Search</label>
-    <input
+        <div class="search-wrapper">
+        <input
       id="search-input"
       type="text"
       class="search-input"
       placeholder="Search foods..."
     />
+        <button class="search-clear" id="search-clear" aria-label="Clear search">&times;</button>
+        </div>
         </div>
         <div class="filter-group">
           <label class="filter-label">Sort By</label>
@@ -177,13 +179,10 @@ filtered.sort((a, b) => {
         return isAscending ? valA - valB : valB - valA;
       }
 
-      // Tie breaker: Name A-Z
       const nameA = a.getAttribute("data-name") || "";
       const nameB = b.getAttribute("data-name") || "";
       return nameA.localeCompare(nameB);
     });
-
-    // Re-append cards in the sorted order and update animation delays for visible ones
     let visibleIndex = 0;
     cards.forEach((card) => {
       if (!card.classList.contains("filtered-out")) {
@@ -195,7 +194,6 @@ filtered.sort((a, b) => {
   }
 
   let searchQuery = "";
-
   function applySearch(query: string) {
     searchQuery = query.toLowerCase().trim();
     applyFilters();
@@ -210,13 +208,9 @@ filtered.sort((a, b) => {
     let visibleIndex = 0;
     cards.forEach((card) => {
       const name = card.getAttribute("data-name") || "";
-      const desc = card.getAttribute("data-description") || "";
       const category = card.getAttribute("data-category") || "";
-
       const matchesSearch = !searchQuery ||
-        name.includes(searchQuery) ||
-        desc.includes(searchQuery) ||
-        category.includes(searchQuery);
+        name.includes(searchQuery);
 
       const matchesCategory = !activeCategory || category === activeCategory;
 
@@ -246,7 +240,6 @@ filtered.sort((a, b) => {
     const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
     const hasValidCategory = validCategories.includes(cleanHash);
     
-    // Desktop links
     const desktopLinks = document.querySelectorAll(".nav-desktop .nav-link");
     desktopLinks.forEach(link => {
       const href = link.getAttribute("href");
@@ -261,7 +254,6 @@ filtered.sort((a, b) => {
       }
     });
 
-    // Mobile links
     const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-link");
     mobileLinks.forEach(link => {
       const href = link.getAttribute("href");
@@ -277,7 +269,6 @@ filtered.sort((a, b) => {
     });
   }
 
-  // Bind click events on chips
   document.querySelectorAll(".chip").forEach((chip) => {
     chip.addEventListener(
       "click",
@@ -288,17 +279,14 @@ filtered.sort((a, b) => {
         const params = new URLSearchParams(href.split("?")[1] || "");
         const sortId = params.get("sort") || "protein-desc";
 
-        // Update active chip styling
         const parent = this.closest(".filter-chips")!;
         parent
           .querySelectorAll(".chip")
           .forEach((c) => c.classList.remove("active"));
         this.classList.add("active");
 
-        // Apply sort
         applyClientSort(sortId);
 
-        // Update URL query parameters without reloading
         const url = new URL(window.location.href);
         url.searchParams.set("sort", sortId);
         window.history.pushState({}, "", url.toString());
@@ -306,15 +294,23 @@ filtered.sort((a, b) => {
     );
   });
 
-  // Bind search input
   const searchInput = document.getElementById("search-input") as HTMLInputElement;
   if (searchInput) {
+    let debounceTimer: ReturnType<typeof setTimeout>;
     searchInput.addEventListener("input", function () {
-      applySearch(this.value);
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => applySearch(this.value), 100);
+    });
+  }
+  const clearBtn = document.getElementById("search-clear") as HTMLButtonElement;
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = "";
+      applySearch("");
+      searchInput.focus();
     });
   }
 
-  // Bind click events on header and mobile navigation category links starting with #
   document.querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link").forEach((link) => {
     link.addEventListener("click", function (this: HTMLAnchorElement, e: Event) {
       const href = this.getAttribute("href");
@@ -326,19 +322,16 @@ filtered.sort((a, b) => {
     });
   });
 
-  // Bind click events on footer sort links
   document.querySelectorAll("[data-sort]").forEach(link => {
     link.addEventListener("click", function(this: HTMLAnchorElement, e: Event) {
       e.preventDefault();
       const sortId = this.getAttribute("data-sort");
       if (!sortId) return;
 
-      // Update URL query parameter without reloading
       const url = new URL(window.location.href);
       url.searchParams.set("sort", sortId);
       window.history.pushState({}, "", url.toString());
 
-      // Update active chip styling in the grid filters
       const chips = document.querySelectorAll(".chip");
       chips.forEach(chip => {
         const href = chip.getAttribute("href") || "";
@@ -351,22 +344,18 @@ filtered.sort((a, b) => {
         }
       });
 
-      // Apply sorting
       applyClientSort(sortId);
 
-      // Smooth scroll to grid section
       const gridSection = document.getElementById("foods");
       gridSection?.scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  // Handle hash changes (category filters)
   window.addEventListener("hashchange", () => {
     const hash = window.location.hash.slice(1);
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
     
-    // Smooth scroll to the foods section only if the hash is a category or All Foods
     const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
     if (validCategories.includes(hash) || hash === "foods") {
       const gridSection = document.getElementById("foods");
@@ -374,7 +363,6 @@ filtered.sort((a, b) => {
     }
   });
 
-  // Handle initial load sort if URL has a search param
   const runInit = () => {
     const initialSort = getQueryParam("sort");
     if (initialSort) {
@@ -400,7 +388,6 @@ filtered.sort((a, b) => {
     updateHeaderActiveState(hash);
 
     if (hash) {
-      // Delay slightly for render completion
       setTimeout(() => {
         const gridSection = document.getElementById("foods");
         gridSection?.scrollIntoView({ behavior: "smooth" });
@@ -500,7 +487,7 @@ filtered.sort((a, b) => {
   }
 
   .search-input {
-    width: 75%;
+    width: 100%;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -509,6 +496,37 @@ filtered.sort((a, b) => {
     color: var(--text-primary);
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+    padding-right: 2rem;
+  }
+
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 0.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0 0.25rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-clear:hover {
+    color: var(--text-primary);
+  }
+
+  .search-input:not(:placeholder-shown) ~ .search-clear {
+    display: flex;
   }
 
   :root.dark .search-input {
@@ -550,6 +568,13 @@ filtered.sort((a, b) => {
     gap: 1.5rem;
   }
 
+  /* .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  } */
+
   .empty-state {
     display: flex;
     flex-direction: column;
@@ -589,8 +614,10 @@ filtered.sort((a, b) => {
     .filter-row {
       flex-direction: row;
     }
+  }
+  @media (min-width: 768px) {
     .filter-group:first-child {
-      flex: 0 0 35%;
+      width: 35%;
     }
   }
 

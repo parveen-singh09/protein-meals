@@ -83,6 +83,13 @@ const microLabels: Record<string, string> = {
   sodium: "Sodium",
 };
 
+const DISPLAY_MICROS = [
+  'vitaminA', 'vitaminC', 'vitaminD', 'vitaminE', 'vitaminK',
+  'thiamin', 'riboflavin', 'niacin', 'vitaminB6', 'folate', 'vitaminB12',
+  'calcium', 'iron', 'magnesium', 'phosphorus', 'potassium', 'sodium',
+  'zinc', 'copper', 'manganese', 'selenium'
+];
+
 const mcgKeys = new Set([
   "vitaminA", "vitaminD", "vitaminK", "folate", "vitaminB12", "selenium",
 ]);
@@ -112,6 +119,7 @@ function microValue(v: number, key: string): string {
   data-name={food.name.toLowerCase()}
   data-category={food.category}
   data-description={food.description.toLowerCase()}
+  data-tags={food.tags?.join(' ').toLowerCase() || ''}
 >
   <div class="card-row">
     <div class="card-left">
@@ -182,14 +190,15 @@ function microValue(v: number, key: string): string {
     <div class="card-right">
       <div class="micro-content">
         {
-          Object.entries(food.micros)
-            .filter(([, v]) => v != null && v !== 0)
-            .map(([key, val]) => (
+          DISPLAY_MICROS.map((key) => {
+            const val = food.micros[key] ?? 0;
+            return (
               <span class="micro-item">
                 {microLabels[key] || key}
-                <span class="micro-value">{microValue(val!, key)}</span>
+                <span class="micro-value" class:list={{ "micro-zero": val === 0 }}>{microValue(val, key)}</span>
               </span>
-            ))
+            );
+          })
         }
       </div>
     </div>
@@ -211,11 +220,12 @@ function microValue(v: number, key: string): string {
   }
 
   .card-right {
-    flex: 0 0 200px;
+    flex: 0 0 220px;
     padding: 1.25rem;
     border-left: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
+    min-height: 0;
   }
 
   :root.dark .card-right {
@@ -418,6 +428,9 @@ function microValue(v: number, key: string): string {
   }
 
   .micro-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -448,6 +461,10 @@ function microValue(v: number, key: string): string {
     color: #3b82f6;
   }
 
+  .micro-zero {
+    color: #f97316 !important;
+  }
+
   @media (max-width: 640px) {
     .card-row {
       flex-direction: column;
@@ -457,6 +474,7 @@ function microValue(v: number, key: string): string {
       flex: none;
       border-left: none;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
+      max-height: 240px;
     }
 
     :root.dark .card-right {
