@@ -27,26 +27,7 @@ import { categories } from "../data/foods";
       </svg>
     </button>
     <a href="/" class="logo">
-      <span class="logo-icon">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"
-          ></path>
-          <line x1="6" y1="17" x2="18" y2="17"></line>
-        </svg>
-      </span>
-      <div class="logo-text">
-        <span class="logo-title">HighProtein Labs</span>
-      </div>
+      <img src="/favicon-96x96.png" alt="HighProtein Labs" width="27" height="27" style="border-radius: 8px;" />
     </a>
 
     <nav class="nav-desktop">
@@ -213,50 +194,8 @@ import { categories } from "../data/foods";
   .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
     flex-shrink: 0;
-  }
-
-  .logo-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: linear-gradient(
-      135deg,
-      var(--accent-green),
-      var(--accent-teal)
-    );
-    color: white;
-  }
-
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .logo-title {
-    font-size: 1.125rem;
-    font-weight: 700;
-    background: linear-gradient(
-      135deg,
-      var(--accent-green),
-      var(--accent-teal)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.2;
-  }
-
-  .logo-sub {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    -webkit-text-fill-color: var(--text-muted);
   }
 
   .nav-desktop {
@@ -437,9 +376,6 @@ import { categories } from "../data/foods";
   }
 
   @media (max-width: 767px) {
-    .logo-icon {
-      display: none;
-    }
     .header-inner {
       gap: 0.25rem;
     }
