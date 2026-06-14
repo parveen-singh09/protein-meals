@@ -13,8 +13,8 @@ import { foods } from '../data/foods';
         Discover <span class="gradient-text">High Protein</span> Foods
       </h1>
       <p class="hero-subtitle">
-        Explore {foods.length}+ protein-rich foods with complete macros, micros, prices, and HD images.
-        Data sourced from USDA FoodData Central. Free for everyone.
+        Explore 100+ protein-rich common foods with complete macros, micros, prices, and HD images.
+        Free for everyone.
       </p>
       <div class="hero-actions">
         <a href="#foods" class="btn btn-hero">
@@ -39,7 +39,7 @@ import { foods } from '../data/foods';
             <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
           </svg>
         </div>
-        <h3>Complete Macros</h3>
+        <h3>Complete Macros & Micros</h3>
         <p>Protein, calories, carbs, fat, and fiber per 100g for every food item. No guesswork.</p>
       </div>
 
@@ -50,7 +50,7 @@ import { foods } from '../data/foods';
           </svg>
         </div>
         <h3>Price Tracking</h3>
-        <p>Average prices included so you can find the best protein per dollar value for your budget.</p>
+        <p>Average prices included so you can find the best protein per price value for your budget.</p>
       </div>
 
       <div class="feature-card glass fade-in" style="animation-delay: 160ms">
@@ -63,25 +63,6 @@ import { foods } from '../data/foods';
         <p>Sort by protein content, calories, protein per dollar, protein per calorie, and more.</p>
       </div>
 
-      <div class="feature-card glass fade-in" style="animation-delay: 240ms">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <h3>Micronutrients</h3>
-        <p>Detailed vitamin and mineral profiles for each food. Know exactly what you're getting.</p>
-      </div>
-
-      <div class="feature-card glass fade-in" style="animation-delay: 320ms">
-        <div class="feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-        </div>
-        <h3>USDA Verified</h3>
-        <p>All data sourced from USDA FoodData Central (fdc.nal.usda.gov) — the most reliable nutrition database.</p>
-      </div>
 
       <div class="feature-card glass fade-in" style="animation-delay: 400ms">
         <div class="feature-icon">
@@ -90,7 +71,7 @@ import { foods } from '../data/foods';
           </svg>
         </div>
         <h3>Filter & Search</h3>
-        <p>Filter by category, availability, or search by name, description, and tags to find exactly what you need.</p>
+        <p>Filter by different categories of food like, veg, non-veg, supplements and so on</p>
       </div>
     </div>
   </div>
@@ -201,12 +182,13 @@ import { foods } from '../data/foods';
   }
 
   .features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
   .feature-card {
+    flex: 1 1 100%;
     padding: 1.5rem;
     transition: all 0.3s;
   }
@@ -367,14 +349,14 @@ import { foods } from '../data/foods';
   }
 
   @media (min-width: 640px) {
-    .features-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .feature-card {
+      flex: 1 1 calc(50% - 0.5rem);
     }
   }
 
   @media (min-width: 1024px) {
-    .features-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .feature-card {
+      flex: 1 1 calc(33.333% - 0.667rem);
     }
   }
 </style>
