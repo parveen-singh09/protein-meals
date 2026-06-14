@@ -101,77 +101,80 @@ function microValue(v: number): string {
   data-name={food.name.toLowerCase()}
   data-category={food.category}
 >
-  <div class="card-image">
-    <img
-      src={food.image}
-      alt={food.name}
-      loading={index < 12 ? "eager" : "lazy"}
-    />
-
-    <div class="card-category">
-      {categoryLabels[food.category] || food.category}
-    </div>
-  </div>
-
-  <div class="card-body">
-    <h3 class="card-title">{food.name}</h3>
-    <p class="card-desc">{food.description}</p>
-
-    <div class="macro-bar">
-      <div class="macro-bar-label">
-        <span>Protein</span>
-        <span class="macro-value highlight"
-          >{food.protein}g / {food.serving.replace(/\(.*\)/, "").trim()}</span
-        >
+  <div class="card-row">
+    <div class="card-left">
+      <div class="card-image">
+        <img
+          src={food.image}
+          alt={food.name}
+          loading={index < 12 ? "eager" : "lazy"}
+        />
+        <div class="card-category">
+          {categoryLabels[food.category] || food.category}
+        </div>
       </div>
-      <div class="macro-bar-track">
-        <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}>
+
+      <div class="card-body">
+        <h3 class="card-title">{food.name}</h3>
+        <p class="card-desc">{food.description}</p>
+
+        <div class="macro-bar">
+          <div class="macro-bar-label">
+            <span>Protein</span>
+            <span class="macro-value highlight"
+              >{food.protein}g / {food.serving.replace(/\(.*\)/, "").trim()}</span
+            >
+          </div>
+          <div class="macro-bar-track">
+            <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}>
+            </div>
+          </div>
+        </div>
+
+        <div class="macro-grid">
+          <div class="macro-item">
+            <span>{food.calories}</span>
+            <small>Calories</small>
+          </div>
+          <div class="macro-item">
+            <span>{food.carbs}g</span>
+            <small>Carbs</small>
+          </div>
+          <div class="macro-item">
+            <span>{food.fat}g</span>
+            <small>Fat</small>
+          </div>
+          <div class="macro-item">
+            <span>{food.fiber}g</span>
+            <small>Fiber</small>
+          </div>
+        </div>
+
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">${displayPrice}</span>
+            <span class="stat-label">Per {isWeightUnit ? "100g" : food.priceUnit}</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">{food.bioavailability}%</span>
+            <span class="stat-label">Bioavailability</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">{food.aminoAcids}%</span>
+            <span class="stat-label">Amino Acids</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="macro-grid">
-      <div class="macro-item">
-        <span>{food.calories}</span>
-        <small>Calories</small>
-      </div>
-      <div class="macro-item">
-        <span>{food.carbs}g</span>
-        <small>Carbs</small>
-      </div>
-      <div class="macro-item">
-        <span>{food.fat}g</span>
-        <small>Fat</small>
-      </div>
-      <div class="macro-item">
-        <span>{food.fiber}g</span>
-        <small>Fiber</small>
-      </div>
-    </div>
-
-    <div class="card-stats">
-      <div class="stat">
-        <span class="stat-value">${displayPrice}</span>
-        <span class="stat-label">{priceLabel}</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">{food.bioavailability}%</span>
-        <span class="stat-label">Bioavailability</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">{food.aminoAcids}%</span>
-        <span class="stat-label">Amino Acids</span>
-      </div>
-    </div>
-
-    <div class="micro-section">
+    <div class="card-right">
       <div class="micro-content">
         {
           Object.entries(food.micros)
             .filter(([, v]) => v != null && v !== 0)
             .map(([key, val]) => (
               <span class="micro-item">
-                {microLabels[key] || key} -{" "}
+                {microLabels[key] || key}
                 <span class="micro-value">{microValue(val!)}</span>
               </span>
             ))
@@ -182,6 +185,31 @@ function microValue(v: number): string {
 </article>
 
 <style>
+  .card-row {
+    display: flex;
+  }
+
+  .card-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .card-right {
+    flex: 0 0 200px;
+    padding: 1.25rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  :root.dark .card-right {
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
   .food-card {
     overflow: hidden;
     transition: all 0.3s ease;
@@ -213,6 +241,7 @@ function microValue(v: number): string {
   .card-image {
     position: relative;
     height: 180px;
+    border-radius: 0.5rem;
     overflow: hidden;
   }
 
@@ -238,7 +267,6 @@ function microValue(v: number): string {
   }
 
   .card-body {
-    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.875rem;
@@ -296,9 +324,14 @@ function microValue(v: number): string {
   }
 
   .macro-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
+  }
+
+  .macro-grid .macro-item {
+    flex: 1 0 60px;
+    min-width: 0;
   }
 
   .macro-item {
@@ -334,13 +367,18 @@ function microValue(v: number): string {
   }
 
   .card-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     padding: 0.75rem;
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .card-stats .stat {
+    flex: 1 0 70px;
+    min-width: 0;
   }
 
   :root.dark .card-stats {
@@ -369,9 +407,11 @@ function microValue(v: number): string {
 
   .micro-content {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     column-gap: 0.25rem;
     row-gap: 0.125rem;
+    align-items: center;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
     background: rgba(255, 255, 255, 0.2);
@@ -394,5 +434,21 @@ function microValue(v: number): string {
 
   .micro-value {
     color: #3b82f6;
+  }
+
+  @media (max-width: 640px) {
+    .card-row {
+      flex-direction: column;
+    }
+
+    .card-right {
+      flex: none;
+      border-left: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    :root.dark .card-right {
+      border-color: rgba(255, 255, 255, 0.06);
+    }
   }
 </style>
