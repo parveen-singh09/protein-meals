@@ -20,6 +20,7 @@ export interface Props {
     type: string;
     completeProtein: boolean;
     bioavailability: number;
+    aminoAcids: number;
     tags: string[];
   };
   index: number;
@@ -28,7 +29,6 @@ export interface Props {
 const { food, index } = Astro.props;
 
 const proteinBarPercent = Math.min((food.protein / 100) * 100, 100);
-
 
 const priceValue =
   food.priceUnit === "lb" ? (food.price / 453.6) * 100 : food.price;
@@ -120,7 +120,9 @@ function microValue(v: number): string {
     <div class="macro-bar">
       <div class="macro-bar-label">
         <span>Protein</span>
-        <span class="macro-value highlight">{food.protein}g / {food.serving.replace(/\(.*\)/, "").trim()}</span>
+        <span class="macro-value highlight"
+          >{food.protein}g / {food.serving.replace(/\(.*\)/, "").trim()}</span
+        >
       </div>
       <div class="macro-bar-track">
         <div class="macro-bar-fill" style={`width: ${proteinBarPercent}%`}>
@@ -157,21 +159,22 @@ function microValue(v: number): string {
         <span class="stat-label">Bioavailability</span>
       </div>
       <div class="stat">
-        <span class="stat-value"
-          >{food.serving.replace(/\(.*\)/, "").trim()}</span
-        >
-        <span class="stat-label">Serving</span>
+        <span class="stat-value">{food.aminoAcids}</span>
+        <span class="stat-label">Amino Acids</span>
       </div>
     </div>
 
     <div class="micro-section">
       <div class="micro-content">
         {
-          Object.entries(food.micros).filter(([, v]) => v != null && v !== 0).map(([key, val]) => (
-            <span class="micro-item"
-              >{microLabels[key] || key} - <span class="micro-value">{microValue(val!)}</span></span
-            >
-          ))
+          Object.entries(food.micros)
+            .filter(([, v]) => v != null && v !== 0)
+            .map(([key, val]) => (
+              <span class="micro-item">
+                {microLabels[key] || key} -{" "}
+                <span class="micro-value">{microValue(val!)}</span>
+              </span>
+            ))
         }
       </div>
     </div>
