@@ -83,12 +83,23 @@ const microLabels: Record<string, string> = {
   sodium: "Sodium",
 };
 
-function microValue(v: number): string {
+const mcgKeys = new Set([
+  "vitaminA", "vitaminD", "vitaminK", "folate", "vitaminB12", "selenium",
+]);
+
+function microValue(v: number, key: string): string {
   if (v === 0) return "0";
+
+  if (mcgKeys.has(key)) {
+    // Some data stores µg nutrients in mg (e.g., salmon D: 0.012 mg = 12 µg)
+    if (v < 0.1) v = v * 1000;
+    if (v >= 1000) return (v / 1000).toFixed(1) + "mg";
+    return v.toFixed(v < 1 ? 1 : 0) + "µg";
+  }
+
   if (v >= 1000) return (v / 1000).toFixed(1) + "g";
-  if (v >= 1) return v.toFixed(1) + "mg";
-  if (v >= 0.001) return (v * 1000).toFixed(0) + "µg";
-  return (v * 1000).toFixed(1) + "µg";
+  if (v >= 1) return v.toFixed(v >= 10 ? 1 : 2) + "mg";
+  return (v * 1000).toFixed(v * 1000 >= 1 ? 0 : 1) + "µg";
 }
 ---
 
@@ -100,6 +111,7 @@ function microValue(v: number): string {
   data-protein-per-price={proteinPerPrice}
   data-name={food.name.toLowerCase()}
   data-category={food.category}
+  data-description={food.description.toLowerCase()}
 >
   <div class="card-row">
     <div class="card-left">
@@ -160,7 +172,7 @@ function microValue(v: number): string {
             <span class="stat-label">Bioavailability</span>
           </div>
           <div class="stat">
-            <span class="stat-value">{food.aminoAcids}%</span>
+            <span class="stat-value">{food.aminoAcids}</span>
             <span class="stat-label">Amino Acids</span>
           </div>
         </div>
@@ -175,7 +187,7 @@ function microValue(v: number): string {
             .map(([key, val]) => (
               <span class="micro-item">
                 {microLabels[key] || key}
-                <span class="micro-value">{microValue(val!)}</span>
+                <span class="micro-value">{microValue(val!, key)}</span>
               </span>
             ))
         }
@@ -318,7 +330,7 @@ function microValue(v: number): string {
 
   .macro-bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-teal), var(--accent-blue));
+    background: linear-gradient(90deg, var(--accent-emerald), var(--accent-green-light));
     border-radius: 3px;
     transition: width 0.6s ease;
   }
