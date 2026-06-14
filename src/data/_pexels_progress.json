@@ -2,439 +2,862 @@
   "chicken-breast": {
     "url": "https://images.pexels.com/photos/5769376/pexels-photo-5769376.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 5769376,
-    "query": "raw chicken breast",
-    "photographer": "Leeloo The First"
+    "query": "Chicken Breast",
+    "photographer": "Leeloo The First",
+    "alt": "Raw chicken breasts garnished with rosemary and garlic on a white surface."
   },
   "turkey-breast": {
-    "url": "https://images.pexels.com/photos/5769376/pexels-photo-5769376.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 5769376,
-    "query": "raw turkey breast",
-    "photographer": "Leeloo The First"
+    "url": "https://images.pexels.com/photos/16496288/pexels-photo-16496288.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 16496288,
+    "query": "Turkey Breast",
+    "photographer": "Valeriya Kobzar",
+    "alt": "A gourmet breakfast plate featuring a perfectly fried egg, toast, turkey slices, and fresh veggies."
   },
   "lean-ground-beef": {
-    "url": "https://images.pexels.com/photos/128401/pexels-photo-128401.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 128401,
-    "query": "raw ground beef mince",
-    "photographer": "Angele  J"
+    "url": "https://images.pexels.com/photos/7284305/pexels-photo-7284305.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7284305,
+    "query": "Lean Ground Beef (90/10)",
+    "photographer": "Alexas Fotos",
+    "alt": "Detailed close-up image of raw, red ground beef with visible strands."
   },
   "beef-sirloin": {
     "url": "https://images.pexels.com/photos/618775/pexels-photo-618775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 618775,
-    "query": "raw beef sirloin steak",
-    "photographer": "Lukas Blazek"
+    "query": "Beef Sirloin Steak",
+    "photographer": "Lukas Blazek",
+    "alt": "Raw beef steak seasoned with spices on a wooden chopping board. Perfect for cooking enthusiasts."
   },
   "pork-tenderloin": {
-    "url": "https://images.pexels.com/photos/27603410/pexels-photo-27603410.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 27603410,
-    "query": "raw pork tenderloin fillet meat fresh",
-    "photographer": "Dương Nhân",
-    "alt": "Close-up of raw beef steaks garnished with rosemary, ready for cooking."
+    "url": "https://images.pexels.com/photos/341044/pexels-photo-341044.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 341044,
+    "query": "Pork Tenderloin",
+    "photographer": "Viktor Tasnadi",
+    "alt": "Sliced pork tenderloin with herb garnish and green puree on a white plate."
   },
   "lamb-chop": {
-    "url": "https://images.pexels.com/photos/6281507/pexels-photo-6281507.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 6281507,
-    "query": "raw lamb chop meat",
-    "photographer": "Ragil Tagiyev"
+    "url": "https://images.pexels.com/photos/6281506/pexels-photo-6281506.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6281506,
+    "query": "Lamb Chop (Lean)",
+    "photographer": "Ragil Tagiyev",
+    "alt": "Top view of fresh meat with herbs, spices, and vegetables on a cutting board."
   },
   "bison": {
-    "url": "https://images.pexels.com/photos/9173043/pexels-photo-9173043.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 9173043,
-    "query": "raw bison buffalo meat",
-    "photographer": "Chris F"
+    "url": "https://images.pexels.com/photos/27826323/pexels-photo-27826323.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 27826323,
+    "query": "Bison/Buffalo",
+    "photographer": "DANNIEL CORBIT",
+    "alt": "Wild bison herd roaming freely in a natural setting, showcasing their strength and presence."
   },
   "chicken-thigh": {
-    "url": "https://images.pexels.com/photos/13422467/pexels-photo-13422467.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 13422467,
-    "query": "raw chicken thigh",
-    "photographer": "Mateusz Feliksik"
+    "url": "https://images.pexels.com/photos/26707585/pexels-photo-26707585.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 26707585,
+    "query": "Chicken Thigh (Skinless)",
+    "photographer": "Towfiqu barbhuiya",
+    "alt": "A variety of fresh ingredients including chicken, vegetables, and spices ready for a healthy meal."
   },
   "venison": {
-    "url": "https://images.pexels.com/photos/19405544/pexels-photo-19405544.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 19405544,
-    "query": "raw venison deer meat",
-    "photographer": "Art Litvinau"
+    "url": "https://images.pexels.com/photos/13237137/pexels-photo-13237137.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 13237137,
+    "query": "Venison (Deer)",
+    "photographer": "Andrew Patrick Photo",
+    "alt": "Two white-tailed deer in a forest setting, showcasing their majestic antlers and natural habitat."
   },
   "pork-chops": {
-    "url": "https://images.pexels.com/photos/5500663/pexels-photo-5500663.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 5500663,
-    "query": "raw pork chop meat",
-    "photographer": "Bulat Khamitov"
+    "url": "https://images.pexels.com/photos/10647859/pexels-photo-10647859.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10647859,
+    "query": "Pork Chops (Center Cut)",
+    "photographer": "Rickie-Tom Schünemann",
+    "alt": "Fresh raw pork chops on display in a butcher shop, ready for sale."
   },
   "beef-jerky": {
     "url": "https://images.pexels.com/photos/8250275/pexels-photo-8250275.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 8250275,
-    "query": "beef jerky dried meat sticks strips",
+    "query": "Beef Jerky",
     "photographer": "Julia Filirovska",
     "alt": "A close-up view of dried, seasoned meat slices displayed in a wicker basket."
   },
   "ground-turkey": {
-    "url": "https://images.pexels.com/photos/7284305/pexels-photo-7284305.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 7284305,
-    "query": "ground turkey raw minced poultry white meat",
-    "photographer": "Alexas Fotos",
-    "alt": "Detailed close-up image of raw, red ground beef with visible strands."
-  },
-  "beef-liver": {
-    "url": "https://images.pexels.com/photos/18606644/pexels-photo-18606644.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 18606644,
-    "query": "raw beef liver organ",
-    "photographer": "Doğan Alpaslan  Demir"
+    "url": "https://images.pexels.com/photos/7225725/pexels-photo-7225725.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7225725,
+    "query": "Ground Turkey (93/7)",
+    "photographer": "Eva Bronzini",
+    "alt": "High-angle shot of raw minced meat in enamel bowl with chopsticks, perfect for culinary themes."
   },
   "sirloin-steak": {
-    "url": "https://images.pexels.com/photos/618775/pexels-photo-618775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 618775,
-    "query": "beef sirloin steak",
-    "photographer": "Lukas Blazek"
+    "url": "https://images.pexels.com/photos/20187067/pexels-photo-20187067.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 20187067,
+    "query": "Beef Sirloin Steak",
+    "photographer": "Boys in Bristol Photography",
+    "alt": "Close-up of a raw steak on a red cutting board, ideal for food photography."
+  },
+  "beef-liver": {
+    "url": "https://images.pexels.com/photos/18606624/pexels-photo-18606624.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 18606624,
+    "query": "Beef Liver",
+    "photographer": "Doğan Alpaslan  Demir",
+    "alt": "Close-up of raw beef livers hanging at a butcher's display, showcasing fresh meat preparation."
+  },
+  "duck-breast": {
+    "url": "https://images.pexels.com/photos/17751633/pexels-photo-17751633.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 17751633,
+    "query": "Duck Breast (Skinless)",
+    "photographer": "Valeria Boltneva",
+    "alt": "Sliced duck breast served with a rich sauce and fresh fruit garnish, showcasing gourmet dining."
+  },
+  "rabbit-meat": {
+    "url": "https://images.pexels.com/photos/19613749/pexels-photo-19613749.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 19613749,
+    "query": "Rabbit",
+    "photographer": "William Warby",
+    "alt": "Adorable close-up photo of a domestic rabbit sitting on grass in Normandy, France."
+  },
+  "veal-cutlet": {
+    "url": "https://images.pexels.com/photos/34636425/pexels-photo-34636425.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 34636425,
+    "query": "Veal Cutlet",
+    "photographer": "Novkov Visuals",
+    "alt": "Golden crispy schnitzel served with a fresh vegetable salad, presented on a square plate."
+  },
+  "goat-meat": {
+    "url": "https://images.pexels.com/photos/18864678/pexels-photo-18864678.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 18864678,
+    "query": "Goat Meat",
+    "photographer": "M.Emin  BİLİR",
+    "alt": "A peaceful goat resting in a sunny meadow, surrounded by grass and fellow goats."
+  },
+  "chicken-liver": {
+    "url": "https://images.pexels.com/photos/6281495/pexels-photo-6281495.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6281495,
+    "query": "Chicken Liver",
+    "photographer": "Ragil Tagiyev",
+    "alt": "Aerial view of raw ingredients on a chopping board with spices and knife."
+  },
+  "beef-brisket": {
+    "url": "https://images.pexels.com/photos/36869213/pexels-photo-36869213.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 36869213,
+    "query": "Beef Brisket",
+    "photographer": "Bezalens JGP",
+    "alt": "A detailed view of sliced brisket on a wooden cutting board with a knife."
+  },
+  "pork-shoulder": {
+    "url": "https://images.pexels.com/photos/5774154/pexels-photo-5774154.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5774154,
+    "query": "Pork Shoulder",
+    "photographer": "Luis Becerra  Fotógrafo",
+    "alt": "Assorted raw meat cuts displayed on a wooden chopping board with sliced potatoes and spring onions."
+  },
+  "pork-belly": {
+    "url": "https://images.pexels.com/photos/8915004/pexels-photo-8915004.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8915004,
+    "query": "Pork Belly",
+    "photographer": "makafood",
+    "alt": "Raw pork pieces placed on a grill, ready for cooking, surrounded by side dishes."
+  },
+  "turkey-thigh": {
+    "url": "https://images.pexels.com/photos/5876354/pexels-photo-5876354.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5876354,
+    "query": "Turkey Thigh (Skinless)",
+    "photographer": "Monstera Production",
+    "alt": "Unrecognizable African American couple standing at wooden counter with tray of uncooked whole turkey topped with rosemary in kitchen on blurred background"
+  },
+  "beef-tongue": {
+    "url": "https://images.pexels.com/photos/37800171/pexels-photo-37800171.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 37800171,
+    "query": "Beef Tongue",
+    "photographer": "Emanuele Ricciardi",
+    "alt": "Close-up of fresh beef skewers at a Japanese market stall, highlighting traditional street food."
+  },
+  "lamb-shoulder": {
+    "url": "https://images.pexels.com/photos/31732110/pexels-photo-31732110.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 31732110,
+    "query": "Lamb Shoulder",
+    "photographer": "Reco Alleyne",
+    "alt": "Detailed close-up of raw lamb chops highlighting intricate marbling and rich color."
+  },
+  "cornish-hen": {
+    "url": "https://images.pexels.com/photos/17064389/pexels-photo-17064389.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 17064389,
+    "query": "Cornish Hen",
+    "photographer": "raja j",
+    "alt": "Broiler chickens gathered around a feeder on a poultry farm."
+  },
+  "quail": {
+    "url": "https://images.pexels.com/photos/6978936/pexels-photo-6978936.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6978936,
+    "query": "Quail",
+    "photographer": "KATRIN  BOLOVTSOVA",
+    "alt": "A selection of quail eggs displayed on a wooden surface with a carton and round tray."
+  },
+  "goose": {
+    "url": "https://images.pexels.com/photos/26547171/pexels-photo-26547171.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 26547171,
+    "query": "Goose",
+    "photographer": "Sydney Sang",
+    "alt": "A solitary Canada goose stands on a pier by the water. Perfect for nature lovers."
+  },
+  "chicken-gizzards": {
+    "url": "https://images.pexels.com/photos/13524831/pexels-photo-13524831.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 13524831,
+    "query": "Chicken Gizzards",
+    "photographer": "Alejandro Maroto",
+    "alt": "Close-up of raw chickens hanging on hooks in a market, ready for sale."
+  },
+  "beef-heart": {
+    "url": "https://images.pexels.com/photos/8477054/pexels-photo-8477054.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8477054,
+    "query": "Beef Heart",
+    "photographer": "Los Muertos Crew",
+    "alt": "Close-up of a chef holding a raw heart while wearing gloves, captured indoors."
   },
   "salmon": {
-    "url": "https://images.pexels.com/photos/5014596/pexels-photo-5014596.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 5014596,
-    "query": "raw salmon fillet fish",
-    "photographer": "Anastasia Yudin"
+    "url": "https://images.pexels.com/photos/28172684/pexels-photo-28172684.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 28172684,
+    "query": "Salmon (Wild Caught)",
+    "photographer": "Mark Alicea",
+    "alt": "Close-up of fresh salmon fillets displayed at a market in Toronto."
   },
   "tuna": {
     "url": "https://images.pexels.com/photos/14426299/pexels-photo-14426299.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 14426299,
-    "query": "canned tuna fish",
-    "photographer": "Towfiqu barbhuiya"
-  },
-  "tuna-steak": {
-    "url": "https://images.pexels.com/photos/14062112/pexels-photo-14062112.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 14062112,
-    "query": "raw tuna steak fish",
-    "photographer": "Deane Bayas"
+    "query": "Tuna (Canned in Water)",
+    "photographer": "Towfiqu barbhuiya",
+    "alt": "A close-up of an opened canned tuna held over a wooden cutting board and utensils."
   },
   "shrimp": {
-    "url": "https://images.pexels.com/photos/5273798/pexels-photo-5273798.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 5273798,
-    "query": "raw shrimp prawn seafood",
-    "photographer": "Ponsakthi Anand"
+    "url": "https://images.pexels.com/photos/21771249/pexels-photo-21771249.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 21771249,
+    "query": "Shrimp",
+    "photographer": "Valeria Boltneva",
+    "alt": "High-quality close-up of raw shrimps in a blue bowl, perfect for seafood-themed culinary projects."
   },
   "cod": {
-    "url": "https://images.pexels.com/photos/8629084/pexels-photo-8629084.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 8629084,
-    "query": "raw cod fish fillet",
-    "photographer": "Kampus Production"
+    "url": "https://images.pexels.com/photos/8351639/pexels-photo-8351639.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8351639,
+    "query": "Cod (Atlantic)",
+    "photographer": "Kindel Media",
+    "alt": "A vibrant display of fresh black cod fish at a seafood market, showcasing high-quality seafood."
   },
   "tilapia": {
-    "url": "https://images.pexels.com/photos/34111355/pexels-photo-34111355.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 34111355,
-    "query": "raw tilapia fish fillet",
-    "photographer": "pooliwattano P"
+    "url": "https://images.pexels.com/photos/31636077/pexels-photo-31636077.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 31636077,
+    "query": "Tilapia",
+    "photographer": "Kazys Photography",
+    "alt": "Freshly caught tilapia fish stacked in a basket, ready for market sale."
   },
   "sardines": {
     "url": "https://images.pexels.com/photos/9797030/pexels-photo-9797030.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 9797030,
-    "query": "canned sardines fish",
-    "photographer": "Towfiqu barbhuiya"
+    "query": "Sardines (Canned in Oil)",
+    "photographer": "Towfiqu barbhuiya",
+    "alt": "Close-up of canned sardines in olive oil with a fork on a wooden surface."
   },
   "halibut": {
-    "url": "https://images.pexels.com/photos/14062108/pexels-photo-14062108.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 14062108,
-    "query": "raw halibut fish fillet",
-    "photographer": "Deane Bayas"
-  },
-  "mackerel": {
-    "url": "https://images.pexels.com/photos/8352392/pexels-photo-8352392.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 8352392,
-    "query": "raw mackerel fish",
-    "photographer": "Kindel Media"
+    "url": "https://images.pexels.com/photos/35288360/pexels-photo-35288360.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 35288360,
+    "query": "Halibut",
+    "photographer": "Andreas Berget",
+    "alt": "A serene underwater scene capturing the graceful swim of Atlantic halibut fish in the ocean."
   },
   "scallops": {
-    "url": "https://images.pexels.com/photos/28731912/pexels-photo-28731912.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 28731912,
-    "query": "raw scallops seafood",
-    "photographer": "iris lee"
+    "url": "https://images.pexels.com/photos/32988590/pexels-photo-32988590.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 32988590,
+    "query": "Scallops",
+    "photographer": "Elzaproart",
+    "alt": "A pile of fresh scallops still in their shells, perfect for seafood dishes."
   },
   "crab": {
-    "url": "https://images.pexels.com/photos/3640448/pexels-photo-3640448.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 3640448,
-    "query": "crab seafood",
-    "photographer": "Jaradah Fish"
+    "url": "https://images.pexels.com/photos/11402497/pexels-photo-11402497.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 11402497,
+    "query": "Crab (Blue)",
+    "photographer": "Picas Joe",
+    "alt": "Close-up of fresh crabs on ice, showcasing seafood freshness and quality."
   },
   "lobster": {
     "url": "https://images.pexels.com/photos/3650124/pexels-photo-3650124.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 3650124,
-    "query": "lobster seafood",
-    "photographer": "energepic.com"
+    "query": "Lobster",
+    "photographer": "energepic.com",
+    "alt": "Vibrant red lobsters chilling on a bed of ice, perfect for seafood lovers."
+  },
+  "mackerel": {
+    "url": "https://images.pexels.com/photos/9143774/pexels-photo-9143774.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 9143774,
+    "query": "Mackerel (Atlantic)",
+    "photographer": "mehdi aydın",
+    "alt": "A vertical shot showcasing an abundant collection of raw mackerels, emphasizing freshness and texture."
+  },
+  "tuna-steak": {
+    "url": "https://images.pexels.com/photos/10432642/pexels-photo-10432642.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10432642,
+    "query": "Tuna Steak (Yellowfin)",
+    "photographer": "RDNE Stock project",
+    "alt": "High-quality close-up of raw tuna fish piece, perfect for culinary and food photography."
   },
   "clams": {
-    "url": "https://images.pexels.com/photos/27624730/pexels-photo-27624730.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 27624730,
-    "query": "clams seafood shellfish",
-    "photographer": "Dudubangbang Travel"
+    "url": "https://images.pexels.com/photos/8352783/pexels-photo-8352783.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8352783,
+    "query": "Clams (Canned)",
+    "photographer": "Kindel Media",
+    "alt": "High-quality close-up of fresh clams on ice, perfect for seafood-themed projects."
+  },
+  "trout": {
+    "url": "https://images.pexels.com/photos/19524032/pexels-photo-19524032.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 19524032,
+    "query": "Trout (Rainbow)",
+    "photographer": "Marcelo Verfe",
+    "alt": "Two fresh raw fish with garlic, rosemary, and onions on wooden board."
+  },
+  "haddock": {
+    "url": "https://images.pexels.com/photos/36704545/pexels-photo-36704545.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 36704545,
+    "query": "Haddock",
+    "photographer": "Dahlia E. Akhaine",
+    "alt": "Variety of fresh fish and seafood on display at an outdoor market in Northern Ireland."
+  },
+  "catfish": {
+    "url": "https://images.pexels.com/photos/4619577/pexels-photo-4619577.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 4619577,
+    "query": "Catfish",
+    "photographer": "Orsys _tography",
+    "alt": "Close-up of a fresh catfish wrapped in transparent plastic against a dark background. Seafood photography."
+  },
+  "sea-bass": {
+    "url": "https://images.pexels.com/photos/14062103/pexels-photo-14062103.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 14062103,
+    "query": "Sea Bass",
+    "photographer": "Deane Bayas",
+    "alt": "Top view of fresh whole fish placed on ice in a metal container, perfect for seafood concepts."
+  },
+  "snapper": {
+    "url": "https://images.pexels.com/photos/8352778/pexels-photo-8352778.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8352778,
+    "query": "Snapper",
+    "photographer": "Kindel Media",
+    "alt": "A vibrant display of fresh red snapper neatly arranged on ice at a bustling fish market."
+  },
+  "swordfish": {
+    "url": "https://images.pexels.com/photos/35362296/pexels-photo-35362296.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 35362296,
+    "query": "Swordfish",
+    "photographer": "Florian Avramescu",
+    "alt": "Fresh swordfish on display at a bustling market in Sicily, Italy."
+  },
+  "octopus": {
+    "url": "https://images.pexels.com/photos/16736309/pexels-photo-16736309.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 16736309,
+    "query": "Octopus",
+    "photographer": "Tony  Wu",
+    "alt": "Colorful bowls with fresh octopus and shellfish ready for preparation."
+  },
+  "mussels": {
+    "url": "https://images.pexels.com/photos/33653255/pexels-photo-33653255.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 33653255,
+    "query": "Mussels",
+    "photographer": "Engin Akyurt",
+    "alt": "A detailed closeup of fresh mussels displaying their natural sheen, perfect for seafood lovers."
+  },
+  "oysters": {
+    "url": "https://images.pexels.com/photos/10895800/pexels-photo-10895800.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10895800,
+    "query": "Oysters",
+    "photographer": "Nadin Sh",
+    "alt": "A gourmet seafood platter of fresh oysters served on ice with lemon and sauce."
+  },
+  "anchovies": {
+    "url": "https://images.pexels.com/photos/10112456/pexels-photo-10112456.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10112456,
+    "query": "Anchovies",
+    "photographer": "Engin Akyurt",
+    "alt": "Close-up of fresh raw fish at a vibrant seafood market, perfect for culinary and health themes."
+  },
+  "eel": {
+    "url": "https://images.pexels.com/photos/30910486/pexels-photo-30910486.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 30910486,
+    "query": "Eel (Unagi)",
+    "photographer": "Valeria Boltneva",
+    "alt": "Close-up of a sushi roll with salmon, eel, avocado, and rice on a wooden board."
+  },
+  "mahi-mahi": {
+    "url": "https://images.pexels.com/photos/8112421/pexels-photo-8112421.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8112421,
+    "query": "Mahi-Mahi",
+    "photographer": "Rachel Claire",
+    "alt": "Close-up of raw fish fillet on a rustic metal plate in dramatic lighting."
+  },
+  "squid": {
+    "url": "https://images.pexels.com/photos/7263908/pexels-photo-7263908.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7263908,
+    "query": "Squid (Calamari)",
+    "photographer": "Rachel Claire",
+    "alt": "Close-up of fresh squid in a metal bowl, perfect for seafood preparation and cooking themes."
+  },
+  "perch": {
+    "url": "https://images.pexels.com/photos/36892785/pexels-photo-36892785.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 36892785,
+    "query": "Perch",
+    "photographer": "Rinat Askarov",
+    "alt": "Freshly caught river perch laid out on ice at a local fish market for sale."
+  },
+  "barramundi": {
+    "url": "https://images.pexels.com/photos/19789770/pexels-photo-19789770.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 19789770,
+    "query": "Barramundi",
+    "photographer": "Engin Akyurt",
+    "alt": "Close-up of fresh fish displayed on ice in a market setting, highlighting freshness and quality."
+  },
+  "crayfish": {
+    "url": "https://images.pexels.com/photos/4571249/pexels-photo-4571249.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 4571249,
+    "query": "Crayfish",
+    "photographer": "Yan Stavchansky",
+    "alt": "From above of fresh raw delicious prawns and lobsters placed on ice in local market"
+  },
+  "monkfish": {
+    "url": "https://images.pexels.com/photos/30207551/pexels-photo-30207551.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 30207551,
+    "query": "Monkfish",
+    "photographer": "Lexi Lauwers",
+    "alt": "Captivating view of a lionfish swimming in a dark aquarium setting."
   },
   "eggs": {
-    "url": "https://images.pexels.com/photos/7966479/pexels-photo-7966479.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 7966479,
-    "query": "eggs brown white",
-    "photographer": "Felicity Tai"
+    "url": "https://images.pexels.com/photos/16149475/pexels-photo-16149475.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 16149475,
+    "query": "Whole Eggs",
+    "photographer": "Natali Yakovleva",
+    "alt": "Still life photograph featuring eggs, milk, and kitchenware on a rustic wooden table."
   },
   "egg-whites": {
-    "url": "https://images.pexels.com/photos/31558751/pexels-photo-31558751.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 31558751,
-    "query": "egg whites liquid carton",
-    "photographer": "Gustavo Denuncio"
+    "url": "https://images.pexels.com/photos/11554894/pexels-photo-11554894.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 11554894,
+    "query": "Egg Whites",
+    "photographer": "Flüssiges Eiweiß",
+    "alt": "Vertical shot of liquid egg white bottle with eggs and flour on a kitchen counter."
   },
   "greek-yogurt": {
-    "url": "https://images.pexels.com/photos/4006347/pexels-photo-4006347.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 4006347,
-    "query": "greek yogurt bowl",
-    "photographer": "Jenna Hamra"
+    "url": "https://images.pexels.com/photos/20379659/pexels-photo-20379659.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 20379659,
+    "query": "Greek Yogurt (Nonfat, Plain)",
+    "photographer": "C'Pho Ngondo R.Rouge",
+    "alt": "Lancewood double cream coconut yoghurt with a spoon and bowl on a reflective surface."
   },
   "cottage-cheese": {
-    "url": "https://images.pexels.com/photos/4198168/pexels-photo-4198168.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 4198168,
-    "query": "cottage cheese bowl",
-    "photographer": "www.kaboompics.com"
+    "url": "https://images.pexels.com/photos/6851930/pexels-photo-6851930.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6851930,
+    "query": "Cottage Cheese (1% Milkfat)",
+    "photographer": "Zizi zi",
+    "alt": "From above of appetizing cottage cheese with berry jam served in glass bowl with spoon on white table"
   },
   "mozzarella": {
-    "url": "https://images.pexels.com/photos/31625027/pexels-photo-31625027.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 31625027,
-    "query": "fresh mozzarella cheese ball white italian",
-    "photographer": "Anil  Sharma",
-    "alt": "A mouthwatering display of bocconcini cheese with fresh basil in olive oil, perfect for food photography enthusiasts."
+    "url": "https://images.pexels.com/photos/144239/pexels-photo-144239.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 144239,
+    "query": "Mozzarella (Part-Skim)",
+    "photographer": "Pixabay",
+    "alt": "A delicious plate of fresh Caprese salad with mozzarella, tomatoes, and basil on a rustic wooden table."
   },
   "parmesan": {
-    "url": "https://images.pexels.com/photos/34037769/pexels-photo-34037769.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 34037769,
-    "query": "parmesan cheese wedge",
-    "photographer": "Ahimsa -  OM"
+    "url": "https://images.pexels.com/photos/3693280/pexels-photo-3693280.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 3693280,
+    "query": "Parmesan Cheese",
+    "photographer": "Castorly Stock",
+    "alt": "Detailed close-up of an aged Parmigiano cheese block, showcasing texture and salt crystals."
   },
   "cheddar": {
-    "url": "https://images.pexels.com/photos/6004145/pexels-photo-6004145.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 6004145,
-    "query": "cheddar cheese block",
-    "photographer": "RDNE Stock project"
+    "url": "https://images.pexels.com/photos/6660053/pexels-photo-6660053.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6660053,
+    "query": "Cheddar Cheese",
+    "photographer": "www.kaboompics.com",
+    "alt": "Pile of sliced cheese with rosemary and walnuts, perfect for food photography."
+  },
+  "milk": {
+    "url": "https://images.pexels.com/photos/31012757/pexels-photo-31012757.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 31012757,
+    "query": "Milk (2% Reduced Fat)",
+    "photographer": "Marcia Salido",
+    "alt": "Three milk containers with a splash in a glass on a black background, emphasizing freshness."
   },
   "ricotta": {
     "url": "https://images.pexels.com/photos/8109320/pexels-photo-8109320.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 8109320,
-    "query": "ricotta cheese creamy",
-    "photographer": "Julio Mantilla"
+    "query": "Ricotta Cheese (Part-Skim)",
+    "photographer": "Julio Mantilla",
+    "alt": "Close-up of creamy cheese batter being mixed in a food processor, perfect for baking needs."
   },
   "feta": {
-    "url": "https://images.pexels.com/photos/19460144/pexels-photo-19460144.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 19460144,
-    "query": "feta cheese block",
-    "photographer": "Patrick"
+    "url": "https://images.pexels.com/photos/6128854/pexels-photo-6128854.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6128854,
+    "query": "Feta Cheese",
+    "photographer": "Alesia  Kozik",
+    "alt": "Delicious crumbled feta cheese on a blue plate, perfect for salads and Mediterranean dishes."
   },
   "swiss-cheese": {
-    "url": "https://images.pexels.com/photos/36040972/pexels-photo-36040972.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 36040972,
-    "query": "swiss cheese yellow holes sliced block",
-    "photographer": "Edita Brus",
-    "alt": "Detailed close-up of curly Swiss cheese slices on black background."
+    "url": "https://images.pexels.com/photos/11126279/pexels-photo-11126279.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 11126279,
+    "query": "Swiss Cheese",
+    "photographer": "Federica Gioia",
+    "alt": "Hand holds a block of cheese with a mountain landscape backdrop."
   },
-  "milk": {
-    "url": "https://images.pexels.com/photos/4578396/pexels-photo-4578396.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 4578396,
-    "query": "milk glass bottle",
-    "photographer": "Suzy Hazelwood"
+  "buttermilk": {
+    "url": "https://images.pexels.com/photos/6865763/pexels-photo-6865763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6865763,
+    "query": "Buttermilk",
+    "photographer": "Jen G",
+    "alt": "Close-up shot of golden pancakes on a white plate, perfect for a tasty breakfast."
   },
-  "soy-milk": {
-    "url": "https://images.pexels.com/photos/14534512/pexels-photo-14534512.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 14534512,
-    "query": "soy milk carton box shelf stable vanilla",
+  "heavy-cream": {
+    "url": "https://images.pexels.com/photos/16014816/pexels-photo-16014816.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 16014816,
+    "query": "Heavy Cream",
+    "photographer": "Fernanda  Lima",
+    "alt": "Savor a delectable meal of creamy fettuccine Alfredo topped with a juicy steak, perfect for food photography enthusiasts."
+  },
+  "sour-cream": {
+    "url": "https://images.pexels.com/photos/7144518/pexels-photo-7144518.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7144518,
+    "query": "Sour Cream",
+    "photographer": "Monstera Production",
+    "alt": "From above of anonymous person stirring sour cream with spoon in wooden bowl placed on table against blurred background"
+  },
+  "cream-cheese": {
+    "url": "https://images.pexels.com/photos/12449964/pexels-photo-12449964.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 12449964,
+    "query": "Cream Cheese",
     "photographer": "Towfiqu barbhuiya",
-    "alt": "Overhead view of sealed fresh milk cartons, highlighting pasteurization."
+    "alt": "Close-up of a hand holding a bagel with creamy cheese spread next to an open container."
+  },
+  "goat-cheese": {
+    "url": "https://images.pexels.com/photos/31610393/pexels-photo-31610393.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 31610393,
+    "query": "Goat Cheese (Chevre)",
+    "photographer": "Anil  Sharma",
+    "alt": "Exquisite goat cheese platter garnished with berries and nuts, perfect for a gourmet meal."
+  },
+  "blue-cheese": {
+    "url": "https://images.pexels.com/photos/28575893/pexels-photo-28575893.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 28575893,
+    "query": "Blue Cheese",
+    "photographer": "Marcelo Verfe",
+    "alt": "A variety of artisanal cheeses and bread displayed on a wooden board, ideal for gourmet presentations."
+  },
+  "gouda": {
+    "url": "https://images.pexels.com/photos/33843099/pexels-photo-33843099.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 33843099,
+    "query": "Gouda Cheese",
+    "photographer": "Andrea Biancotto",
+    "alt": "A boat carrying cheese with a person on a canal in the Netherlands."
+  },
+  "havarti": {
+    "url": "https://images.pexels.com/photos/19467886/pexels-photo-19467886.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 19467886,
+    "query": "Havarti Cheese",
+    "photographer": "Mariya Eskina",
+    "alt": "Close-up of a charcuterie board featuring salami, dill havarti cheese, and garnishes."
+  },
+  "provolone": {
+    "url": "https://images.pexels.com/photos/28881696/pexels-photo-28881696.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 28881696,
+    "query": "Provolone Cheese",
+    "photographer": "Domenico Scaglione",
+    "alt": "Close-up of fresh provolone cheese elegantly displayed with a dark green backdrop, ideal for culinary themes."
+  },
+  "monterey-jack": {
+    "url": "https://images.pexels.com/photos/5250399/pexels-photo-5250399.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5250399,
+    "query": "Monterey Jack Cheese",
+    "photographer": "Kate",
+    "alt": "Close-up of a delicious assorted cheese platter garnished with cilantro."
+  },
+  "colby-cheese": {
+    "url": "https://images.pexels.com/photos/6004145/pexels-photo-6004145.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6004145,
+    "query": "Colby Cheese",
+    "photographer": "RDNE Stock project",
+    "alt": "Close-up of cheddar and colby-jack cheese slices on a wooden cutting board with a knife."
+  },
+  "mascarpone": {
+    "url": "https://images.pexels.com/photos/36939727/pexels-photo-36939727.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 36939727,
+    "query": "Mascarpone Cheese",
+    "photographer": "zhor abdellkader",
+    "alt": "Top-down view of mascarpone and baking ingredients for tiramisu preparation."
+  },
+  "quark": {
+    "url": "https://images.pexels.com/photos/10994435/pexels-photo-10994435.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10994435,
+    "query": "Quark",
+    "photographer": "Diana Light",
+    "alt": "Top view of flour and cottage cheese on a rustic wooden table, perfect for baking inspiration."
+  },
+  "skyr": {
+    "url": "https://images.pexels.com/photos/566564/pexels-photo-566564.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 566564,
+    "query": "Skyr (Icelandic Yogurt)",
+    "photographer": "Foodie Factor",
+    "alt": "Close-up of fresh blueberries and strawberries on yogurt with granola."
+  },
+  "kefir": {
+    "url": "https://images.pexels.com/photos/37907507/pexels-photo-37907507.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 37907507,
+    "query": "Kefir",
+    "photographer": "Matvei",
+    "alt": "A rustic still life featuring cottage cheese in a bowl, a glass of milk, and kitchenware on a wooden table."
+  },
+  "duck-eggs": {
+    "url": "https://images.pexels.com/photos/9664253/pexels-photo-9664253.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 9664253,
+    "query": "Duck Eggs",
+    "photographer": "Lò hột  Đại thịnh",
+    "alt": "A batch of freshly harvested duck eggs covered with black mesh netting, ready for sale."
+  },
+  "quail-eggs": {
+    "url": "https://images.pexels.com/photos/6294234/pexels-photo-6294234.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6294234,
+    "query": "Quail Eggs",
+    "photographer": "Klaus Nielsen",
+    "alt": "High angle closeup of healthy raw quail eggs scattered on table in kitchen on sunny day"
+  },
+  "powdered-milk": {
+    "url": "https://images.pexels.com/photos/10994727/pexels-photo-10994727.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 10994727,
+    "query": "Powdered Milk",
+    "photographer": "Towfiqu barbhuiya",
+    "alt": "A yellow spoon filled with powdered milk, next to a measuring bottle, on a blue background."
+  },
+  "condensed-milk": {
+    "url": "https://images.pexels.com/photos/7144325/pexels-photo-7144325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7144325,
+    "query": "Sweetened Condensed Milk",
+    "photographer": "Monstera Production",
+    "alt": "Delicious serving of pancakes with fresh strawberries and pouring condensed milk on a plate."
   },
   "tofu": {
-    "url": "https://images.pexels.com/photos/11663140/pexels-photo-11663140.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 11663140,
-    "query": "tofu block",
-    "photographer": "Sabur Ahmed Jishan"
+    "url": "https://images.pexels.com/photos/35132130/pexels-photo-35132130.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 35132130,
+    "query": "Tofu (Firm)",
+    "photographer": "Leongsan Tung",
+    "alt": "Delicious fresh tofu garnished with sliced green onions, served in Kyoto style."
   },
   "tempeh": {
-    "url": "https://images.pexels.com/photos/34439456/pexels-photo-34439456.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 34439456,
-    "query": "tempeh block fermented",
-    "photographer": "Jb Moordiana"
+    "url": "https://images.pexels.com/photos/6822603/pexels-photo-6822603.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6822603,
+    "query": "Tempeh",
+    "photographer": "cottonbro studio",
+    "alt": "A close-up shot of tempeh on a plate, with hands preparing ingredients in the background."
   },
   "edamame": {
-    "url": "https://images.pexels.com/photos/29935499/pexels-photo-29935499.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 29935499,
-    "query": "edamame soybeans pods",
-    "photographer": "khezez  | خزاز"
+    "url": "https://images.pexels.com/photos/18363407/pexels-photo-18363407.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 18363407,
+    "query": "Edamame",
+    "photographer": "Nadin Sh",
+    "alt": "Delicious and healthy fresh edamame beans, close-up shot highlighting texture and greenness."
   },
   "lentils": {
-    "url": "https://images.pexels.com/photos/7245609/pexels-photo-7245609.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 7245609,
-    "query": "lentils dried legumes bowl",
-    "photographer": "Olga Lioncat"
+    "url": "https://images.pexels.com/photos/35763746/pexels-photo-35763746.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 35763746,
+    "query": "Lentils (Cooked)",
+    "photographer": "Vural Yavas",
+    "alt": "Top view of a savory lentil dish garnished with onion and parsley in a black bowl."
   },
   "chickpeas": {
     "url": "https://images.pexels.com/photos/16208459/pexels-photo-16208459.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 16208459,
-    "query": "chickpeas legumes bowl",
-    "photographer": "Wan Fun"
+    "query": "Chickpeas (Cooked)",
+    "photographer": "Wan Fun",
+    "alt": "High angle view of cooked chickpeas in a metal bowl, showcasing a healthy vegan food option."
   },
   "black-beans": {
-    "url": "https://images.pexels.com/photos/14090828/pexels-photo-14090828.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 14090828,
-    "query": "black beans bowl",
-    "photographer": "Shalom Dare"
+    "url": "https://images.pexels.com/photos/34195319/pexels-photo-34195319.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 34195319,
+    "query": "Black Beans (Cooked)",
+    "photographer": "José Roberto Oliveira",
+    "alt": "Traditional Brazilian feijoada with chorizo, orange slices, greens, and peppers."
   },
   "quinoa": {
-    "url": "https://images.pexels.com/photos/1306548/pexels-photo-1306548.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 1306548,
-    "query": "quinoa grain bowl cooked",
-    "photographer": "Suzy Hazelwood"
+    "url": "https://images.pexels.com/photos/9501556/pexels-photo-9501556.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 9501556,
+    "query": "Quinoa (Cooked)",
+    "photographer": "Gustavo Peres",
+    "alt": "A close-up of a decorative eggplant slice paired with a colorful quinoa salad on a white ornate plate."
   },
   "almonds": {
     "url": "https://images.pexels.com/photos/6003907/pexels-photo-6003907.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 6003907,
-    "query": "almonds nuts bowl",
-    "photographer": "Nixon Johnson"
+    "query": "Almonds",
+    "photographer": "Nixon Johnson",
+    "alt": "A close-up of almonds in a red bowl, perfect for a healthy snack or nutritious eating."
   },
   "peanuts": {
-    "url": "https://images.pexels.com/photos/4590484/pexels-photo-4590484.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 4590484,
-    "query": "peanuts nuts shell",
-    "photographer": "Lars H Knudsen"
+    "url": "https://images.pexels.com/photos/35275158/pexels-photo-35275158.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 35275158,
+    "query": "Peanuts (Dry Roasted)",
+    "photographer": "Rafael Rodrigues",
+    "alt": "A detailed close-up of numerous salted peanuts creating a textured background."
   },
   "peanut-butter": {
-    "url": "https://images.pexels.com/photos/23384626/pexels-photo-23384626.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 23384626,
-    "query": "peanut butter jar spread",
-    "photographer": "Adrianna CA"
+    "url": "https://images.pexels.com/photos/8611766/pexels-photo-8611766.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8611766,
+    "query": "Peanut Butter (Natural)",
+    "photographer": "Towfiqu barbhuiya",
+    "alt": "Close-up of creamy peanut butter in a glass jar surrounded by peanuts. Tasty and homemade."
   },
   "walnuts": {
-    "url": "https://images.pexels.com/photos/13427997/pexels-photo-13427997.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 13427997,
-    "query": "walnuts nuts shell",
-    "photographer": "Mateusz Feliksik"
+    "url": "https://images.pexels.com/photos/18930135/pexels-photo-18930135.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 18930135,
+    "query": "Walnuts",
+    "photographer": "Merve Sezer",
+    "alt": "A vibrant vertical close-up of numerous dried walnuts in their shells, highlighting texture."
   },
   "cashews": {
-    "url": "https://images.pexels.com/photos/9017852/pexels-photo-9017852.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 9017852,
-    "query": "cashew nuts bowl",
-    "photographer": "Towfiqu barbhuiya"
+    "url": "https://images.pexels.com/photos/6730156/pexels-photo-6730156.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6730156,
+    "query": "Cashews",
+    "photographer": "Saveurs Secretes",
+    "alt": "Overhead view of roasted cashews on baking tray with fork."
   },
   "pistachios": {
-    "url": "https://images.pexels.com/photos/4931455/pexels-photo-4931455.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 4931455,
-    "query": "pistachio nuts shell",
-    "photographer": "Anton Uniqueton"
+    "url": "https://images.pexels.com/photos/6086412/pexels-photo-6086412.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6086412,
+    "query": "Pistachios",
+    "photographer": "Eva Bronzini",
+    "alt": "Detailed close-up of unshelled pistachio nuts, ideal for food or culinary themes."
   },
   "hemp-seeds": {
-    "url": "https://images.pexels.com/photos/28286256/pexels-photo-28286256.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 28286256,
-    "query": "hemp seeds bowl",
-    "photographer": "Nic Wood"
+    "url": "https://images.pexels.com/photos/18275955/pexels-photo-18275955.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 18275955,
+    "query": "Hemp Seeds",
+    "photographer": "Petr Ganaj",
+    "alt": "Detailed close-up of hemp seeds showcasing natural textures and nutritional value."
   },
   "chia-seeds": {
     "url": "https://images.pexels.com/photos/27468397/pexels-photo-27468397.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     "pexels_id": 27468397,
-    "query": "chia seeds bowl",
-    "photographer": "Jubair Bin Iqbal"
-  },
-  "pumpkin-seeds": {
-    "url": "https://images.pexels.com/photos/1080071/pexels-photo-1080071.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 1080071,
-    "query": "pumpkin seeds bowl",
-    "photographer": "João  Jesus"
-  },
-  "sunflower-seeds": {
-    "url": "https://images.pexels.com/photos/9186961/pexels-photo-9186961.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 9186961,
-    "query": "sunflower seeds bowl",
-    "photographer": "Nivedha Somasundaram"
+    "query": "Chia Seeds",
+    "photographer": "Jubair Bin Iqbal",
+    "alt": "A close-up of chia seeds in a white bowl on a light wooden surface, showcasing a healthy food concept."
   },
   "seitan": {
-    "url": "https://images.pexels.com/photos/36371693/pexels-photo-36371693.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 36371693,
-    "query": "seitan vegan meat wheat gluten block sliced",
-    "photographer": "Guilherme  Pedrosa",
-    "alt": "Close-up of tofu slices garnished with green onions, ideal for vegan meals."
+    "url": "https://images.pexels.com/photos/28354522/pexels-photo-28354522.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 28354522,
+    "query": "Seitan (Wheat Gluten)",
+    "photographer": "Nic Wood",
+    "alt": "Close-up of a rustic artisan bread loaf slice surrounded by scattered wheat grains on a flour-dusted surface."
+  },
+  "pumpkin-seeds": {
+    "url": "https://images.pexels.com/photos/7217526/pexels-photo-7217526.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7217526,
+    "query": "Pumpkin Seeds (Pepitas)",
+    "photographer": "Alberta Studios",
+    "alt": "A detailed macro shot of a pile of fresh green pumpkin seeds, perfect for healthy eating concepts."
   },
   "oats": {
-    "url": "https://images.pexels.com/photos/11112773/pexels-photo-11112773.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 11112773,
-    "query": "rolled oats oatmeal bowl",
-    "photographer": "Karyna Panchenko"
+    "url": "https://images.pexels.com/photos/5988273/pexels-photo-5988273.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5988273,
+    "query": "Oats (Rolled)",
+    "photographer": "Eva Bronzini",
+    "alt": "A detailed close-up view of textured rolled oats, ideal for food and health themes."
   },
   "spinach": {
-    "url": "https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 2325843,
-    "query": "fresh spinach leaves green",
-    "photographer": "Jacqueline Howell"
+    "url": "https://images.pexels.com/photos/8954279/pexels-photo-8954279.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8954279,
+    "query": "Spinach (Cooked)",
+    "photographer": "makafood",
+    "alt": "Tasty Asian spinach dish served in a white bowl, ideal for healthy dining."
   },
   "broccoli": {
-    "url": "https://images.pexels.com/photos/7676045/pexels-photo-7676045.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 7676045,
-    "query": "broccoli green vegetable",
-    "photographer": "Mikhail Nilov"
+    "url": "https://images.pexels.com/photos/8056670/pexels-photo-8056670.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 8056670,
+    "query": "Broccoli (Cooked)",
+    "photographer": "Mateusz Feliksik",
+    "alt": "Close-up of fresh steamed broccoli, perfect for healthy meal concept."
   },
   "green-peas": {
-    "url": "https://images.pexels.com/photos/255469/pexels-photo-255469.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 255469,
-    "query": "green peas vegetable",
-    "photographer": "Pixabay"
+    "url": "https://images.pexels.com/photos/32188886/pexels-photo-32188886.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 32188886,
+    "query": "Green Peas (Cooked)",
+    "photographer": "Dilara",
+    "alt": "Fresh green peas in a bowl with a rustic, close-up view on a blue cloth."
   },
   "sweet-corn": {
-    "url": "https://images.pexels.com/photos/15429114/pexels-photo-15429114.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 15429114,
-    "query": "sweet corn yellow cob",
-    "photographer": "Engin Akyurt"
+    "url": "https://images.pexels.com/photos/12987565/pexels-photo-12987565.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 12987565,
+    "query": "Sweet Corn (Cooked)",
+    "photographer": "Unaizat Abdulgamidova",
+    "alt": "Close-up of two yellow corn cobs on a white plate, ready to eat."
   },
   "brussels-sprouts": {
-    "url": "https://images.pexels.com/photos/3510155/pexels-photo-3510155.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 3510155,
-    "query": "brussels sprouts roasted green vegetable whole",
-    "photographer": "Sebastian Coman Photography",
-    "alt": "Close-up of delicious roasted Brussels sprouts in a cast iron skillet, perfect for a healthy meal."
+    "url": "https://images.pexels.com/photos/5612015/pexels-photo-5612015.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5612015,
+    "query": "Brussels Sprouts (Cooked)",
+    "photographer": "Damir Mijailovic",
+    "alt": "Top view of wooden surface with knife after peeling green fresh Brussels sprouts in kitchen"
   },
   "asparagus": {
-    "url": "https://images.pexels.com/photos/1118179/pexels-photo-1118179.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 1118179,
-    "query": "asparagus green spears fresh vegetable bunch",
-    "photographer": "Rubyand Lion",
-    "alt": "Close-up of fresh green asparagus spears, perfect for spring recipes."
+    "url": "https://images.pexels.com/photos/11650403/pexels-photo-11650403.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 11650403,
+    "query": "Asparagus (Cooked)",
+    "photographer": "Cook Eat",
+    "alt": "Delicious roasted potatoes and asparagus served on a white plate."
   },
   "mushrooms": {
-    "url": "https://images.pexels.com/photos/33654806/pexels-photo-33654806.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 33654806,
-    "query": "fresh white mushrooms",
-    "photographer": "Engin Akyurt"
+    "url": "https://images.pexels.com/photos/9821813/pexels-photo-9821813.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 9821813,
+    "query": "Mushrooms (White, Cooked)",
+    "photographer": "Engin Akyurt",
+    "alt": "Close-up of fresh white button mushroom on a plate, highlighting its texture and freshness."
   },
   "hummus": {
-    "url": "https://images.pexels.com/photos/34227828/pexels-photo-34227828.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 34227828,
-    "query": "hummus dip bowl",
-    "photographer": "Novkov Visuals"
+    "url": "https://images.pexels.com/photos/6327663/pexels-photo-6327663.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 6327663,
+    "query": "Hummus",
+    "photographer": "Tima Miroshnichenko",
+    "alt": "Close-up of a delicious hummus dish garnished with lemon, tomato, and rice cakes."
+  },
+  "soy-milk": {
+    "url": "https://images.pexels.com/photos/5201095/pexels-photo-5201095.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5201095,
+    "query": "Soy Milk (Fortified)",
+    "photographer": "Eric  Jo",
+    "alt": "Person holding soy milk bottle on a rooftop with urban scenery, showcasing a relaxed and trendy lifestyle."
   },
   "nutritional-yeast": {
-    "url": "https://images.pexels.com/photos/19062744/pexels-photo-19062744.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 19062744,
-    "query": "nutritional yeast flakes yellow powder",
-    "photographer": "Nadin Sh",
-    "alt": "A detailed shot of fresh, sliced artisan bread showcasing texture and variety."
+    "url": "https://images.pexels.com/photos/5988422/pexels-photo-5988422.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 5988422,
+    "query": "Nutritional Yeast",
+    "photographer": "Eva Bronzini",
+    "alt": "Detailed close-up of brown salt flakes showcasing texture and natural pattern."
+  },
+  "kidney-beans": {
+    "url": "https://images.pexels.com/photos/34590138/pexels-photo-34590138.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 34590138,
+    "query": "Kidney Beans (Cooked)",
+    "photographer": "Nour Alhoda",
+    "alt": "Hands serving a bean and rice dish in a kitchen setting."
+  },
+  "sunflower-seeds": {
+    "url": "https://images.pexels.com/photos/36943553/pexels-photo-36943553.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 36943553,
+    "query": "Sunflower Seeds",
+    "photographer": "pierre matile",
+    "alt": "Detailed view of dried sunflower heads and seeds, perfect for agricultural concepts."
   },
   "whey-protein": {
-    "url": "https://images.pexels.com/photos/12625114/pexels-photo-12625114.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 12625114,
-    "query": "whey protein powder scoop",
-    "photographer": "Towfiqu barbhuiya"
+    "url": "https://images.pexels.com/photos/15120889/pexels-photo-15120889.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 15120889,
+    "query": "Whey Protein Isolate",
+    "photographer": "Krzysztof Biernat",
+    "alt": "Dynamic shot of protein powder being added to a shaker, fitness concept."
   },
   "soy-protein": {
-    "url": "https://images.pexels.com/photos/12625114/pexels-photo-12625114.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 12625114,
-    "query": "soy protein powder scoop",
-    "photographer": "Towfiqu barbhuiya"
-  },
-  "collagen": {
-    "url": "https://images.pexels.com/photos/8845102/pexels-photo-8845102.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 8845102,
-    "query": "collagen supplement powder jar scoop white",
-    "photographer": "Yaroslav Shuraev",
-    "alt": "Close-up of a jar and a spoon with green powder, ideal for healthcare and wellness themes."
+    "url": "https://images.pexels.com/photos/4378489/pexels-photo-4378489.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 4378489,
+    "query": "Soy Protein Isolate",
+    "photographer": "www.kaboompics.com",
+    "alt": "Adult man holds a protein shake in a red lid tumbler outdoors, wearing a black shirt."
   },
   "casein-protein": {
-    "url": "https://images.pexels.com/photos/12625114/pexels-photo-12625114.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-    "pexels_id": 12625114,
-    "query": "casein protein powder tub scoop dairy",
-    "photographer": "Towfiqu barbhuiya",
-    "alt": "White powder spilled from a scoop on bright blue background. Clean and minimalistic food photo."
+    "url": "https://images.pexels.com/photos/7656565/pexels-photo-7656565.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    "pexels_id": 7656565,
+    "query": "Casein Protein",
+    "photographer": "Cup of  Couple",
+    "alt": "Fresh strawberry and blueberry smoothie in a glass jar with fruits on a clean surface."
   }
 }
