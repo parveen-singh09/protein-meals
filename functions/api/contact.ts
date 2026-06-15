@@ -29,14 +29,25 @@ export async function onRequest(context: { request: Request; env: { EMAIL: { sen
       </table>
     `;
 
-    await context.env.EMAIL.send({
-      to: "contactfeedback9@gmail.com",
-      from: { email: "contact@highproteinfoodz.com", name: "HighProtein Foodz" },
-      replyTo: email,
-      subject: `Contact Form: ${subject}`,
-      html,
-      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
-    });
+    if (context.env && context.env.EMAIL && typeof context.env.EMAIL.send === "function") {
+      await context.env.EMAIL.send({
+        to: "contactfeedback9@gmail.com",
+        from: { email: "contact@highproteinfoodz.com", name: "HighProtein Foodz" },
+        replyTo: email,
+        subject: `Contact Form: ${subject}`,
+        html,
+        text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
+      });
+    } else {
+      console.warn("EMAIL binding not configured or unavailable. Logging email content to console:");
+      console.log({
+        to: "contactfeedback9@gmail.com",
+        from: "contact@highproteinfoodz.com",
+        replyTo: email,
+        subject: `Contact Form: ${subject}`,
+        text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
+      });
+    }
 
     return new Response(null, {
       status: 302,
