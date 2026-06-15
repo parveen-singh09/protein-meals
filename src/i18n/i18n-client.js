@@ -91,7 +91,7 @@ window.__applyLanguage = function applyLanguage(lang) {
   });
   if (t["hero.title"]) {
     var rawTitle = t["hero.title"].replace(/[\u200e\u200f]/g, ""); // strip control chars if any
-    document.title = rawTitle + " - HighProtein Labs";
+    document.title = rawTitle + " - HighProtein Foodz";
   }
   var metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && t["hero.subtitle"]) {
