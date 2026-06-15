@@ -76,7 +76,7 @@ window.__applyLanguage = function applyLanguage(lang) {
         } else {
           var val = t[key];
           if (typeof val === "string" && val.indexOf("120") !== -1) {
-            val = val.replace("120", window.__totalFoodsCount || "123");
+            val = val.replace("120+", window.__totalFoodsCount || "123").replace("120", window.__totalFoodsCount || "123");
           }
           el.textContent = val;
         }
@@ -101,7 +101,7 @@ window.__applyLanguage = function applyLanguage(lang) {
   if (metaDesc && t["hero.subtitle"]) {
     var subtitleVal = t["hero.subtitle"];
     if (typeof subtitleVal === "string" && subtitleVal.indexOf("120") !== -1) {
-      subtitleVal = subtitleVal.replace("120", window.__totalFoodsCount || "123");
+      subtitleVal = subtitleVal.replace("120+", window.__totalFoodsCount || "123").replace("120", window.__totalFoodsCount || "123");
     }
     metaDesc.setAttribute("content", subtitleVal);
   }
