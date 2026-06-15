@@ -931,12 +931,13 @@ filtered.sort((a, b) => {
   .custom-dropdown {
     position: relative;
     flex: 1;
+    min-width: 0;
   }
 
   .dropdown-trigger {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     padding: 0.625rem 1rem;
     background: rgba(0, 0, 0, 0.03);
@@ -948,6 +949,13 @@ filtered.sort((a, b) => {
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: var(--font-sans);
+  }
+
+  .dropdown-trigger span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
   }
 
   :root.dark .dropdown-trigger {
