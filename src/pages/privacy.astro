@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy - HighProtein Foodz">
+  <Header />
+  <section class="page-content fade-in-on-scroll">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="page-lede">Last updated: June 2026</p>
+
+      <p>HighProtein Foodz ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+
+      <h2>Information We Collect</h2>
+      <p>We collect minimal information to operate our website. This includes anonymous usage data such as pages visited, time spent on pages, and browser type. If you contact us via our contact form, we collect your name, email address, and the content of your message.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use the information we collect to: respond to your inquiries and messages, improve our website and user experience, analyze usage patterns to optimize our <strong>high protein foods list</strong> and content, and ensure the security and proper functioning of our site.</p>
+
+      <h2>Cookies</h2>
+      <p>HighProtein Foodz uses minimal cookies for essential functionality, including storing your theme preference (dark/light mode). We do not use tracking cookies or third-party advertising cookies. You can disable cookies in your browser settings, though this may affect certain functionality.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>We do not sell, trade, or transfer your personal information to third parties. We may use third-party services (such as hosting providers) that process data on our behalf. These providers are contractually obligated to protect your data.</p>
+
+      <h2>Data Security</h2>
+      <p>We implement reasonable security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information. However, no method of transmission over the internet is 100% secure.</p>
+
+      <h2>Your Rights</h2>
+      <p>You have the right to: request access to any personal data we hold about you, request correction or deletion of your data, withdraw consent for data processing, and request a copy of your data in a portable format. To exercise these rights, <a href="/contact">contact us</a>.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Our website is not intended for children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us so we can delete it.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy, please <a href="/contact">contact us</a> at contactfeedback9@gmail.com.</p>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .page-content {
+    padding: 8rem 0 4rem;
+    min-height: 100dvh;
+  }
+
+  .page-content h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .page-lede {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    margin: 0 0 2rem;
+  }
+
+  .page-content h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .page-content p {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0 0 1rem;
+    max-width: 720px;
+  }
+
+  .page-content a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .page-content a:hover {
+    color: var(--accent-green-light);
+  }
+
+  @media (max-width: 640px) {
+    .page-content {
+      padding: 5rem 0 2rem;
+    }
+  }
+</style>

@@ -7,8 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:cf": "wrangler pages dev dist --remote",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "npm run build && npx wrangler pages deploy dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.100.0"
   }
 }

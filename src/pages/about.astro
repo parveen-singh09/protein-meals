@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - HighProtein Foodz | The Most Complete High Protein Foods Resource">
+  <Header />
+  <section class="page-content fade-in-on-scroll">
+    <div class="container">
+      <h1>About HighProtein Foodz</h1>
+      <p class="page-lede">Your completely free resource for discovering the best high protein foods with accurate, comprehensive nutrition data.</p>
+
+      <h2>Our Mission</h2>
+      <p>At HighProtein Foodz, our mission is simple: make it easy for everyone to find and understand <strong>high protein foods</strong>. Whether you're an athlete optimizing your <strong>high protein diet</strong>, someone looking for <strong>high protein foods for weight loss</strong>, or just curious about <strong>protein rich foods</strong>, we provide the data you need in a clean, accessible format.</p>
+
+      <h2>What We Offer</h2>
+      <p>We maintain the most comprehensive <strong>high protein foods list</strong> available online — over 120 foods with complete macronutrient and micronutrient profiles. Every entry includes protein per 100g, calories, fat, carbohydrates, fiber, and 21 essential micronutrients. We also provide average pricing so you can find <strong>low calorie high protein foods</strong> that fit your budget.</p>
+
+      <h2>Our Data Source</h2>
+      <p>All nutrition data is sourced from <strong>USDA FoodData Central</strong> (fdc.nal.usda.gov), the United States Department of Agriculture's comprehensive food composition database. This ensures our <strong>protein foods list</strong> is accurate, reliable, and up-to-date. We present this data in a user-friendly format so you can quickly find the <strong>highest protein foods per 100g</strong> and compare options side by side.</p>
+
+      <h2>Who We Serve</h2>
+      <p>Our users include fitness enthusiasts, bodybuilders, nutritionists, dietitians, healthcare professionals, and anyone interested in <strong>healthy high protein meals</strong>. From finding <strong>high protein snacks</strong> to planning complete meals, our database supports a wide range of dietary needs and preferences.</p>
+
+      <h2>Our Commitment</h2>
+      <p>HighProtein Foodz is and always will be completely free. No registration required, no paywalls, no premium tiers. We believe that access to nutrition information should be available to everyone. We're continuously expanding our database and improving our tools to serve you better.</p>
+
+      <h2>Contact Us</h2>
+      <p>Have questions, suggestions, or feedback? We'd love to hear from you. Visit our <a href="/contact">Contact Us</a> page to get in touch.</p>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .page-content {
+    padding: 8rem 0 4rem;
+    min-height: 100dvh;
+  }
+
+  .page-content h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .page-lede {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 0 2.5rem;
+    max-width: 680px;
+  }
+
+  .page-content h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .page-content p {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0 0 1rem;
+    max-width: 720px;
+  }
+
+  .page-content a {
+    color: var(--accent-green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .page-content a:hover {
+    color: var(--accent-green-light);
+  }
+
+  @media (max-width: 640px) {
+    .page-content {
+      padding: 5rem 0 2rem;
+    }
+  }
+</style>
