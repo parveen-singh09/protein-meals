@@ -1,5 +1,6 @@
 ---
 import { categories } from "../data/foods";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 ---
 
 <header class="header">
@@ -31,13 +32,13 @@ import { categories } from "../data/foods";
     </a>
 
     <nav class="nav-desktop">
-      <a href="/" class="nav-link active">Home</a>
-      <a href="#foods" class="nav-link">All Foods</a>
+      <a href="/" class="nav-link active" data-i18n="nav.home">Home</a>
+      <a href="#foods" class="nav-link" data-i18n="nav.allFoods">All Foods</a>
       {
         categories
           .filter((c) => c.id !== "all")
           .map((c) => (
-            <a href={`#${c.id}`} class="nav-link">
+            <a href={`#${c.id}`} class="nav-link" data-i18n={`categories.${c.id}`}>
               {c.label}
             </a>
           ))
@@ -45,6 +46,7 @@ import { categories } from "../data/foods";
     </nav>
 
     <div class="header-actions">
+      <LanguageSwitcher />
       <button
         class="theme-toggle"
         id="themeToggle"
@@ -102,14 +104,14 @@ import { categories } from "../data/foods";
         <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
-    <span class="mobile-nav-title">Categories</span>
+    <span class="mobile-nav-title" data-i18n="nav.categories">Categories</span>
   </div>
-  <a href="#foods" class="mobile-link">All Foods</a>
+  <a href="#foods" class="mobile-link" data-i18n="nav.allFoods">All Foods</a>
   {
     categories
       .filter((c) => c.id !== "all")
       .map((c) => (
-        <a href={`#${c.id}`} class="mobile-link">
+        <a href={`#${c.id}`} class="mobile-link" data-i18n={`categories.${c.id}`}>
           {c.label}
         </a>
       ))
