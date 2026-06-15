@@ -1,4 +1,4 @@
-export async function onRequest(context) {
+export async function onRequest(context: { request: Request; env: { EMAIL: { send: (args: { to: string; from: { email: string; name: string }; replyTo: string; subject: string; html: string; text: string }) => Promise<void> } } }) {
   const request = context.request;
 
   if (request.method !== "POST") {
@@ -7,10 +7,10 @@ export async function onRequest(context) {
 
   try {
     const formData = await request.formData();
-    const name = formData.get("name") || "Anonymous";
-    const email = formData.get("email") || "no-reply@example.com";
-    const subject = formData.get("subject") || "General Inquiry";
-    const message = formData.get("message") || "";
+    const name = (formData.get("name") as string) || "Anonymous";
+    const email = (formData.get("email") as string) || "no-reply@example.com";
+    const subject = (formData.get("subject") as string) || "General Inquiry";
+    const message = (formData.get("message") as string) || "";
 
     if (!message) {
       return new Response(null, {

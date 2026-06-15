@@ -72,12 +72,19 @@ import Footer from '../components/Footer.astro';
 <script>
   const params = new URLSearchParams(window.location.search);
   if (params.get("success") === "true") {
-    document.getElementById("formSuccess").style.display = "flex";
-    document.querySelector(".contact-form h2").style.display = "none";
-    document.querySelectorAll(".contact-form .form-group").forEach(el => el.style.display = "none");
-    document.querySelector(".contact-form .btn-submit").style.display = "none";
+    const formSuccess = document.getElementById("formSuccess");
+    if (formSuccess) formSuccess.style.display = "flex";
+    const formTitle = document.querySelector(".contact-form h2") as HTMLElement;
+    if (formTitle) formTitle.style.display = "none";
+    document.querySelectorAll(".contact-form .form-group").forEach(el => {
+      const element = el as HTMLElement;
+      element.style.display = "none";
+    });
+    const btnSubmit = document.querySelector(".contact-form .btn-submit") as HTMLElement;
+    if (btnSubmit) btnSubmit.style.display = "none";
   } else if (params.get("error") === "server" || params.get("error") === "missing") {
-    document.getElementById("formError").style.display = "flex";
+    const formError = document.getElementById("formError");
+    if (formError) formError.style.display = "flex";
   }
 </script>
 

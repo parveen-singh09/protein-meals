@@ -513,7 +513,7 @@ filtered.sort((a, b) => {
     let activeItem = null;
 
     items.forEach((item) => {
-      const itemVal = item.getAttribute("data-value");
+      const itemVal = (item as HTMLElement).getAttribute("data-value");
       if (itemVal === value) {
         item.classList.add("active");
         activeItem = item;
@@ -523,19 +523,20 @@ filtered.sort((a, b) => {
     });
 
     if (activeItem) {
-      const triggerText = document.getElementById("categoryTriggerText");
-      if (triggerText) {
-        const i18nKey = activeItem.getAttribute("data-i18n");
-        if (i18nKey) {
-          triggerText.setAttribute("data-i18n", i18nKey);
-          if (window.__applyLanguage) {
-            window.__applyLanguage(
-              document.documentElement.getAttribute("lang") || "en",
-            );
+        const triggerText = document.getElementById("categoryTriggerText");
+        if (triggerText) {
+          const i18nKey = (activeItem as HTMLElement).getAttribute("data-i18n");
+          if (i18nKey) {
+            triggerText.setAttribute("data-i18n", i18nKey);
+            const win = window as Window & { __applyLanguage?: (lang: string) => void };
+            if (win.__applyLanguage) {
+              win.__applyLanguage(
+                document.documentElement.getAttribute("lang") || "en",
+              );
+            }
           }
         }
       }
-    }
   }
 
   function updateSortDropdownState(sortId: string) {
@@ -547,7 +548,7 @@ filtered.sort((a, b) => {
     let activeItem = null;
 
     items.forEach((item) => {
-      const itemVal = item.getAttribute("data-value");
+      const itemVal = (item as HTMLElement).getAttribute("data-value");
       if (itemVal === activeSort) {
         item.classList.add("active");
         activeItem = item;
@@ -559,11 +560,12 @@ filtered.sort((a, b) => {
     if (activeItem) {
       const triggerText = document.getElementById("sortTriggerText");
       if (triggerText) {
-        const i18nKey = activeItem.getAttribute("data-i18n");
+        const i18nKey = (activeItem as HTMLElement).getAttribute("data-i18n");
         if (i18nKey) {
           triggerText.setAttribute("data-i18n", i18nKey);
-          if (window.__applyLanguage) {
-            window.__applyLanguage(
+          const win = window as Window & { __applyLanguage?: (lang: string) => void };
+          if (win.__applyLanguage) {
+            win.__applyLanguage(
               document.documentElement.getAttribute("lang") || "en",
             );
           }
@@ -598,7 +600,7 @@ filtered.sort((a, b) => {
       }
 
       sortDropdown.querySelectorAll(".dropdown-item").forEach((item) => {
-        item.addEventListener("click", function () {
+        item.addEventListener("click", function (this: HTMLElement) {
           const sortId = this.getAttribute("data-value");
           if (!sortId) return;
 
@@ -627,7 +629,7 @@ filtered.sort((a, b) => {
       });
 
       categoryDropdown.querySelectorAll(".dropdown-item").forEach((item) => {
-        item.addEventListener("click", function () {
+        item.addEventListener("click", function (this: HTMLElement) {
           const catValue = this.getAttribute("data-value");
           if (!catValue) return;
 

@@ -37,9 +37,6 @@ const proteinPerPrice = food.protein / (priceValue || 1);
 const weightUnits = ["lb", "pound", "ounce", "oz"];
 const isWeightUnit = weightUnits.some((u) => food.priceUnit.includes(u));
 
-const priceLabel = isWeightUnit
-  ? "avg price / 100g"
-  : `avg price / ${food.priceUnit}`;
 const displayPrice = isWeightUnit
   ? (food.price / 453.6).toFixed(2)
   : (food.price / 100).toFixed(2);
