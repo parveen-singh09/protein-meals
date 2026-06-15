@@ -239,18 +239,24 @@ function microValue(v: number, key: string): string {
     transition: all 0.3s ease;
     animation: fadeIn 0.42s ease-out both;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
-  :root.dark .food-card {
-    background: rgba(255, 255, 255, 0.04);
+  .food-card.in-view {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+  }
+
+  :root.dark .food-card {
+    background: rgba(255, 255, 255, 0.04);
     border-color: rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  :root.dark .food-card.in-view {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .food-card:hover {

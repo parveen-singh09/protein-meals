@@ -663,8 +663,33 @@ filtered.sort((a, b) => {
     }
   });
 
+  function initScrollObserver() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll(".food-card").forEach((card) => card.classList.add("in-view"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, {
+      rootMargin: "250px 0px",
+      threshold: 0.01
+    });
+
+    document.querySelectorAll(".food-card").forEach((card) => {
+      observer.observe(card);
+    });
+  }
+
   const runInit = () => {
     initDropdowns();
+    initScrollObserver();
 
     const initialSort = getQueryParam("sort") || "protein-desc";
     applyClientSort(initialSort);
