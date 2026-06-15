@@ -223,6 +223,9 @@ filtered.sort((a, b) => {
     <div class="grid">
       {filtered.map((food, i) => <FoodCard food={food} index={i} />)}
     </div>
+    <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+      <button class="btn btn-ghost" id="loadMoreBtn" data-i18n="foodgrid.loadMore">Load More</button>
+    </div>
     <div class="empty-state glass fade-in" style="display: none;">
       <svg
         width="48"
@@ -250,6 +253,9 @@ filtered.sort((a, b) => {
 </section>
 
 <script>
+  const CARDS_PER_PAGE = 12;
+  let visibleLimit = CARDS_PER_PAGE;
+
   function getQueryParam(name: string) {
     const params = new URLSearchParams(window.location.search);
     return params.get(name);
@@ -305,14 +311,13 @@ filtered.sort((a, b) => {
       const nameB = b.getAttribute("data-name") || "";
       return nameA.localeCompare(nameB);
     });
-    let visibleIndex = 0;
+
     cards.forEach((card) => {
-      if (!card.classList.contains("filtered-out")) {
-        card.style.animationDelay = `${visibleIndex * 50}ms`;
-        visibleIndex++;
-      }
       grid.appendChild(card);
     });
+
+    visibleLimit = CARDS_PER_PAGE;
+    applyFilters();
   }
 
   let searchQuery = "";
@@ -337,28 +342,50 @@ filtered.sort((a, b) => {
     const cards = document.querySelectorAll(
       ".food-card",
     ) as NodeListOf<HTMLElement>;
+    
     let visibleIndex = 0;
+
     cards.forEach((card) => {
       const name = card.getAttribute("data-name") || "";
       const category = card.getAttribute("data-category") || "";
       const matchesSearch = !searchQuery || name.includes(searchQuery);
-
       const matchesCategory = !activeCategory || category === activeCategory;
 
       if (matchesSearch && matchesCategory) {
         card.classList.remove("filtered-out");
+      } else {
+        card.classList.add("filtered-out");
+        card.classList.add("hidden-by-pagination");
+      }
+    });
+
+    const matchingCards = Array.from(cards).filter((card) => !card.classList.contains("filtered-out"));
+
+    matchingCards.forEach((card, index) => {
+      if (index < visibleLimit) {
+        card.classList.remove("hidden-by-pagination");
         card.style.animationDelay = `${visibleIndex * 50}ms`;
         card.style.animation = "none";
         card.offsetHeight;
         card.style.animation = "";
         visibleIndex++;
       } else {
-        card.classList.add("filtered-out");
+        card.classList.add("hidden-by-pagination");
       }
     });
+
+    const loadMoreContainer = document.getElementById("loadMoreContainer");
+    if (loadMoreContainer) {
+      if (matchingCards.length > visibleLimit) {
+        loadMoreContainer.style.display = "flex";
+      } else {
+        loadMoreContainer.style.display = "none";
+      }
+    }
+
     const emptyState = document.querySelector(".empty-state") as HTMLElement;
     if (emptyState) {
-      emptyState.style.display = visibleIndex === 0 ? "flex" : "none";
+      emptyState.style.display = matchingCards.length === 0 ? "flex" : "none";
     }
   }
 
@@ -439,17 +466,27 @@ filtered.sort((a, b) => {
     let debounceTimer: ReturnType<typeof setTimeout>;
     searchInput.addEventListener("input", function () {
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => applySearch(this.value), 100);
+      debounceTimer = setTimeout(() => {
+        visibleLimit = CARDS_PER_PAGE;
+        applySearch(this.value);
+      }, 100);
     });
   }
   const clearBtn = document.getElementById("search-clear") as HTMLButtonElement;
   if (clearBtn && searchInput) {
     clearBtn.addEventListener("click", function () {
       searchInput.value = "";
+      visibleLimit = CARDS_PER_PAGE;
       applySearch("");
       searchInput.focus();
     });
   }
+
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  loadMoreBtn?.addEventListener("click", () => {
+    visibleLimit += CARDS_PER_PAGE;
+    applyFilters();
+  });
 
   document
     .querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link")
@@ -508,7 +545,7 @@ filtered.sort((a, b) => {
     );
     if (!categoryDropdown) return;
 
-    const value = hash || "all";
+    const value = (hash === "foods" || !hash) ? "all" : hash;
     const items = categoryDropdown.querySelectorAll(".dropdown-item");
     let activeItem = null;
 
@@ -633,7 +670,7 @@ filtered.sort((a, b) => {
           const catValue = this.getAttribute("data-value");
           if (!catValue) return;
 
-          window.location.hash = catValue === "all" ? "" : catValue;
+          window.location.hash = catValue === "all" ? "foods" : catValue;
         });
       });
 
@@ -646,6 +683,7 @@ filtered.sort((a, b) => {
 
   window.addEventListener("hashchange", () => {
     const hash = window.location.hash.slice(1);
+    visibleLimit = CARDS_PER_PAGE;
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
     updateCategoryDropdownState(hash);
@@ -938,8 +976,15 @@ filtered.sort((a, b) => {
     }
   }
 
-  :global(.food-card.filtered-out) {
+  :global(.food-card.filtered-out),
+  :global(.food-card.hidden-by-pagination) {
     display: none !important;
+  }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
   }
 
   .desktop-sort-group {

@@ -45,7 +45,7 @@ window.__applyLanguage = function applyLanguage(lang) {
   var t = allT[lang] || allT["en"] || {};
   document.querySelectorAll("[data-i18n]").forEach(function (el) {
     var key = el.getAttribute("data-i18n");
-    if (t[key]) {
+    if (t[key] || key === "foodgrid.loadMore") {
       if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
         el.setAttribute("placeholder", t[key]);
       } else {
@@ -57,26 +57,41 @@ window.__applyLanguage = function applyLanguage(lang) {
             fr: "riches en protéines",
             de: "proteinreiche",
             pt: "ricos em proteínas",
-            it: "ad alto contenuto proteico",
+            it: "ricchi di proteine",
             ru: "с высоким содержанием белка",
             ja: "高タンパク",
             "zh-CN": "高蛋白",
-            ar: "عالية البروتين",
+            ar: "الغنية بالبروتين",
             hi: "उच्च प्रोटीन",
             ko: "고단백",
             tr: "Yüksek Proteinli",
             nl: "eiwitrijke",
-            pl: "wysokobiałkowe",
+            pl: "bogate w białko",
             sv: "proteinrika",
             th: "โปรตีนสูง"
           };
           var highlight = highlightMap[lang] || "Protein";
           var regex = new RegExp("(" + highlight + ")", "i");
           el.innerHTML = titleText.replace(regex, '<span class="gradient-text">$1</span>');
+        } else if (key === "foodgrid.loadMore") {
+          var loadMoreMap = {
+            en: "Load More", es: "Cargar más", fr: "Charger plus", de: "Mehr laden",
+            pt: "Carregar mais", it: "Carica altro", ru: "Загрузить еще", ja: "もっと読み込む",
+            "zh-CN": "加载更多", ar: "تحميل المزيد", hi: "और लोड करें", ko: "더 보기",
+            tr: "Daha Fazla Yükle", nl: "Meer laden", pl: "Załaduj więcej", sv: "Ladda mer", th: "โหลดเพิ่มเติม"
+          };
+          el.textContent = loadMoreMap[lang] || "Load More";
         } else {
           var val = t[key];
           if (typeof val === "string" && val.indexOf("120") !== -1) {
-            val = val.replace("120+", window.__totalFoodsCount || "123").replace("120", window.__totalFoodsCount || "123");
+            var countStr = window.__totalFoodsCount || "120";
+            var hasPlus = (typeof countStr === "string" && countStr.endsWith("+"));
+            var numericCount = hasPlus ? countStr.slice(0, -1) : countStr;
+            if (val.indexOf("120+") !== -1) {
+              val = val.replace(/120\+/g, countStr);
+            } else {
+              val = val.replace(/120/g, numericCount);
+            }
           }
           el.textContent = val;
         }
