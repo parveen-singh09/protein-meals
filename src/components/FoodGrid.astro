@@ -65,9 +65,9 @@ filtered.sort((a, b) => {
 });
 ---
 
-<section id="foods" class="food-grid-section">
+<section class="food-grid-section">
   <div class="container">
-    <div class="filters glass fade-in">
+      <div class="filters glass fade-in" id="foods">
       <div class="filter-row">
         <div class="filter-group">
           <div class="search-wrapper">
@@ -707,7 +707,7 @@ filtered.sort((a, b) => {
 
 <style>
   .food-grid-section {
-    padding: 14rem 0 10rem;
+    padding: 60px 0 10rem;
     scroll-margin-top: 80px;
   }
 
@@ -719,6 +719,7 @@ filtered.sort((a, b) => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    scroll-margin-top: 100px;
   }
 
   .filter-group {
