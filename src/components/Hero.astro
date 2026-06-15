@@ -5,11 +5,11 @@ import { foods } from '../data/foods';
 <section class="hero">
   <div class="container hero-content">
     <div class="hero-text fade-in">
-        <div class="hero-badge glass" data-i18n="hero.badge">
+      <div class="hero-badge glass">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-        Completely Free Resource
+        <span data-i18n="hero.badge">Completely Free Resource</span>
       </div>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-i18n="hero.title">
         Discover <span class="gradient-text">High Protein</span> Foods
       </h1>
       <p class="hero-subtitle" data-i18n="hero.subtitle">
@@ -17,8 +17,8 @@ import { foods } from '../data/foods';
         Free for everyone.
       </p>
       <div class="hero-actions">
-        <a href="#foods" class="btn btn-hero" data-i18n="hero.cta">
-          Browse All Foods
+        <a href="#foods" class="btn btn-hero">
+          <span data-i18n="hero.cta">Browse All Foods</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
         </a>
       </div>

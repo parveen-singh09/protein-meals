@@ -1,5 +1,25 @@
 ---
 import { languages } from "../i18n";
+
+const countryCodes: Record<string, string> = {
+  "en": "gb",
+  "es": "es",
+  "fr": "fr",
+  "de": "de",
+  "pt": "pt",
+  "it": "it",
+  "ru": "ru",
+  "ja": "jp",
+  "zh-CN": "cn",
+  "ar": "sa",
+  "hi": "in",
+  "ko": "kr",
+  "tr": "tr",
+  "nl": "nl",
+  "pl": "pl",
+  "sv": "se",
+  "th": "th"
+};
 ---
 
 <div class="lang-switcher-wrapper" id="langSwitcherWrapper">
@@ -9,13 +29,20 @@ import { languages } from "../i18n";
       <line x1="2" y1="12" x2="22" y2="12"></line>
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
     </svg>
-    <span class="lang-flag" id="langFlag">🇬🇧</span>
+    <span class="lang-label" id="langLabel">English</span>
   </button>
   <div class="lang-dropdown glass-strong" id="langDropdown">
     {
       languages.map((lang) => (
         <button class="lang-option" data-lang={lang.code}>
-          <span class="lang-option-flag">{lang.flag}</span>
+          <img
+            class="lang-option-flag"
+            src={`https://flagcdn.com/w40/${countryCodes[lang.code]}.png`}
+            alt={`${lang.name} flag`}
+            width="20"
+            height="14"
+            style="border-radius: 2px; object-fit: cover; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"
+          />
           <span class="lang-option-name">{lang.name}</span>
         </button>
       ))
@@ -32,13 +59,13 @@ import { languages } from "../i18n";
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.35rem;
     height: 36px;
     cursor: pointer;
     color: var(--text-secondary);
     background: none;
     border: none;
-    padding: 0 0.25rem;
+    padding: 0 0.35rem;
     transition: color 0.2s;
   }
 
@@ -51,70 +78,132 @@ import { languages } from "../i18n";
     line-height: 1;
   }
 
+  .lang-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+
+  .lang-switcher:hover .lang-label {
+    color: var(--text-secondary);
+  }
+
   .lang-dropdown {
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: 0.375rem;
-    background: rgba(255, 255, 255, 0.28);
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(24px) saturate(1.5);
     -webkit-backdrop-filter: blur(24px) saturate(1.5);
     border: 1px solid rgba(255, 255, 255, 0.45);
     border-radius: 0.75rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
     flex-direction: column;
     padding: 0.375rem;
     gap: 0.125rem;
-    min-width: 170px;
-    max-height: 320px;
+    min-width: 180px;
+    max-height: 280px;
     overflow-y: auto;
     z-index: 300;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+    pointer-events: none;
+  }
+
+  .lang-dropdown::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .lang-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .lang-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 99px;
+  }
+
+  .lang-dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
   }
 
   :root.dark .lang-dropdown {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(24px) saturate(1.5);
-    -webkit-backdrop-filter: blur(24px) saturate(1.5);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    background: rgba(10, 25, 47, 0.85);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  :root.dark .lang-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  :root.dark .lang-dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .lang-switcher-wrapper.open .lang-dropdown {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
   }
 
   .lang-option-flag {
-    font-size: 1.1rem;
-    line-height: 1;
+    display: block;
+    vertical-align: middle;
   }
 
   .lang-option {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.625rem;
     padding: 0.5rem 0.75rem;
     border: none;
     background: none;
     border-radius: 0.5rem;
     cursor: pointer;
     color: var(--text-secondary);
-    transition: all 0.15s;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.8125rem;
     text-align: left;
     width: 100%;
   }
 
   .lang-option:hover {
-    background: var(--surface-hover);
+    background: rgba(255, 255, 255, 0.25);
     color: var(--text-primary);
+    transform: translateX(2px);
+  }
+
+  :root.dark .lang-option:hover {
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .lang-option-name {
     color: var(--text-muted);
+    transition: color 0.15s;
   }
 
   .lang-option:hover .lang-option-name {
     color: var(--text-secondary);
+  }
+
+  @media (max-width: 1279px) {
+    .lang-label {
+      display: none;
+    }
+    .lang-switcher {
+      gap: 0;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
   }
 </style>

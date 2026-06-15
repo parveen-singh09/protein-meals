@@ -377,7 +377,7 @@ import LanguageSwitcher from "./LanguageSwitcher.astro";
     background: rgba(255, 255, 255, 0.06);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .header-inner {
       gap: 0.25rem;
     }
@@ -386,7 +386,7 @@ import LanguageSwitcher from "./LanguageSwitcher.astro";
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .menu-toggle {
       display: none;
     }
@@ -398,6 +398,21 @@ import LanguageSwitcher from "./LanguageSwitcher.astro";
     }
     .nav-desktop {
       display: flex;
+      gap: 0.125rem;
+    }
+    .nav-link {
+      padding: 0.5rem 0.5rem;
+      font-size: 0.8125rem;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    .nav-desktop {
+      gap: 0.25rem;
+    }
+    .nav-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
     }
   }
 </style>

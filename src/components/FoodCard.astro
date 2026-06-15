@@ -129,18 +129,18 @@ function microValue(v: number, key: string): string {
           alt={food.name}
           loading={index < 12 ? "eager" : "lazy"}
         />
-        <div class="card-category">
+        <div class="card-category" data-i18n={`categories.${food.category}`}>
           {categoryLabels[food.category] || food.category}
         </div>
       </div>
 
       <div class="card-body">
-        <h3 class="card-title">{food.name}</h3>
-        <p class="card-desc">{food.description}</p>
+        <h3 class="card-title" data-i18n={`food.${food.id}.name`}>{food.name}</h3>
+        <p class="card-desc" data-i18n={`food.${food.id}.desc`}>{food.description}</p>
 
         <div class="macro-bar">
           <div class="macro-bar-label">
-            <span>Protein</span>
+            <span data-i18n="foodcard.protein">Protein</span>
             <span class="macro-value highlight"
               >{food.protein}g / {food.serving.replace(/\(.*\)/, "").trim()}</span
             >
@@ -154,34 +154,44 @@ function microValue(v: number, key: string): string {
         <div class="macro-grid">
           <div class="macro-item">
             <span>{food.calories}</span>
-            <small>Calories</small>
+            <small data-i18n="foodcard.calories">Calories</small>
           </div>
           <div class="macro-item">
             <span>{food.carbs}g</span>
-            <small>Carbs</small>
+            <small data-i18n="foodcard.carbs">Carbs</small>
           </div>
           <div class="macro-item">
             <span>{food.fat}g</span>
-            <small>Fat</small>
+            <small data-i18n="foodcard.fat">Fat</small>
           </div>
           <div class="macro-item">
             <span>{food.fiber}g</span>
-            <small>Fiber</small>
+            <small data-i18n="foodcard.fiber">Fiber</small>
           </div>
         </div>
 
         <div class="card-stats">
           <div class="stat">
-            <span class="stat-value">${displayPrice}</span>
-            <span class="stat-label">Per {isWeightUnit ? "100g" : food.priceUnit}</span>
+            <span class="stat-value" data-usd-price={displayPrice}>${displayPrice}</span>
+            <span class="stat-label" data-i18n={
+              isWeightUnit || food.priceUnit === "100g"
+                ? "foodcard.per100g"
+                : food.priceUnit === "dozen"
+                  ? "foodcard.perDozen"
+                  : food.priceUnit === "carton"
+                    ? "foodcard.perCarton"
+                    : food.priceUnit === "cup"
+                      ? "foodcard.perCup"
+                      : "foodcard.per100g"
+            }>Per {isWeightUnit || food.priceUnit === "100g" ? "100g" : food.priceUnit}</span>
           </div>
           <div class="stat">
             <span class="stat-value">{food.bioavailability}%</span>
-            <span class="stat-label">Bioavailability</span>
+            <span class="stat-label" data-i18n="foodcard.bioavailability">Bioavailability</span>
           </div>
           <div class="stat">
             <span class="stat-value">{food.aminoAcids}</span>
-            <span class="stat-label">Amino Acids</span>
+            <span class="stat-label" data-i18n="foodcard.aminoAcids">Amino Acids</span>
           </div>
         </div>
       </div>
@@ -192,9 +202,10 @@ function microValue(v: number, key: string): string {
         {
           DISPLAY_MICROS.map((key) => {
             const val = food.micros[key] ?? 0;
+            const translationKey = key === 'vitaminB6' ? 'b6' : key === 'vitaminB12' ? 'b12' : key;
             return (
               <span class="micro-item">
-                {microLabels[key] || key}
+                <span data-i18n={`micro.${translationKey}`}>{microLabels[key] || key}</span>
                 <span class="micro-value" class:list={{ "micro-zero": val === 0 }}>{microValue(val, key)}</span>
               </span>
             );
