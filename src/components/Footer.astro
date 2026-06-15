@@ -48,17 +48,8 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>
-        &copy; {new Date().getFullYear()} HighProtein Foodz. <span data-i18n="footer.copyright">All rights reserved.</span>
-      </p>
-      <p class="footer-source">
-        <span data-i18n="footer.source">Nutrition data from</span> <a
-          href="https://fdc.nal.usda.gov/"
-          target="_blank"
-          rel="noopener noreferrer" data-i18n="footer.usda">USDA FoodData Central</a
-        >
-      </p>
+    <div class="footer-disclaimer">
+      <span><span class="text-xl font-semibold">Disclaimer :</span> Prices shown are average estimates and may not reflect current market prices. Nutrition data is for informational purposes and may vary by brand, preparation method, and source.</span>
     </div>
   </div>
 </footer>
@@ -154,6 +145,31 @@
   .footer-note {
     color: var(--text-muted) !important;
     font-size: 0.8rem !important;
+  }
+
+  .footer-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 193, 7, 0.08);
+    border: 1px solid rgba(255, 193, 7, 0.15);
+    border-radius: var(--radius);
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  :root.dark .footer-disclaimer {
+    background: rgba(255, 193, 7, 0.05);
+    border-color: rgba(255, 193, 7, 0.1);
+  }
+
+  .footer-disclaimer svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+    color: #f59e0b;
+    stroke-width: 2.5;
   }
 
   .footer-bottom {

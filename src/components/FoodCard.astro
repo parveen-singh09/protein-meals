@@ -219,6 +219,7 @@ function microValue(v: number, key: string): string {
 <style>
   .card-row {
     display: flex;
+    flex-direction: column;
   }
 
   .card-left {
@@ -231,16 +232,10 @@ function microValue(v: number, key: string): string {
   }
 
   .card-right {
-    flex: 0 0 220px;
-    padding: 1.25rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0 1.25rem 1.25rem;
     display: flex;
     flex-direction: column;
-    min-height: 0;
-  }
-
-  :root.dark .card-right {
-    border-color: rgba(255, 255, 255, 0.06);
+    max-height: 240px;
   }
 
   .food-card {
@@ -273,7 +268,7 @@ function microValue(v: number, key: string): string {
 
   .card-image {
     position: relative;
-    height: 180px;
+    aspect-ratio: 16 / 9;
     border-radius: 0.5rem;
     overflow: hidden;
   }
@@ -476,20 +471,5 @@ function microValue(v: number, key: string): string {
     color: #f97316 !important;
   }
 
-  @media (max-width: 640px) {
-    .card-row {
-      flex-direction: column;
-    }
 
-    .card-right {
-      flex: none;
-      border-left: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      max-height: 240px;
-    }
-
-    :root.dark .card-right {
-      border-color: rgba(255, 255, 255, 0.06);
-    }
-  }
 </style>

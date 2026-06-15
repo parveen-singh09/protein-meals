@@ -74,7 +74,11 @@ window.__applyLanguage = function applyLanguage(lang) {
           var regex = new RegExp("(" + highlight + ")", "i");
           el.innerHTML = titleText.replace(regex, '<span class="gradient-text">$1</span>');
         } else {
-          el.textContent = t[key];
+          var val = t[key];
+          if (typeof val === "string" && val.indexOf("120") !== -1) {
+            val = val.replace("120", window.__totalFoodsCount || "123");
+          }
+          el.textContent = val;
         }
       }
       if (key.indexOf("food.") === 0) {
@@ -95,7 +99,11 @@ window.__applyLanguage = function applyLanguage(lang) {
   }
   var metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && t["hero.subtitle"]) {
-    metaDesc.setAttribute("content", t["hero.subtitle"]);
+    var subtitleVal = t["hero.subtitle"];
+    if (typeof subtitleVal === "string" && subtitleVal.indexOf("120") !== -1) {
+      subtitleVal = subtitleVal.replace("120", window.__totalFoodsCount || "123");
+    }
+    metaDesc.setAttribute("content", subtitleVal);
   }
 
   // Currency conversion

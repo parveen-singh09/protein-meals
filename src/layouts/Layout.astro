@@ -1,5 +1,6 @@
 ---
 import { translations, languages } from "../i18n";
+import { foods } from "../data/foods";
 
 export interface Props {
   title?: string;
@@ -43,8 +44,9 @@ const { title = 'HighProtein Foodz - Discover 120+ High Protein Foods with Compl
       });
     </script>
 
-    <script define:vars={{ translations }} is:inline>
+    <script define:vars={{ translations, totalFoodsCount: foods.length }} is:inline>
       window.__translations = translations;
+      window.__totalFoodsCount = totalFoodsCount;
     </script>
 
     <script src="../i18n/i18n-client.js"></script>

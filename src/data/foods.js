@@ -40,7 +40,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5769376/pexels-photo-5769376.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5769376/pexels-photo-5769376.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 6,
       vitaminC: 0,
@@ -87,7 +87,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/16496288/pexels-photo-16496288.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/16496288/pexels-photo-16496288.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 3,
       vitaminC: 0,
@@ -134,7 +134,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7284305/pexels-photo-7284305.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7284305/pexels-photo-7284305.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 3,
       vitaminC: 0,
@@ -181,7 +181,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/618775/pexels-photo-618775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/618775/pexels-photo-618775.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -228,7 +228,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/792027/pexels-photo-792027.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -275,7 +275,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5410460/pexels-photo-5410460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5410460/pexels-photo-5410460.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 6,
       vitaminC: 0,
@@ -320,7 +320,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/7807394/pexels-photo-7807394.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7807394/pexels-photo-7807394.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -365,7 +365,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/26707585/pexels-photo-26707585.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/26707585/pexels-photo-26707585.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 8,
       vitaminC: 0,
@@ -412,7 +412,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/15307371/pexels-photo-15307371.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15307371/pexels-photo-15307371.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -452,7 +452,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10647859/pexels-photo-10647859.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10647859/pexels-photo-10647859.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -499,7 +499,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8250275/pexels-photo-8250275.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8250275/pexels-photo-8250275.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -546,7 +546,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7225725/pexels-photo-7225725.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7225725/pexels-photo-7225725.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 30,
       vitaminC: 0,
@@ -593,7 +593,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/20187067/pexels-photo-20187067.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/20187067/pexels-photo-20187067.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -640,7 +640,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/18606624/pexels-photo-18606624.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/18606624/pexels-photo-18606624.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 7744,
       vitaminC: 0.7,
@@ -687,7 +687,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/17751633/pexels-photo-17751633.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/17751633/pexels-photo-17751633.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 23,
       vitaminC: 0,
@@ -734,7 +734,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/35156470/pexels-photo-35156470.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/35156470/pexels-photo-35156470.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -777,7 +777,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/34636425/pexels-photo-34636425.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/34636425/pexels-photo-34636425.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -822,7 +822,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/6358978/pexels-photo-6358978.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6358978/pexels-photo-6358978.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -868,7 +868,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5191833/pexels-photo-5191833.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5191833/pexels-photo-5191833.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 3981,
       vitaminC: 27.9,
@@ -915,7 +915,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36869213/pexels-photo-36869213.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36869213/pexels-photo-36869213.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -961,7 +961,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5774154/pexels-photo-5774154.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5774154/pexels-photo-5774154.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1008,7 +1008,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8915004/pexels-photo-8915004.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8915004/pexels-photo-8915004.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 3,
       vitaminC: 0.3,
@@ -1055,7 +1055,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/33683051/pexels-photo-33683051.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/33683051/pexels-photo-33683051.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 6,
       vitaminC: 0,
@@ -1102,7 +1102,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/37800171/pexels-photo-37800171.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/37800171/pexels-photo-37800171.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 1.3,
@@ -1149,7 +1149,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/20226299/pexels-photo-20226299.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/20226299/pexels-photo-20226299.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1194,7 +1194,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/24186393/pexels-photo-24186393.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/24186393/pexels-photo-24186393.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 20,
       vitaminC: 0.6,
@@ -1241,7 +1241,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/24186400/pexels-photo-24186400.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/24186400/pexels-photo-24186400.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 70,
       vitaminC: 2.3,
@@ -1286,7 +1286,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/29333562/pexels-photo-29333562.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/29333562/pexels-photo-29333562.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 12,
       vitaminC: 0,
@@ -1330,7 +1330,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/37206692/pexels-photo-37206692.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/37206692/pexels-photo-37206692.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1377,7 +1377,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/8477054/pexels-photo-8477054.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8477054/pexels-photo-8477054.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1424,7 +1424,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/28172684/pexels-photo-28172684.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/28172684/pexels-photo-28172684.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 12,
       vitaminC: 0,
@@ -1471,7 +1471,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/14426299/pexels-photo-14426299.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/14426299/pexels-photo-14426299.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1518,7 +1518,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/21771249/pexels-photo-21771249.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/21771249/pexels-photo-21771249.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 4.1,
@@ -1565,7 +1565,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8351639/pexels-photo-8351639.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8351639/pexels-photo-8351639.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 12,
       vitaminC: 1,
@@ -1612,7 +1612,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/31636077/pexels-photo-31636077.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/31636077/pexels-photo-31636077.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -1659,7 +1659,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/9797030/pexels-photo-9797030.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/9797030/pexels-photo-9797030.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 32,
       vitaminC: 0,
@@ -1706,7 +1706,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/35288360/pexels-photo-35288360.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/35288360/pexels-photo-35288360.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 20,
       vitaminC: 0,
@@ -1753,7 +1753,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/32988590/pexels-photo-32988590.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/32988590/pexels-photo-32988590.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 0,
@@ -1800,7 +1800,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/11402497/pexels-photo-11402497.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/11402497/pexels-photo-11402497.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 2,
       vitaminC: 3,
@@ -1847,7 +1847,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/3650124/pexels-photo-3650124.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/3650124/pexels-photo-3650124.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 0,
@@ -1894,7 +1894,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/9143774/pexels-photo-9143774.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/9143774/pexels-photo-9143774.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 50,
       vitaminC: 0.4,
@@ -1941,7 +1941,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10432642/pexels-photo-10432642.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10432642/pexels-photo-10432642.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 18,
       vitaminC: 0,
@@ -1988,7 +1988,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8352783/pexels-photo-8352783.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8352783/pexels-photo-8352783.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 149,
       vitaminC: 0,
@@ -2035,7 +2035,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/19524032/pexels-photo-19524032.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/19524032/pexels-photo-19524032.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 19,
       vitaminC: 2.4,
@@ -2082,7 +2082,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36704545/pexels-photo-36704545.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36704545/pexels-photo-36704545.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 17,
       vitaminC: 0,
@@ -2129,7 +2129,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/4619577/pexels-photo-4619577.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/4619577/pexels-photo-4619577.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -2176,7 +2176,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/14062103/pexels-photo-14062103.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/14062103/pexels-photo-14062103.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 46,
       vitaminC: 0,
@@ -2223,7 +2223,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8352778/pexels-photo-8352778.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8352778/pexels-photo-8352778.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 32,
       vitaminC: 1.6,
@@ -2270,7 +2270,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10432702/pexels-photo-10432702.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10432702/pexels-photo-10432702.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 36,
       vitaminC: 0,
@@ -2317,7 +2317,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/16944381/pexels-photo-16944381.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/16944381/pexels-photo-16944381.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 45,
       vitaminC: 5,
@@ -2364,7 +2364,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/33653255/pexels-photo-33653255.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/33653255/pexels-photo-33653255.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 48,
       vitaminC: 8,
@@ -2411,7 +2411,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10895800/pexels-photo-10895800.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10895800/pexels-photo-10895800.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 13,
       vitaminC: 0,
@@ -2458,7 +2458,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10112456/pexels-photo-10112456.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10112456/pexels-photo-10112456.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 12,
       vitaminC: 0,
@@ -2505,7 +2505,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/30910486/pexels-photo-30910486.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/30910486/pexels-photo-30910486.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1040,
       vitaminC: 1.8,
@@ -2552,7 +2552,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/15112757/pexels-photo-15112757.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15112757/pexels-photo-15112757.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 54,
       vitaminC: 0,
@@ -2599,7 +2599,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7263908/pexels-photo-7263908.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7263908/pexels-photo-7263908.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 10,
       vitaminC: 4.7,
@@ -2646,7 +2646,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36892785/pexels-photo-36892785.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36892785/pexels-photo-36892785.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 9,
       vitaminC: 1.7,
@@ -2693,7 +2693,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/19789770/pexels-photo-19789770.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/19789770/pexels-photo-19789770.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 19,
       vitaminC: 0,
@@ -2740,7 +2740,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/4571249/pexels-photo-4571249.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/4571249/pexels-photo-4571249.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 15,
       vitaminC: 0.5,
@@ -2787,7 +2787,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/30207551/pexels-photo-30207551.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/30207551/pexels-photo-30207551.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 12,
       vitaminC: 1,
@@ -2834,7 +2834,7 @@ export const foods = [
     serving: '100g (2 large)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/16149475/pexels-photo-16149475.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/16149475/pexels-photo-16149475.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 160,
       vitaminC: 0,
@@ -2881,7 +2881,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8477757/pexels-photo-8477757.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8477757/pexels-photo-8477757.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -2928,7 +2928,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/20379659/pexels-photo-20379659.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/20379659/pexels-photo-20379659.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 0.3,
@@ -2975,7 +2975,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10165775/pexels-photo-10165775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10165775/pexels-photo-10165775.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 11,
       vitaminC: 0,
@@ -3022,7 +3022,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/14840767/pexels-photo-14840767.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/14840767/pexels-photo-14840767.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 127,
       vitaminC: 0,
@@ -3069,7 +3069,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/3693280/pexels-photo-3693280.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/3693280/pexels-photo-3693280.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 262,
       vitaminC: 0,
@@ -3116,7 +3116,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6660053/pexels-photo-6660053.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6660053/pexels-photo-6660053.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 316,
       vitaminC: 0,
@@ -3163,7 +3163,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/4324359/pexels-photo-4324359.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/4324359/pexels-photo-4324359.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 55,
       vitaminC: 0.2,
@@ -3210,7 +3210,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8109320/pexels-photo-8109320.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8109320/pexels-photo-8109320.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 107,
       vitaminC: 0,
@@ -3257,7 +3257,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6128854/pexels-photo-6128854.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6128854/pexels-photo-6128854.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 125,
       vitaminC: 0,
@@ -3304,7 +3304,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/11126279/pexels-photo-11126279.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/11126279/pexels-photo-11126279.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 292,
       vitaminC: 0,
@@ -3351,7 +3351,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8489749/pexels-photo-8489749.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8489749/pexels-photo-8489749.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 47,
       vitaminC: 0,
@@ -3398,7 +3398,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/4109853/pexels-photo-4109853.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/4109853/pexels-photo-4109853.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 411,
       vitaminC: 0.6,
@@ -3445,7 +3445,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7144518/pexels-photo-7144518.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7144518/pexels-photo-7144518.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 124,
       vitaminC: 0.9,
@@ -3492,7 +3492,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/12449964/pexels-photo-12449964.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/12449964/pexels-photo-12449964.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 308,
       vitaminC: 0,
@@ -3539,7 +3539,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/16204683/pexels-photo-16204683.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/16204683/pexels-photo-16204683.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 288,
       vitaminC: 0,
@@ -3586,7 +3586,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/11065345/pexels-photo-11065345.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/11065345/pexels-photo-11065345.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 198,
       vitaminC: 0,
@@ -3633,7 +3633,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/33575864/pexels-photo-33575864.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/33575864/pexels-photo-33575864.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 165,
       vitaminC: 0,
@@ -3680,7 +3680,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36570893/pexels-photo-36570893.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36570893/pexels-photo-36570893.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1430,
       vitaminC: 0,
@@ -3727,7 +3727,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/28881696/pexels-photo-28881696.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/28881696/pexels-photo-28881696.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 236,
       vitaminC: 0,
@@ -3774,7 +3774,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5250399/pexels-photo-5250399.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5250399/pexels-photo-5250399.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 198,
       vitaminC: 0,
@@ -3821,7 +3821,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6004145/pexels-photo-6004145.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6004145/pexels-photo-6004145.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 264,
       vitaminC: 0,
@@ -3868,7 +3868,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36939727/pexels-photo-36939727.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36939727/pexels-photo-36939727.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 302,
       vitaminC: 0,
@@ -3915,7 +3915,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/29516115/pexels-photo-29516115.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/29516115/pexels-photo-29516115.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0.49,
@@ -3962,7 +3962,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/566564/pexels-photo-566564.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/566564/pexels-photo-566564.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0.3,
@@ -4009,7 +4009,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/15522898/pexels-photo-15522898.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15522898/pexels-photo-15522898.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 171,
       vitaminC: 0.2,
@@ -4056,7 +4056,7 @@ export const foods = [
     serving: '100g (1.5 large)',
     ageGroups: ["all"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/9664253/pexels-photo-9664253.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/9664253/pexels-photo-9664253.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 194,
       vitaminC: 0,
@@ -4103,7 +4103,7 @@ export const foods = [
     serving: '100g (8-10 eggs)',
     ageGroups: ["all"],
     availability: 'limited',
-    image: 'https://images.pexels.com/photos/6294234/pexels-photo-6294234.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6294234/pexels-photo-6294234.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 156,
       vitaminC: 0,
@@ -4150,7 +4150,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/10994727/pexels-photo-10994727.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/10994727/pexels-photo-10994727.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 653,
       vitaminC: 6.8,
@@ -4197,7 +4197,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7144325/pexels-photo-7144325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7144325/pexels-photo-7144325.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 74,
       vitaminC: 2.6,
@@ -4244,7 +4244,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/35132130/pexels-photo-35132130.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/35132130/pexels-photo-35132130.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0.2,
@@ -4291,7 +4291,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6822599/pexels-photo-6822599.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6822599/pexels-photo-6822599.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4338,7 +4338,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/18363407/pexels-photo-18363407.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/18363407/pexels-photo-18363407.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 15,
       vitaminC: 6.1,
@@ -4385,7 +4385,7 @@ export const foods = [
     serving: '100g (cooked)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/35763746/pexels-photo-35763746.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/35763746/pexels-photo-35763746.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 1.5,
@@ -4432,7 +4432,7 @@ export const foods = [
     serving: '100g (cooked)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/16208459/pexels-photo-16208459.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/16208459/pexels-photo-16208459.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 1.3,
@@ -4479,7 +4479,7 @@ export const foods = [
     serving: '100g (cooked)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/31672561/pexels-photo-31672561.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/31672561/pexels-photo-31672561.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4526,7 +4526,7 @@ export const foods = [
     serving: '100g (cooked)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/248509/pexels-photo-248509.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/248509/pexels-photo-248509.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4573,7 +4573,7 @@ export const foods = [
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6003907/pexels-photo-6003907.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6003907/pexels-photo-6003907.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4620,7 +4620,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/35275158/pexels-photo-35275158.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/35275158/pexels-photo-35275158.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4667,7 +4667,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8611766/pexels-photo-8611766.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8611766/pexels-photo-8611766.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4714,7 +4714,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/18930135/pexels-photo-18930135.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/18930135/pexels-photo-18930135.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 1.3,
@@ -4761,7 +4761,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6730156/pexels-photo-6730156.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6730156/pexels-photo-6730156.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4808,7 +4808,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6086412/pexels-photo-6086412.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6086412/pexels-photo-6086412.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 13,
       vitaminC: 3,
@@ -4855,7 +4855,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/18275955/pexels-photo-18275955.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/18275955/pexels-photo-18275955.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 0.5,
@@ -4902,7 +4902,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/27468397/pexels-photo-27468397.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/27468397/pexels-photo-27468397.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 16,
       vitaminC: 1.6,
@@ -4949,7 +4949,7 @@ id: 'peanuts',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/28354522/pexels-photo-28354522.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/28354522/pexels-photo-28354522.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -4996,7 +4996,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/7217526/pexels-photo-7217526.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/7217526/pexels-photo-7217526.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 1.9,
@@ -5043,7 +5043,7 @@ id: 'pumpkin-seeds',
     serving: '100g (dry)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5988273/pexels-photo-5988273.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5988273/pexels-photo-5988273.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -5090,7 +5090,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8954279/pexels-photo-8954279.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8954279/pexels-photo-8954279.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 524,
       vitaminC: 9.8,
@@ -5137,7 +5137,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/8056670/pexels-photo-8056670.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/8056670/pexels-photo-8056670.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 77,
       vitaminC: 64.9,
@@ -5184,7 +5184,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/32188886/pexels-photo-32188886.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/32188886/pexels-photo-32188886.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 40,
       vitaminC: 14.2,
@@ -5231,7 +5231,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/12987565/pexels-photo-12987565.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/12987565/pexels-photo-12987565.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 13,
       vitaminC: 5.5,
@@ -5278,7 +5278,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5612015/pexels-photo-5612015.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5612015/pexels-photo-5612015.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 39,
       vitaminC: 62,
@@ -5325,7 +5325,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'seasonal',
-    image: 'https://images.pexels.com/photos/11650403/pexels-photo-11650403.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/11650403/pexels-photo-11650403.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 50,
       vitaminC: 7.7,
@@ -5372,7 +5372,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/9821813/pexels-photo-9821813.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/9821813/pexels-photo-9821813.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 4,
@@ -5419,7 +5419,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/6541637/pexels-photo-6541637.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/6541637/pexels-photo-6541637.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 1,
       vitaminC: 0,
@@ -5466,7 +5466,7 @@ id: 'pumpkin-seeds',
     serving: '100ml',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/5201095/pexels-photo-5201095.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/5201095/pexels-photo-5201095.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 55,
       vitaminC: 0,
@@ -5513,7 +5513,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/15623115/pexels-photo-15623115.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15623115/pexels-photo-15623115.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0.5,
@@ -5560,7 +5560,7 @@ id: 'pumpkin-seeds',
     serving: '100g (cooked)',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/18233225/pexels-photo-18233225.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/18233225/pexels-photo-18233225.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 1.2,
@@ -5607,7 +5607,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["all"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/36943553/pexels-photo-36943553.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/36943553/pexels-photo-36943553.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 1.4,
@@ -5654,7 +5654,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/15120889/pexels-photo-15120889.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/15120889/pexels-photo-15120889.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -5701,7 +5701,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/13779116/pexels-photo-13779116.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/13779116/pexels-photo-13779116.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,
@@ -5748,7 +5748,7 @@ id: 'pumpkin-seeds',
     serving: '100g',
     ageGroups: ["adult","teen"],
     availability: 'year-round',
-    image: 'https://images.pexels.com/photos/12625114/pexels-photo-12625114.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/12625114/pexels-photo-12625114.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     micros: {
       vitaminA: 0,
       vitaminC: 0,

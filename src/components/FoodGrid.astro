@@ -31,7 +31,11 @@ filtered.sort((a, b) => {
       isAscending = true;
       break;
     case "protein-per-price": {
-      const getVal = (f: { protein: number; price: number; priceUnit: string }) => {
+      const getVal = (f: {
+        protein: number;
+        price: number;
+        priceUnit: string;
+      }) => {
         const priceValue =
           f.priceUnit === "lb" ? (f.price / 453.6) * 100 : f.price;
         return f.protein / (priceValue || 1);
@@ -63,26 +67,27 @@ filtered.sort((a, b) => {
 
 <section id="foods" class="food-grid-section">
   <div class="container">
-    <div class="section-header fade-in">
-      <h2 data-i18n="foodgrid.title">Browse All Foods</h2>
-    </div>
-
     <div class="filters glass fade-in">
       <div class="filter-row">
         <div class="filter-group">
-        <div class="search-wrapper">
-        <input
-      id="search-input"
-      type="text"
-      class="search-input"
-      placeholder="Search foods..."
-      data-i18n="foodgrid.searchPlaceholder"
-    />
-        <button class="search-clear" id="search-clear" aria-label="Clear search">&times;</button>
+          <div class="search-wrapper">
+            <input
+              id="search-input"
+              type="text"
+              class="search-input"
+              placeholder="Search foods..."
+              data-i18n="foodgrid.searchPlaceholder"
+            />
+            <button
+              class="search-clear"
+              id="search-clear"
+              aria-label="Clear search">&times;</button
+            >
+          </div>
         </div>
-        </div>
-        <div class="filter-group">
-          <label class="filter-label" data-i18n="foodgrid.sortBy">Sort By</label>
+        <div class="filter-group desktop-sort-group">
+          <label class="filter-label" data-i18n="foodgrid.sortBy">Sort By</label
+          >
           <div class="filter-chips">
             {
               sortOptions.map((opt) => {
@@ -94,25 +99,132 @@ filtered.sort((a, b) => {
                   "protein-per-price": "sort.bestProteinPerPrice",
                 }[opt.id];
                 return (
-                <a
-                  href={`?sort=${opt.id}`}
-                  class={`chip ${currentSort === opt.id ? "active" : ""}`}
-                  data-i18n={i18nKey}
-                >
-                  {opt.label}
-                </a>
+                  <a
+                    href={`?sort=${opt.id}`}
+                    class={`chip ${currentSort === opt.id ? "active" : ""}`}
+                    data-i18n={i18nKey}
+                  >
+                    {opt.label}
+                  </a>
                 );
               })
             }
+          </div>
+        </div>
+
+        <div class="mobile-filter-dropdowns">
+          <!-- Sort Dropdown -->
+          <div class="custom-dropdown" id="sortDropdownContainer">
+            <button
+              class="dropdown-trigger"
+              id="sortDropdownTrigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span id="sortTriggerText" data-i18n="sort.highestProtein"
+                >Highest Protein</span
+              >
+              <svg
+                class="chevron-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg
+              >
+            </button>
+            <div class="dropdown-menu" role="listbox">
+              {
+                sortOptions.map((opt) => {
+                  const i18nKey = {
+                    "protein-desc": "sort.highestProtein",
+                    "protein-asc": "sort.lowestProtein",
+                    "calories-desc": "sort.highestCalories",
+                    "calories-asc": "sort.lowestCalories",
+                    "protein-per-price": "sort.bestProteinPerPrice",
+                  }[opt.id];
+                  return (
+                    <button
+                      class="dropdown-item"
+                      role="option"
+                      data-value={opt.id}
+                      data-i18n={i18nKey}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })
+              }
+            </div>
+          </div>
+
+          <!-- Category Dropdown -->
+          <div class="custom-dropdown" id="categoryDropdownContainer">
+            <button
+              class="dropdown-trigger"
+              id="categoryDropdownTrigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span id="categoryTriggerText" data-i18n="nav.allFoods"
+                >All Foods</span
+              >
+              <svg
+                class="chevron-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg
+              >
+            </button>
+            <div class="dropdown-menu" role="listbox">
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="all"
+                data-i18n="nav.allFoods">All Foods</button
+              >
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="meat"
+                data-i18n="categories.meat">Meat & Poultry</button
+              >
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="seafood"
+                data-i18n="categories.seafood">Fish & Seafood</button
+              >
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="dairy"
+                data-i18n="categories.dairy">Dairy & Eggs</button
+              >
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="plant"
+                data-i18n="categories.plant">Plant-Based</button
+              >
+              <button
+                class="dropdown-item"
+                role="option"
+                data-value="supplements"
+                data-i18n="categories.supplements">Supplements</button
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="grid">
-      {filtered.map((food, i) => (
-        <FoodCard food={food} index={i} />
-      ))}
+      {filtered.map((food, i) => <FoodCard food={food} index={i} />)}
     </div>
     <div class="empty-state glass fade-in" style="display: none;">
       <svg
@@ -125,12 +237,14 @@ filtered.sort((a, b) => {
         stroke-linecap="round"
         stroke-linejoin="round"
       >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-        <line x1="8" y1="11" x2="14" y2="11" />
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
       </svg>
       <h3 data-i18n="foodgrid.empty.title">No foods found</h3>
-      <p data-i18n="foodgrid.empty.desc">Try adjusting your search or filters</p>
+      <p data-i18n="foodgrid.empty.desc">
+        Try adjusting your search or filters
+      </p>
       <a href="/" class="btn" data-i18n="foodgrid.clearFilters">
         Clear all filters
       </a>
@@ -212,16 +326,25 @@ filtered.sort((a, b) => {
 
   function applyFilters() {
     const windowHash = window.location.hash.slice(1);
-    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
-    const activeCategory = validCategories.includes(windowHash) ? windowHash : null;
+    const validCategories = [
+      "meat",
+      "seafood",
+      "dairy",
+      "plant",
+      "supplements",
+    ];
+    const activeCategory = validCategories.includes(windowHash)
+      ? windowHash
+      : null;
 
-    const cards = document.querySelectorAll(".food-card") as NodeListOf<HTMLElement>;
+    const cards = document.querySelectorAll(
+      ".food-card",
+    ) as NodeListOf<HTMLElement>;
     let visibleIndex = 0;
     cards.forEach((card) => {
       const name = card.getAttribute("data-name") || "";
       const category = card.getAttribute("data-category") || "";
-      const matchesSearch = !searchQuery ||
-        name.includes(searchQuery);
+      const matchesSearch = !searchQuery || name.includes(searchQuery);
 
       const matchesCategory = !activeCategory || category === activeCategory;
 
@@ -248,11 +371,17 @@ filtered.sort((a, b) => {
 
   function updateHeaderActiveState(hash: string) {
     const cleanHash = hash.replace("#", "");
-    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
+    const validCategories = [
+      "meat",
+      "seafood",
+      "dairy",
+      "plant",
+      "supplements",
+    ];
     const hasValidCategory = validCategories.includes(cleanHash);
-    
+
     const desktopLinks = document.querySelectorAll(".nav-desktop .nav-link");
-    desktopLinks.forEach(link => {
+    desktopLinks.forEach((link) => {
       const href = link.getAttribute("href");
       if (href === "/" && (!cleanHash || cleanHash === "features")) {
         link.classList.add("active");
@@ -266,7 +395,7 @@ filtered.sort((a, b) => {
     });
 
     const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-link");
-    mobileLinks.forEach(link => {
+    mobileLinks.forEach((link) => {
       const href = link.getAttribute("href");
       if (href === "/" && (!cleanHash || cleanHash === "features")) {
         link.classList.add("active");
@@ -297,6 +426,7 @@ filtered.sort((a, b) => {
         this.classList.add("active");
 
         applyClientSort(sortId);
+        updateSortDropdownState(sortId);
 
         const url = new URL(window.location.href);
         url.searchParams.set("sort", sortId);
@@ -305,7 +435,9 @@ filtered.sort((a, b) => {
     );
   });
 
-  const searchInput = document.getElementById("search-input") as HTMLInputElement;
+  const searchInput = document.getElementById(
+    "search-input",
+  ) as HTMLInputElement;
   if (searchInput) {
     let debounceTimer: ReturnType<typeof setTimeout>;
     searchInput.addEventListener("input", function () {
@@ -322,52 +454,210 @@ filtered.sort((a, b) => {
     });
   }
 
-  document.querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link").forEach((link) => {
-    link.addEventListener("click", function (this: HTMLAnchorElement, e: Event) {
-      const href = this.getAttribute("href");
-      if (href && href.startsWith("#")) {
+  document
+    .querySelectorAll(".nav-desktop .nav-link, .mobile-nav .mobile-link")
+    .forEach((link) => {
+      link.addEventListener(
+        "click",
+        function (this: HTMLAnchorElement, e: Event) {
+          const href = this.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const hashPart = href.slice(1);
+            window.location.hash = hashPart;
+          }
+        },
+      );
+    });
+
+  document.querySelectorAll("[data-sort]").forEach((link) => {
+    link.addEventListener(
+      "click",
+      function (this: HTMLAnchorElement, e: Event) {
         e.preventDefault();
-        const hashPart = href.slice(1);
-        window.location.hash = hashPart;
+        const sortId = this.getAttribute("data-sort");
+        if (!sortId) return;
+
+        const url = new URL(window.location.href);
+        url.searchParams.set("sort", sortId);
+        window.history.pushState({}, "", url.toString());
+
+        const chips = document.querySelectorAll(".chip");
+        chips.forEach((chip) => {
+          const href = chip.getAttribute("href") || "";
+          const params = new URLSearchParams(href.split("?")[1] || "");
+          const chipSortId = params.get("sort");
+          if (chipSortId === sortId) {
+            const parent = chip.closest(".filter-chips")!;
+            parent
+              .querySelectorAll(".chip")
+              .forEach((c) => c.classList.remove("active"));
+            chip.classList.add("active");
+          }
+        });
+
+        applyClientSort(sortId);
+        updateSortDropdownState(sortId);
+
+        const gridSection = document.getElementById("foods");
+        gridSection?.scrollIntoView({ behavior: "smooth" });
+      },
+    );
+  });
+
+  function updateCategoryDropdownState(hash: string) {
+    const categoryDropdown = document.getElementById(
+      "categoryDropdownContainer",
+    );
+    if (!categoryDropdown) return;
+
+    const value = hash || "all";
+    const items = categoryDropdown.querySelectorAll(".dropdown-item");
+    let activeItem = null;
+
+    items.forEach((item) => {
+      const itemVal = item.getAttribute("data-value");
+      if (itemVal === value) {
+        item.classList.add("active");
+        activeItem = item;
+      } else {
+        item.classList.remove("active");
       }
     });
-  });
 
-  document.querySelectorAll("[data-sort]").forEach(link => {
-    link.addEventListener("click", function(this: HTMLAnchorElement, e: Event) {
-      e.preventDefault();
-      const sortId = this.getAttribute("data-sort");
-      if (!sortId) return;
-
-      const url = new URL(window.location.href);
-      url.searchParams.set("sort", sortId);
-      window.history.pushState({}, "", url.toString());
-
-      const chips = document.querySelectorAll(".chip");
-      chips.forEach(chip => {
-        const href = chip.getAttribute("href") || "";
-        const params = new URLSearchParams(href.split("?")[1] || "");
-        const chipSortId = params.get("sort");
-        if (chipSortId === sortId) {
-          const parent = chip.closest(".filter-chips")!;
-          parent.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-          chip.classList.add("active");
+    if (activeItem) {
+      const triggerText = document.getElementById("categoryTriggerText");
+      if (triggerText) {
+        const i18nKey = activeItem.getAttribute("data-i18n");
+        if (i18nKey) {
+          triggerText.setAttribute("data-i18n", i18nKey);
+          if (window.__applyLanguage) {
+            window.__applyLanguage(
+              document.documentElement.getAttribute("lang") || "en",
+            );
+          }
         }
+      }
+    }
+  }
+
+  function updateSortDropdownState(sortId: string) {
+    const sortDropdown = document.getElementById("sortDropdownContainer");
+    if (!sortDropdown) return;
+
+    const activeSort = sortId || "protein-desc";
+    const items = sortDropdown.querySelectorAll(".dropdown-item");
+    let activeItem = null;
+
+    items.forEach((item) => {
+      const itemVal = item.getAttribute("data-value");
+      if (itemVal === activeSort) {
+        item.classList.add("active");
+        activeItem = item;
+      } else {
+        item.classList.remove("active");
+      }
+    });
+
+    if (activeItem) {
+      const triggerText = document.getElementById("sortTriggerText");
+      if (triggerText) {
+        const i18nKey = activeItem.getAttribute("data-i18n");
+        if (i18nKey) {
+          triggerText.setAttribute("data-i18n", i18nKey);
+          if (window.__applyLanguage) {
+            window.__applyLanguage(
+              document.documentElement.getAttribute("lang") || "en",
+            );
+          }
+        }
+      }
+    }
+  }
+
+  function initDropdowns() {
+    const sortDropdown = document.getElementById("sortDropdownContainer");
+    const categoryDropdown = document.getElementById(
+      "categoryDropdownContainer",
+    );
+
+    if (sortDropdown && categoryDropdown) {
+      const sortTrigger = sortDropdown.querySelector(".dropdown-trigger");
+      const categoryTrigger =
+        categoryDropdown.querySelector(".dropdown-trigger");
+
+      if (sortTrigger && categoryTrigger) {
+        sortTrigger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          sortDropdown.classList.toggle("open");
+          categoryDropdown.classList.remove("open");
+        });
+
+        categoryTrigger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          categoryDropdown.classList.toggle("open");
+          sortDropdown.classList.remove("open");
+        });
+      }
+
+      sortDropdown.querySelectorAll(".dropdown-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          const sortId = this.getAttribute("data-value");
+          if (!sortId) return;
+
+          applyClientSort(sortId);
+
+          const url = new URL(window.location.href);
+          url.searchParams.set("sort", sortId);
+          window.history.pushState({}, "", url.toString());
+
+          const chips = document.querySelectorAll(".chip");
+          chips.forEach((chip) => {
+            const href = chip.getAttribute("href") || "";
+            const params = new URLSearchParams(href.split("?")[1] || "");
+            const chipSortId = params.get("sort");
+            if (chipSortId === sortId) {
+              const parent = chip.closest(".filter-chips")!;
+              parent
+                .querySelectorAll(".chip")
+                .forEach((c) => c.classList.remove("active"));
+              chip.classList.add("active");
+            }
+          });
+
+          updateSortDropdownState(sortId);
+        });
       });
 
-      applyClientSort(sortId);
+      categoryDropdown.querySelectorAll(".dropdown-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          const catValue = this.getAttribute("data-value");
+          if (!catValue) return;
 
-      const gridSection = document.getElementById("foods");
-      gridSection?.scrollIntoView({ behavior: "smooth" });
-    });
-  });
+          window.location.hash = catValue === "all" ? "" : catValue;
+        });
+      });
+
+      document.addEventListener("click", () => {
+        sortDropdown.classList.remove("open");
+        categoryDropdown.classList.remove("open");
+      });
+    }
+  }
 
   window.addEventListener("hashchange", () => {
     const hash = window.location.hash.slice(1);
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
-    
-    const validCategories = ["meat", "seafood", "dairy", "plant", "supplements"];
+    updateCategoryDropdownState(hash);
+
+    const validCategories = [
+      "meat",
+      "seafood",
+      "dairy",
+      "plant",
+      "supplements",
+    ];
     if (validCategories.includes(hash) || hash === "foods") {
       const gridSection = document.getElementById("foods");
       gridSection?.scrollIntoView({ behavior: "smooth" });
@@ -375,28 +665,30 @@ filtered.sort((a, b) => {
   });
 
   const runInit = () => {
-    const initialSort = getQueryParam("sort");
-    if (initialSort) {
-      applyClientSort(initialSort);
+    initDropdowns();
 
-      const chips = document.querySelectorAll(".chip");
-      chips.forEach((chip) => {
-        const href = chip.getAttribute("href") || "";
-        const params = new URLSearchParams(href.split("?")[1] || "");
-        const sortId = params.get("sort");
-        if (sortId === initialSort) {
-          const parent = chip.closest(".filter-chips")!;
-          parent
-            .querySelectorAll(".chip")
-            .forEach((c) => c.classList.remove("active"));
-          chip.classList.add("active");
-        }
-      });
-    }
+    const initialSort = getQueryParam("sort") || "protein-desc";
+    applyClientSort(initialSort);
+    updateSortDropdownState(initialSort);
+
+    const chips = document.querySelectorAll(".chip");
+    chips.forEach((chip) => {
+      const href = chip.getAttribute("href") || "";
+      const params = new URLSearchParams(href.split("?")[1] || "");
+      const sortId = params.get("sort");
+      if (sortId === initialSort) {
+        const parent = chip.closest(".filter-chips")!;
+        parent
+          .querySelectorAll(".chip")
+          .forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+      }
+    });
 
     const hash = window.location.hash.slice(1);
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
+    updateCategoryDropdownState(hash);
 
     if (hash) {
       setTimeout(() => {
@@ -419,27 +711,9 @@ filtered.sort((a, b) => {
     scroll-margin-top: 80px;
   }
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .section-header h2 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 800;
-    margin: 0 0 0.5rem;
-    background: linear-gradient(
-      135deg,
-      var(--accent-green),
-      var(--accent-teal),
-      var(--accent-lime)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .filters {
+    position: relative;
+    z-index: 2;
     padding: 1.25rem;
     margin-bottom: 2rem;
     display: flex;
@@ -506,7 +780,9 @@ filtered.sort((a, b) => {
     font-size: 0.875rem;
     color: var(--text-primary);
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
     padding-right: 2rem;
   }
 
@@ -646,5 +922,120 @@ filtered.sort((a, b) => {
 
   :global(.food-card.filtered-out) {
     display: none !important;
+  }
+
+  .desktop-sort-group {
+    display: none !important;
+  }
+
+  .mobile-filter-dropdowns {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .custom-dropdown {
+    position: relative;
+    flex: 1;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.625rem 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-sans);
+  }
+
+  :root.dark .dropdown-trigger {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .dropdown-trigger:hover,
+  .custom-dropdown.open .dropdown-trigger {
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  :root.dark .dropdown-trigger:hover,
+  :root.dark .custom-dropdown.open .dropdown-trigger {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .chevron-icon {
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+
+  .custom-dropdown.open .chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.375rem);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 0.25rem;
+  }
+
+  :root.dark .dropdown-menu {
+    background: rgba(15, 23, 42, 0.95);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-item {
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0.625rem 0.875rem;
+    text-align: left;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-weight: 500;
+    width: 100%;
+    font-family: var(--font-sans);
+  }
+
+  .dropdown-item:hover {
+    background: rgba(22, 163, 74, 0.08);
+    color: var(--accent-green);
+  }
+
+  .dropdown-item.active {
+    background: var(--accent-green);
+    color: white;
   }
 </style>
