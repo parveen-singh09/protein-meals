@@ -1,10 +1,5 @@
 {
   "name": "highprotein-foodz",
   "compatibility_date": "2026-06-15",
-  "pages_build_output_dir": "dist",
-  "send_email": [
-    {
-      "name": "EMAIL"
-    }
-  ]
+  "pages_build_output_dir": "dist"
 }
