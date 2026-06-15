@@ -336,5 +336,12 @@
   "foodcard.per100g": "Per 100g",
   "foodcard.perDozen": "Per dozen",
   "foodcard.perCarton": "Per carton",
-  "foodcard.perCup": "Per cup"
+  "foodcard.perCup": "Per cup",
+  "error.pageNotFound": "Page Not Found",
+  "error.pageNotFoundDesc": "Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.",
+  "error.serverError": "Server Error",
+  "error.serverErrorDesc": "Something went wrong on our end. Please try again later or contact us if the problem persists.",
+  "error.backHome": "Back to Home",
+  "error.browseFoods": "Browse Foods",
+  "error.contactSupport": "Contact Support"
 }

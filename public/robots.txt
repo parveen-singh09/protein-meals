@@ -1,0 +1,14 @@
+# HighProtein Foodz - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://highproteinfoodz.com/sitemap-index.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 10
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /node_modules/
