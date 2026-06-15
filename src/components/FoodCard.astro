@@ -98,7 +98,6 @@ function microValue(v: number, key: string): string {
   if (v === 0) return "0";
 
   if (mcgKeys.has(key)) {
-    // Some data stores µg nutrients in mg (e.g., salmon D: 0.012 mg = 12 µg)
     if (v < 0.1) v = v * 1000;
     if (v >= 1000) return (v / 1000).toFixed(1) + "mg";
     return v.toFixed(v < 1 ? 1 : 0) + "µg";

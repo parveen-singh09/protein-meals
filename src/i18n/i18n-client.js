@@ -106,7 +106,6 @@ window.__applyLanguage = function applyLanguage(lang) {
     metaDesc.setAttribute("content", subtitleVal);
   }
 
-  // Currency conversion
   document.querySelectorAll("[data-usd-price]").forEach(function (el) {
     var usdPrice = parseFloat(el.getAttribute("data-usd-price"));
     if (!isNaN(usdPrice)) {

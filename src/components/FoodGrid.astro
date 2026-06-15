@@ -60,7 +60,6 @@ filtered.sort((a, b) => {
       : String(valB).localeCompare(String(valA));
   }
 
-  // Fallback to name ascending (A-Z) on tie
   return a.name.localeCompare(b.name);
 });
 ---
@@ -113,7 +112,6 @@ filtered.sort((a, b) => {
         </div>
 
         <div class="mobile-filter-dropdowns">
-          <!-- Sort Dropdown -->
           <div class="custom-dropdown" id="sortDropdownContainer">
             <button
               class="dropdown-trigger"
@@ -159,7 +157,6 @@ filtered.sort((a, b) => {
             </div>
           </div>
 
-          <!-- Category Dropdown -->
           <div class="custom-dropdown" id="categoryDropdownContainer">
             <button
               class="dropdown-trigger"
@@ -855,13 +852,6 @@ filtered.sort((a, b) => {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
-  /* .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  } */
 
   .empty-state {
     display: flex;
