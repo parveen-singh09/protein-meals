@@ -6,26 +6,11 @@ const isFoodsPage = pathname.replace(/\/$/, "") === "/foods";
   <div class="container footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"
-          ></path>
-          <line x1="6" y1="17" x2="18" y2="17"></line>
-        </svg>
-        <span data-i18n="footer.brand">HighProtein Foodz</span>
+        <img src="/favicon-96x96.png" alt="HighProteinFoodz" width="24" height="24" style="border-radius: 6px;" />
+        <span data-i18n="footer.brand">HighProteinFoodz</span>
       </div>
       <p class="footer-desc" data-i18n="footer.desc">
-        Your free resource for discovering protein-rich foods. Data sourced from
-        USDA FoodData Central (fdc.nal.usda.gov).
+        Your free resource for discovering protein-rich foods.
       </p>
     </div>
 
@@ -100,7 +85,7 @@ const isFoodsPage = pathname.replace(/\/$/, "") === "/foods";
     align-items: center;
     gap: 0.5rem;
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 800;
     background: linear-gradient(
       135deg,
       var(--accent-green),
