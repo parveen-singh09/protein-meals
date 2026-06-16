@@ -31,7 +31,7 @@ export async function onRequest(context: { request: Request; env: { EMAIL: { sen
 
     if (context.env && context.env.EMAIL && typeof context.env.EMAIL.send === "function") {
       await context.env.EMAIL.send({
-        to: "contactfeedback9@gmail.com",
+        to: "hello@highproteinfoodz.com",
         from: { email: "contact@highproteinfoodz.com", name: "HighProtein Foodz" },
         replyTo: email,
         subject: `Contact Form: ${subject}`,
@@ -41,7 +41,7 @@ export async function onRequest(context: { request: Request; env: { EMAIL: { sen
     } else {
       console.warn("EMAIL binding not configured or unavailable. Logging email content to console:");
       console.log({
-        to: "contactfeedback9@gmail.com",
+        to: "hello@highproteinfoodz.com",
         from: "contact@highproteinfoodz.com",
         replyTo: email,
         subject: `Contact Form: ${subject}`,
