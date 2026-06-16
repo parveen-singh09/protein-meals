@@ -41,7 +41,9 @@ const isFoodsPage = pathname.replace(/\/$/, "") === "/foods";
       <div class="footer-col">
         <h4 data-i18n="footer.sortBy">Sort By</h4>
         <a href={isFoodsPage ? "#foods" : "/foods?sort=protein-desc"} data-sort="protein-desc" data-i18n="sort.highestProtein">Highest Protein</a>
+        <a href={isFoodsPage ? "#foods" : "/foods?sort=protein-asc"} data-sort="protein-asc" data-i18n="sort.lowestProtein">Lowest Protein</a>
         <a href={isFoodsPage ? "#foods" : "/foods?sort=calories-desc"} data-sort="calories-desc" data-i18n="sort.highestCalories">Highest Calories</a>
+        <a href={isFoodsPage ? "#foods" : "/foods?sort=calories-asc"} data-sort="calories-asc" data-i18n="sort.lowestCalories">Lowest Calories</a>
         <a href={isFoodsPage ? "#foods" : "/foods?sort=protein-per-price"} data-sort="protein-per-price" data-i18n="sort.bestProteinPerPrice">Best Protein per Price</a>
       </div>
       <div class="footer-col">

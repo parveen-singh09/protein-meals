@@ -380,8 +380,9 @@ const isHomePage = pathname.replace(/\/$/, "") === "";
   });
 
   document.addEventListener("click", (e) => {
-    if (!mobileSortDropdown?.contains(e.target) && !mobileSortBtn?.contains(e.target) &&
-        !mobileCategoryDropdown?.contains(e.target) && !mobileCategoryBtn?.contains(e.target)) {
+    const target = e.target as Node | null;
+    if (!mobileSortDropdown?.contains(target) && !mobileSortBtn?.contains(target) &&
+        !mobileCategoryDropdown?.contains(target) && !mobileCategoryBtn?.contains(target)) {
       mobileSortDropdown?.classList.remove("open");
       mobileCategoryDropdown?.classList.remove("open");
     }
