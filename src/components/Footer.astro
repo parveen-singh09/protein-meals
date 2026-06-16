@@ -1,3 +1,7 @@
+---
+const pathname = Astro.url.pathname;
+const isFoodsPage = pathname.replace(/\/$/, "") === "/foods";
+---
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
@@ -28,17 +32,17 @@
     <div class="footer-links">
       <div class="footer-col">
         <h4 data-i18n="footer.categories">Categories</h4>
-        <a href="#meat" data-i18n="categories.meat">Meat & Poultry</a>
-        <a href="#seafood" data-i18n="categories.seafood">Fish & Seafood</a>
-        <a href="#dairy" data-i18n="categories.dairy">Dairy & Eggs</a>
-        <a href="#plant" data-i18n="categories.plant">Plant-Based</a>
-        <a href="#supplements" data-i18n="categories.supplements">Supplements</a>
+        <a href={isFoodsPage ? "#meat" : "/foods#meat"} data-i18n="categories.meat">Meat & Poultry</a>
+        <a href={isFoodsPage ? "#seafood" : "/foods#seafood"} data-i18n="categories.seafood">Fish & Seafood</a>
+        <a href={isFoodsPage ? "#dairy" : "/foods#dairy"} data-i18n="categories.dairy">Dairy & Eggs</a>
+        <a href={isFoodsPage ? "#plant" : "/foods#plant"} data-i18n="categories.plant">Plant-Based</a>
+        <a href={isFoodsPage ? "#supplements" : "/foods#supplements"} data-i18n="categories.supplements">Supplements</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.sortBy">Sort By</h4>
-        <a href="#foods" data-sort="protein-desc" data-i18n="sort.highestProtein">Highest Protein</a>
-        <a href="#foods" data-sort="calories-desc" data-i18n="sort.highestCalories">Highest Calories</a>
-        <a href="#foods" data-sort="protein-per-price" data-i18n="sort.bestProteinPerPrice">Best Protein per Price</a>
+        <a href={isFoodsPage ? "#foods" : "/foods?sort=protein-desc"} data-sort="protein-desc" data-i18n="sort.highestProtein">Highest Protein</a>
+        <a href={isFoodsPage ? "#foods" : "/foods?sort=calories-desc"} data-sort="calories-desc" data-i18n="sort.highestCalories">Highest Calories</a>
+        <a href={isFoodsPage ? "#foods" : "/foods?sort=protein-per-price"} data-sort="protein-per-price" data-i18n="sort.bestProteinPerPrice">Best Protein per Price</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.info">Info</h4>

@@ -64,162 +64,8 @@ filtered.sort((a, b) => {
 });
 ---
 
-<section class="food-grid-section">
+<section class="food-grid-section" id="foods">
   <div class="container">
-      <div class="filters glass fade-in" id="foods">
-      <div class="filter-row">
-        <div class="filter-group">
-          <div class="search-wrapper">
-            <input
-              id="search-input"
-              type="text"
-              class="search-input"
-              placeholder="Search foods..."
-              data-i18n="foodgrid.searchPlaceholder"
-            />
-            <button
-              class="search-clear"
-              id="search-clear"
-              aria-label="Clear search">&times;</button
-            >
-          </div>
-        </div>
-        <div class="filter-group desktop-sort-group">
-          <label class="filter-label" data-i18n="foodgrid.sortBy">Sort By</label
-          >
-          <div class="filter-chips">
-            {
-              sortOptions.map((opt) => {
-                const i18nKey = {
-                  "protein-desc": "sort.highestProtein",
-                  "protein-asc": "sort.lowestProtein",
-                  "calories-desc": "sort.highestCalories",
-                  "calories-asc": "sort.lowestCalories",
-                  "protein-per-price": "sort.bestProteinPerPrice",
-                }[opt.id];
-                return (
-                  <a
-                    href={`?sort=${opt.id}`}
-                    class={`chip ${currentSort === opt.id ? "active" : ""}`}
-                    data-i18n={i18nKey}
-                  >
-                    {opt.label}
-                  </a>
-                );
-              })
-            }
-          </div>
-        </div>
-
-        <div class="mobile-filter-dropdowns">
-          <div class="custom-dropdown" id="sortDropdownContainer">
-            <button
-              class="dropdown-trigger"
-              id="sortDropdownTrigger"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span id="sortTriggerText" data-i18n="sort.highestProtein"
-                >Highest Protein</span
-              >
-              <svg
-                class="chevron-icon"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg
-              >
-            </button>
-            <div class="dropdown-menu" role="listbox">
-              {
-                sortOptions.map((opt) => {
-                  const i18nKey = {
-                    "protein-desc": "sort.highestProtein",
-                    "protein-asc": "sort.lowestProtein",
-                    "calories-desc": "sort.highestCalories",
-                    "calories-asc": "sort.lowestCalories",
-                    "protein-per-price": "sort.bestProteinPerPrice",
-                  }[opt.id];
-                  return (
-                    <button
-                      class="dropdown-item"
-                      role="option"
-                      data-value={opt.id}
-                      data-i18n={i18nKey}
-                    >
-                      {opt.label}
-                    </button>
-                  );
-                })
-              }
-            </div>
-          </div>
-
-          <div class="custom-dropdown" id="categoryDropdownContainer">
-            <button
-              class="dropdown-trigger"
-              id="categoryDropdownTrigger"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span id="categoryTriggerText" data-i18n="nav.allFoods"
-                >All Foods</span
-              >
-              <svg
-                class="chevron-icon"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg
-              >
-            </button>
-            <div class="dropdown-menu" role="listbox">
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="all"
-                data-i18n="nav.allFoods">All Foods</button
-              >
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="meat"
-                data-i18n="categories.meat">Meat & Poultry</button
-              >
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="seafood"
-                data-i18n="categories.seafood">Fish & Seafood</button
-              >
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="dairy"
-                data-i18n="categories.dairy">Dairy & Eggs</button
-              >
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="plant"
-                data-i18n="categories.plant">Plant-Based</button
-              >
-              <button
-                class="dropdown-item"
-                role="option"
-                data-value="supplements"
-                data-i18n="categories.supplements">Supplements</button
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="grid">
       {filtered.map((food, i) => <FoodCard food={food} index={i} />)}
     </div>
@@ -451,6 +297,7 @@ filtered.sort((a, b) => {
 
         applyClientSort(sortId);
         updateSortDropdownState(sortId);
+        updateMobileSortState(sortId);
 
         const url = new URL(window.location.href);
         url.searchParams.set("sort", sortId);
@@ -532,6 +379,7 @@ filtered.sort((a, b) => {
 
         applyClientSort(sortId);
         updateSortDropdownState(sortId);
+        updateMobileSortState(sortId);
 
         const gridSection = document.getElementById("foods");
         gridSection?.scrollIntoView({ behavior: "smooth" });
@@ -611,6 +459,32 @@ filtered.sort((a, b) => {
     }
   }
 
+  function updateMobileSortState(sortId: string) {
+    const options = document.querySelectorAll("#mobileSortOptions .mobile-filter-option");
+    const activeSort = sortId || "protein-desc";
+    options.forEach((opt) => {
+      const val = (opt as HTMLElement).getAttribute("data-value");
+      if (val === activeSort) {
+        opt.classList.add("active");
+      } else {
+        opt.classList.remove("active");
+      }
+    });
+  }
+
+  function updateMobileCategoryState(catValue: string) {
+    const options = document.querySelectorAll("#mobileCategoryOptions .mobile-filter-option");
+    const value = (catValue === "foods" || !catValue) ? "all" : catValue;
+    options.forEach((opt) => {
+      const val = (opt as HTMLElement).getAttribute("data-value");
+      if (val === value) {
+        opt.classList.add("active");
+      } else {
+        opt.classList.remove("active");
+      }
+    });
+  }
+
   function initDropdowns() {
     const sortDropdown = document.getElementById("sortDropdownContainer");
     const categoryDropdown = document.getElementById(
@@ -662,6 +536,7 @@ filtered.sort((a, b) => {
           });
 
           updateSortDropdownState(sortId);
+          updateMobileSortState(sortId);
         });
       });
 
@@ -679,6 +554,34 @@ filtered.sort((a, b) => {
         categoryDropdown.classList.remove("open");
       });
     }
+
+    document.querySelectorAll("#mobileSortOptions .mobile-filter-option").forEach((option) => {
+      option.addEventListener("click", function (this: HTMLElement) {
+        const sortId = this.getAttribute("data-value");
+        if (!sortId) return;
+
+        applyClientSort(sortId);
+        updateSortDropdownState(sortId);
+        updateMobileSortState(sortId);
+
+        const url = new URL(window.location.href);
+        url.searchParams.set("sort", sortId);
+        window.history.pushState({}, "", url.toString());
+
+        document.getElementById("mobileSortDropdown")?.classList.remove("open");
+      });
+    });
+
+    document.querySelectorAll("#mobileCategoryOptions .mobile-filter-option").forEach((option) => {
+      option.addEventListener("click", function (this: HTMLElement) {
+        const catValue = this.getAttribute("data-value");
+        if (!catValue) return;
+
+        window.location.hash = catValue === "all" ? "foods" : catValue;
+        updateMobileCategoryState(catValue);
+        document.getElementById("mobileCategoryDropdown")?.classList.remove("open");
+      });
+    });
   }
 
   window.addEventListener("hashchange", () => {
@@ -687,6 +590,7 @@ filtered.sort((a, b) => {
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
     updateCategoryDropdownState(hash);
+    updateMobileCategoryState(hash);
 
     const validCategories = [
       "meat",
@@ -732,6 +636,7 @@ filtered.sort((a, b) => {
     const initialSort = getQueryParam("sort") || "protein-desc";
     applyClientSort(initialSort);
     updateSortDropdownState(initialSort);
+    updateMobileSortState(initialSort);
 
     const chips = document.querySelectorAll(".chip");
     chips.forEach((chip) => {
@@ -751,6 +656,7 @@ filtered.sort((a, b) => {
     applyClientFilter(hash);
     updateHeaderActiveState(hash);
     updateCategoryDropdownState(hash);
+    updateMobileCategoryState(hash);
 
     if (hash) {
       setTimeout(() => {
@@ -769,8 +675,15 @@ filtered.sort((a, b) => {
 
 <style>
   .food-grid-section {
-    padding: 60px 0 10rem;
+    padding: 110px 0 10rem;
     scroll-margin-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .food-grid-section {
+      padding: 90px 0 10rem;
+      scroll-margin-top: 90px;
+    }
   }
 
   .filters {
@@ -996,6 +909,14 @@ filtered.sort((a, b) => {
     gap: 0.5rem;
     width: 100%;
     margin-top: 0.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-filter-dropdowns {
+      max-width: 480px;
+      margin-left: auto;
+      margin-top: 0;
+    }
   }
 
   .custom-dropdown {
